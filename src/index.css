@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global theme base (light/dark) */
+@layer base {
+	html {
+		@apply bg-white dark:bg-neutral-950;
+		color-scheme: light dark; /* Helps form controls inherit correct scheme */
+	}
+	body {
+		@apply text-gray-900 dark:text-gray-100 transition-colors duration-300 ease-in-out font-sans antialiased;
+	}
+	::selection {
+		@apply bg-[#FF2B2B] text-white;
+	}
+	h1, h2, h3 {
+		@apply font-semibold tracking-tight;
+	}
+	h1 { @apply text-balance; }
+	h2 { @apply text-balance; }
+	h3 { @apply text-balance; }
+	button, .btn, [type=button], [type=submit] { @apply font-semibold; }
+	p, li, label { @apply font-normal; }
+	small, .caption { @apply font-light; }
+}
+
+/* Shimmer underline animation */
+@keyframes underline-shimmer {
+	0% { background-position: 0% 50%; opacity: .85; }
+	50% { background-position: 100% 50%; opacity: 1; }
+	100% { background-position: 0% 50%; opacity: .85; }
+}
+
+.underline-shimmer {
+	background-image: linear-gradient(90deg, rgba(255,43,43,0.15) 0%, rgba(255,43,43,0.9) 35%, rgba(255,130,130,0.9) 50%, rgba(255,43,43,0.9) 65%, rgba(255,43,43,0.15) 100%);
+	background-size: 220% 100%;
+	animation: underline-shimmer 3.2s ease-in-out infinite;
+	box-shadow: 0 0 6px -1px rgba(255,43,43,0.55), 0 0 16px -4px rgba(255,43,43,0.4);
+}
+
+/* Reusable heading underline (applied directly to h1/h2 with class) */
+.heading-shimmer {
+	position: relative;
+	display: inline-block;
+}
+.heading-shimmer::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -14px; /* space below text */
+	width: 120px;
+	height: 6px;
+	border-radius: 9999px;
+	background-image: linear-gradient(90deg, rgba(255,43,43,0.15) 0%, rgba(255,43,43,0.9) 35%, rgba(255,130,130,0.9) 50%, rgba(255,43,43,0.9) 65%, rgba(255,43,43,0.15) 100%);
+	background-size: 220% 100%;
+	animation: underline-shimmer 3.2s ease-in-out infinite;
+	box-shadow: 0 0 6px -1px rgba(255,43,43,0.55), 0 0 16px -4px rgba(255,43,43,0.4);
+}
+
+/* Smaller variant when used on sub-headings inside cards if needed */
+.heading-shimmer.sm::after {
+	width: 90px;
+	height: 4px;
+	bottom: -10px;
+}
+
+/* Vertical divider fade + subtle pulse */
+@keyframes divider-pulse {
+	0%,100% { opacity:.55; box-shadow:0 0 0 0 rgba(255,43,43,0); }
+	50% { opacity:.85; box-shadow:0 0 8px 0 rgba(255,43,43,0.25); }
+}
+.divider-fade {
+	background: linear-gradient(to bottom, rgba(255,43,43,0) 0%, rgba(255,43,43,0.35) 12%, rgba(255,43,43,0.55) 50%, rgba(255,43,43,0.35) 88%, rgba(255,43,43,0) 100%);
+	animation: divider-pulse 5.2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+	.divider-fade { animation: none; }
+}
+
+/* Fade-up utility for staggered reveal */
+@keyframes fade-up {
+	0% { opacity: 0; transform: translateY(14px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+.fade-up { opacity: 0; animation: fade-up .75s cubic-bezier(.22,.61,.36,1) forwards; }
+/* Elements waiting to reveal (IntersectionObserver will add .fade-up) */
+.fade-up-on-scroll { opacity: 0; transform: translateY(14px); }
+@media (prefers-reduced-motion: reduce) { .fade-up-on-scroll { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+	.fade-up { animation: none; opacity: 1; transform: none; }
+}
+
+/* Header fade subtle */
+@keyframes header-fade {
+	0% { opacity:0; transform: translateY(8px); }
+	60% { opacity:1; transform: translateY(0); }
+	100% { opacity:1; }
+}
+.header-fade { animation: header-fade .9s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .header-fade { animation:none; } }
+
+/* Premium card glow helper */
+.premium-glow { position:relative; }
+.premium-glow::after {
+	content:'';
+	position:absolute; inset:0; border-radius:1rem; pointer-events:none;
+	background:radial-gradient(circle at 30% 15%, rgba(255,43,43,0.35), rgba(255,43,43,0) 60%);
+	opacity:0; transition:opacity .6s ease;
+}
+.premium-glow:hover::after { opacity:1; }
+
+/* Heading underline grow animation */
+@keyframes line-expand {
+	0% { transform:scaleX(0); opacity:.2; }
+	60% { opacity:.85; }
+	100% { transform:scaleX(1); opacity:1; }
+}
+.line-expand { transform-origin:center; transform:scaleX(0); animation: line-expand .9s .15s cubic-bezier(.6,.05,.25,1) forwards; }
+@media (prefers-reduced-motion: reduce) { .line-expand { animation:none; transform:none; } }
