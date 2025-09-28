@@ -25,6 +25,7 @@ import {
 import WhyInfoBox from '../components/WhyInfoBox';
  
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
+import { Helmet } from 'react-helmet-async';
 
 const smPlans = [
   {
@@ -117,8 +118,31 @@ export default function SocialMediaPlans() {
 
   // Detailed inclusions removed with toggle; simplification keeps feature bullets only.
 
+  const socialServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Social Media Management',
+    provider: { '@type': 'Organization', name: 'Microsite Studio' },
+    areaServed: 'IN',
+    offers: smPlans.map(p => ({ '@type': 'Offer', name: p.title + ' Plan', price: p.price.replace(/[^0-9]/g,'') || undefined, priceCurrency: 'INR' }))
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 py-14 md:py-20 px-5 md:px-6">
+      <Helmet>
+        <title>Social Media Management Plans | Microsite Studio</title>
+        <meta name="description" content="Monthly social media management plans: starter, growth, premium and elite. Consistent posting, engagement & analytics." />
+        <link rel="canonical" href="https://www.micrositestudio.in/services/social-media" />
+        <meta property="og:title" content="Social Media Management Plans" />
+        <meta property="og:description" content="Affordable managed social media plans to grow brand visibility and engagement." />
+        <meta property="og:url" content="https://www.micrositestudio.in/services/social-media" />
+  <meta property="og:image" content="/og/social-media-plans.jpg" />
+  <meta property="og:image:alt" content="Social media management plans preview card" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="/og/social-media-plans.jpg" />
+  <meta name="twitter:image:alt" content="Social media management plans preview card" />
+        <script type="application/ld+json">{JSON.stringify(socialServiceSchema)}</script>
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <header className="max-w-4xl mx-auto text-center mb-14 md:mb-18 header-fade">

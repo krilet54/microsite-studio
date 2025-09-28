@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useOrders } from '../context/OrderContext';
 
@@ -64,6 +65,12 @@ export default function OrderDetails() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 py-16 px-6">
+      <Helmet>
+        <title>Order Details | Microsite Studio</title>
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="description" content="Internal order details form page. Not for search indexing." />
+        <link rel="canonical" href="https://www.micrositestudio.in/order/details" />
+      </Helmet>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-black text-gray-900 dark:text-white mb-2">Complete Your Order</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-8">No upfront payment required. We will confirm via WhatsApp after submission.</p>

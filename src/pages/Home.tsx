@@ -12,9 +12,9 @@ import {
   ArrowRight,
   Zap
 } from 'lucide-react';
-import { useEffect, useRef } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useEffect, useRef, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate, useLocation } from 'react-router-dom';
 import heroVideo from '../video1.mp4';
 import websiteMockup from '../assets/websitemockup.png';
 import carouselVideo from '../assets/Red and White Retro Collage Animated Carousel Content Mobile Video.mp4';
@@ -123,6 +123,32 @@ export default function Home() {
   const heroRef = useRef<HTMLHeadingElement | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const faqSchema = useMemo(() => ({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
+      {
+        '@type': 'Question',
+        'name': 'Do I need to pay upfront for the ₹499 website?',
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'No. You only pay after the starter website is delivered and approved.' }
+      },
+      {
+        '@type': 'Question',
+        'name': 'How fast can you deliver the starter website?',
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'Typical delivery is 2–3 days after we receive your basic details and any assets.' }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Can I upgrade later to a multi-page or e-commerce site?',
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. We structure the initial build so it can expand into multi‑page or e‑commerce without starting over.' }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Do you also manage social media and branding?',
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. We offer social media management plans and branding & identity kits that integrate with your website growth.' }
+      }
+    ]
+  }), []);
   // Removed svgRef (animated outline) per request to remove odd background shape.
 
   useEffect(() => {
@@ -180,11 +206,14 @@ export default function Home() {
         <meta property="og:title" content="Microsite Studio | ₹499 Websites, Social Media & Branding" />
         <meta property="og:description" content="Professional one-page websites from ₹499 plus branding & social media services. Pay only after delivery." />
         <meta property="og:url" content="https://www.micrositestudio.in/" />
-        <meta property="og:image" content="https://www.micrositestudio.in/micrositefavicon.png" />
-        <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="/og/home-default.jpg" />
+  <meta property="og:image:alt" content="Microsite Studio digital services preview card" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Microsite Studio | ₹499 Websites, Social Media & Branding" />
         <meta name="twitter:description" content="Affordable websites & digital services. Pay after delivery." />
-        <meta name="twitter:image" content="https://www.micrositestudio.in/micrositefavicon.png" />
+  <meta name="twitter:image" content="/og/home-default.jpg" />
+  <meta name="twitter:image:alt" content="Microsite Studio digital services preview card" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       {/* Hero Section */}
   <section id="home" className="relative bg-gray-50 dark:bg-neutral-900 py-24 md:py-28 transition-colors overflow-hidden">
@@ -434,6 +463,31 @@ export default function Home() {
                 <textarea rows={4} placeholder="Tell us about your business..." className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]" />
                 <button className="w-full bg-[#FF2B2B] text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors">Send Message</button>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50 dark:bg-neutral-900 transition-colors">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center">Frequently Asked Questions</h2>
+          <div className="grid md:grid-cols-2 gap-8 text-sm text-gray-700 dark:text-gray-300">
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Do I need to pay upfront for the ₹499 website?</h3>
+              <p>No. You only pay after we deliver and you approve the starter website.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">How fast is delivery?</h3>
+              <p>Usually 2–3 days once we have your details (name, business info, basic content).</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Can I upgrade later?</h3>
+              <p>Yes—your one‑page build can expand into multi‑page or e‑commerce without a rebuild.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Do you handle branding & social?</h3>
+              <p>Yes. We offer branding kits and social media management that plug into the same growth path.</p>
             </div>
           </div>
         </div>

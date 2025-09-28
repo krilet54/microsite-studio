@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useOrders } from '../context/OrderContext';
 import { Globe, LayoutGrid, ShoppingCart, Briefcase, ShieldCheck, Clock, MessagesSquare, CheckCircle2, Layers, CreditCard, Info } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import WhyInfoBox from '../components/WhyInfoBox';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
 
@@ -94,8 +95,31 @@ export default function WebsitePackages() {
     navigate('/order/details');
   };
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Website Development',
+    provider: { '@type': 'Organization', name: 'Microsite Studio' },
+    areaServed: 'IN',
+    offers: websitePackages.map(p => ({ '@type': 'Offer', name: p.title, price: p.price.replace(/[^0-9]/g,'') || undefined, priceCurrency: 'INR' }))
+  };
+
   return (
   <div className="min-h-screen bg-white dark:bg-neutral-950 pt-20 pb-24 px-6">
+      <Helmet>
+        <title>Website Packages | Microsite Studio</title>
+        <meta name="description" content="Choose from ₹499 starter, business, e-commerce and custom website packages. Pay after delivery on eligible plans." />
+        <link rel="canonical" href="https://www.micrositestudio.in/services/websites" />
+        <meta property="og:title" content="Website Packages | Microsite Studio" />
+        <meta property="og:description" content="Affordable website development: starter, business, e-commerce & custom builds." />
+        <meta property="og:url" content="https://www.micrositestudio.in/services/websites" />
+  <meta property="og:image" content="/og/website-packages.jpg" />
+  <meta property="og:image:alt" content="Website packages preview card" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="/og/website-packages.jpg" />
+  <meta name="twitter:image:alt" content="Website packages preview card" />
+        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">

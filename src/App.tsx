@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Home from './pages/Home';
 import Plans from './pages/Plans';
 import Portfolio from './pages/Portfolio';
@@ -13,10 +14,51 @@ import BrandingPackages from './pages/BrandingPackages';
 import Services from './pages/Services';
 import AppLayout from './components/AppLayout';
 
+// Breadcrumbs JSON-LD component
+const BreadcrumbsSchema: React.FC = () => {
+  const location = useLocation();
+  const segments = location.pathname.split('/').filter(Boolean);
+  const baseUrl = 'https://bolt3.io';
+
+  const items = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: baseUrl + '/',
+    },
+    ...segments.map((seg, idx) => {
+      const path = '/' + segments.slice(0, idx + 1).join('/');
+      const formatted = seg
+        .replace(/-/g, ' ')
+        .replace(/\b\w/g, (c) => c.toUpperCase());
+      return {
+        '@type': 'ListItem',
+        position: idx + 2,
+        name: formatted,
+        item: baseUrl + path,
+      };
+    }),
+  ];
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items,
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+    </Helmet>
+  );
+};
+
 function App() {
   return (
     <Router>
       <OrderProvider>
+        <BreadcrumbsSchema />
         <Routes>
           <Route element={<AppLayout />}> 
             <Route path="/" element={<Home />} />

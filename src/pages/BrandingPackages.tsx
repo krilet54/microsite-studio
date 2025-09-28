@@ -4,6 +4,7 @@ import { Palette, Star, Layers, CheckCircle, ChevronDown, FileText } from 'lucid
 import WhyInfoBox from '../components/WhyInfoBox';
 import { useState, useRef, useEffect } from 'react';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
+import { Helmet } from 'react-helmet-async';
 
 const brandingPackages = [
   { key: 'basic', title: 'Basic Kit', price: 899, features: ['Logo (JPG + PNG)', 'Color palette & fonts', 'Primary typography', 'Basic style guide'] },
@@ -67,8 +68,31 @@ export default function BrandingPackages() {
     navigate('/order/details');
   };
 
+  const brandingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Branding & Identity Kits',
+    provider: { '@type': 'Organization', name: 'Microsite Studio' },
+    areaServed: 'IN',
+    offers: brandingPackages.map(p => ({ '@type': 'Offer', name: p.title, price: p.price, priceCurrency: 'INR' }))
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 pt-28 pb-20 px-6">
+      <Helmet>
+        <title>Branding & Identity Kits | Microsite Studio</title>
+        <meta name="description" content="Affordable branding & identity kits: logo, color system, typography, templates and style guides." />
+        <link rel="canonical" href="https://www.micrositestudio.in/services/branding" />
+        <meta property="og:title" content="Branding & Identity Kits" />
+        <meta property="og:description" content="Logo design, color palette, typography & brand assets packages." />
+        <meta property="og:url" content="https://www.micrositestudio.in/services/branding" />
+  <meta property="og:image" content="/og/branding-kits.jpg" />
+  <meta property="og:image:alt" content="Branding & identity kits preview card" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="/og/branding-kits.jpg" />
+  <meta name="twitter:image:alt" content="Branding & identity kits preview card" />
+        <script type="application/ld+json">{JSON.stringify(brandingSchema)}</script>
+      </Helmet>
       <div className="max-w-6xl mx-auto">
         {/* Unified Header / Intro */}
         <div className="max-w-3xl mx-auto text-center mb-8 fade-up-on-scroll">

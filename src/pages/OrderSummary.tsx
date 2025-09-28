@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useOrders } from '../context/OrderContext';
 import { Monitor, LayoutGrid, Smartphone, Mail, RefreshCcw, Clock, CreditCard, ShieldCheck, Info } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function OrderSummary() {
   const { createOrderDraft, currentOrder, updateOrder } = useOrders();
@@ -19,6 +20,12 @@ export default function OrderSummary() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 py-24 px-6">
+      <Helmet>
+        <title>Starter Website Package | Microsite Studio</title>
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="description" content="Internal step – ₹499 starter website summary. Not intended for indexing." />
+        <link rel="canonical" href="https://www.micrositestudio.in/order/summary" />
+      </Helmet>
       <div className="max-w-4xl mx-auto">
         {/* Title + Badge + Caption */}
         <div className="text-center mb-16">
