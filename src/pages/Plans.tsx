@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function Plans() {
   const navigate = useNavigate();
@@ -26,8 +27,35 @@ export default function Plans() {
     window.open(url, '_blank');
   }, []);
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Digital Branding & Web Services',
+    provider: { '@type': 'Organization', name: 'Microsite Studio' },
+    areaServed: 'IN',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Core Services',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '₹499 Starter Website' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Management (Monthly)' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding & Identity Kit' } }
+      ]
+    }
+  };
+
   return (
   <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
+      <Helmet>
+        <title>Plans & Pricing | Microsite Studio</title>
+        <meta name="description" content="Pricing for ₹499 websites, social media management packages, and branding kits. Pay-after-delivery options available." />
+        <link rel="canonical" href="https://www.micrositestudio.in/plans" />
+        <meta property="og:title" content="Plans & Pricing | Microsite Studio" />
+        <meta property="og:description" content="Affordable website, social media, and branding packages for small businesses in India." />
+        <meta property="og:url" content="https://www.micrositestudio.in/plans" />
+        <meta property="og:image" content="https://www.micrositestudio.in/micrositefavicon.png" />
+        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+      </Helmet>
       {/* Page Header */}
   <section className="bg-gray-50 dark:bg-neutral-900 py-20 transition-colors">
         <div className="max-w-6xl mx-auto px-6 text-center">

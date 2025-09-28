@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import heroVideo from '../video1.mp4';
 import websiteMockup from '../assets/websitemockup.png';
 import carouselVideo from '../assets/Red and White Retro Collage Animated Carousel Content Mobile Video.mp4';
@@ -170,6 +171,21 @@ export default function Home() {
 
   return (
   <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
+      <Helmet>
+        <title>Microsite Studio | ₹499 Websites, Social Media & Branding</title>
+        <meta name="description" content="Affordable ₹499 websites, social media management and branding kits for small businesses in India. Pay after delivery on eligible plans." />
+        <link rel="canonical" href="https://www.micrositestudio.in/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Microsite Studio" />
+        <meta property="og:title" content="Microsite Studio | ₹499 Websites, Social Media & Branding" />
+        <meta property="og:description" content="Professional one-page websites from ₹499 plus branding & social media services. Pay only after delivery." />
+        <meta property="og:url" content="https://www.micrositestudio.in/" />
+        <meta property="og:image" content="https://www.micrositestudio.in/micrositefavicon.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Microsite Studio | ₹499 Websites, Social Media & Branding" />
+        <meta name="twitter:description" content="Affordable websites & digital services. Pay after delivery." />
+        <meta name="twitter:image" content="https://www.micrositestudio.in/micrositefavicon.png" />
+      </Helmet>
       {/* Hero Section */}
   <section id="home" className="relative bg-gray-50 dark:bg-neutral-900 py-24 md:py-28 transition-colors overflow-hidden">
         {/* Background Video (z-0 so it sits above section background) */}

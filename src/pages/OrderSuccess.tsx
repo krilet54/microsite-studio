@@ -1,7 +1,7 @@
 import { useOrders } from '../context/OrderContext';
 import { useEffect, useCallback, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import jsPDF from 'jspdf';
+import { Helmet } from 'react-helmet-async';
 
 export default function OrderSuccess() {
   const { currentOrder } = useOrders();
@@ -23,9 +23,10 @@ export default function OrderSuccess() {
 
   if (!orderData) return null;
 
-  const generatePdf = useCallback(() => {
+  const generatePdf = useCallback(async () => {
     const currentOrder = orderData;
     if (!currentOrder) return;
+    const { default: jsPDF } = await import('jspdf');
     const doc = new jsPDF({ unit: 'pt' });
 
     const lineHeight = 18;
@@ -101,6 +102,12 @@ export default function OrderSuccess() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 py-20 px-6">
+      <Helmet>
+        <title>Order Received | Microsite Studio</title>
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="description" content="Your order has been received. We will contact you shortly to begin your project." />
+        <link rel="canonical" href="https://www.micrositestudio.in/order/success" />
+      </Helmet>
       <div className="max-w-2xl mx-auto text-center">
         <div className="w-20 h-20 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center mx-auto mb-6">
           <span className="text-3xl">✅</span>

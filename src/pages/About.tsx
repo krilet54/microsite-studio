@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Globe, Share2, Palette, CheckCircle, Target, Layers } from 'lucide-react';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
 import aboutLogo from '../assets/micrositeaboutlogo.png';
+import { Helmet } from 'react-helmet-async';
 
 export default function About() {
   useRevealOnScroll();
@@ -37,6 +38,15 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-white pt-24">
+      <Helmet>
+        <title>About Us | Microsite Studio</title>
+        <meta name="description" content="Learn about Microsite Studio – affordable websites, social media and branding solutions helping Indian small businesses grow online." />
+        <link rel="canonical" href="https://www.micrositestudio.in/about" />
+        <meta property="og:title" content="About Microsite Studio" />
+        <meta property="og:description" content="Affordable digital services for small businesses: websites, social media, branding." />
+        <meta property="og:url" content="https://www.micrositestudio.in/about" />
+        <meta property="og:image" content="https://www.micrositestudio.in/micrositefavicon.png" />
+      </Helmet>
       {/* HERO */}
       <section className="relative overflow-hidden py-24 fade-up-on-scroll">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-black" />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Share2, Globe, Palette, CheckCircle, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 /**
  * Services Overview Page
@@ -53,6 +54,15 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
+      <Helmet>
+        <title>Services | Microsite Studio</title>
+        <meta name="description" content="Websites, social media management and branding services built for small business growth. Explore our core digital service areas." />
+        <link rel="canonical" href="https://www.micrositestudio.in/services" />
+        <meta property="og:title" content="Services | Microsite Studio" />
+        <meta property="og:description" content="Affordable websites, social media and branding solutions in India." />
+        <meta property="og:url" content="https://www.micrositestudio.in/services" />
+        <meta property="og:image" content="https://www.micrositestudio.in/micrositefavicon.png" />
+      </Helmet>
       {/* Hero */}
       <section className="py-20 bg-gray-50 dark:bg-neutral-900 transition-colors">
         <div className="max-w-6xl mx-auto px-6 text-center">

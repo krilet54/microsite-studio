@@ -12,6 +12,7 @@ import L1Logo from '../assets/L1.png';
 import L2Logo from '../assets/L2.png';
 import L3Logo from '../assets/L3.png';
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 
 export default function Portfolio() {
@@ -191,6 +192,15 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
+      <Helmet>
+        <title>Portfolio | Microsite Studio</title>
+        <meta name="description" content="Sample website projects, social media creatives, and branding kits delivered by Microsite Studio for Indian small businesses." />
+        <link rel="canonical" href="https://www.micrositestudio.in/portfolio" />
+        <meta property="og:title" content="Portfolio | Microsite Studio" />
+        <meta property="og:description" content="Web, social media and branding work examples." />
+        <meta property="og:url" content="https://www.micrositestudio.in/portfolio" />
+        <meta property="og:image" content="https://www.micrositestudio.in/micrositefavicon.png" />
+      </Helmet>
       {/* Header */}
       <section className="py-20 bg-gray-50 dark:bg-neutral-900 transition-colors">
         <div className="max-w-6xl mx-auto px-6 text-center">
