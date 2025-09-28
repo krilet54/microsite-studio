@@ -7,6 +7,7 @@ export default function Navbar() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const toggleRef = useRef<HTMLButtonElement | null>(null);
   // Force dark mode once on mount
   useEffect(() => {
     const root = document.documentElement;
@@ -40,16 +41,25 @@ export default function Navbar() {
 
   // Close on escape & outside click
   useEffect(() => {
-    if (!mobileOpen) return;
+    if (!mobileOpen) {
+      document.body.style.overflow = '';
+      return;
+    }
+    document.body.style.overflow = 'hidden';
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') closeMobile(); };
     const onClick = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        closeMobile();
-      }
+      const target = e.target as Node;
+      if (menuRef.current && menuRef.current.contains(target)) return; // inside menu
+      if (toggleRef.current && toggleRef.current.contains(target)) return; // toggle button
+      closeMobile();
     };
     window.addEventListener('keydown', onKey);
     window.addEventListener('click', onClick);
-    return () => { window.removeEventListener('keydown', onKey); window.removeEventListener('click', onClick); };
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      window.removeEventListener('click', onClick);
+      document.body.style.overflow = '';
+    };
   }, [mobileOpen]);
 
   return (
@@ -115,6 +125,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
+              ref={toggleRef}
               className="text-gray-200 hover:text-[#FF2B2B] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FF2B2B]/50 rounded p-1"
               aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={mobileOpen}
