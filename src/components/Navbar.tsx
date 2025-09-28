@@ -146,7 +146,7 @@ export default function Navbar() {
       </div>
       {/* Mobile Menu Panel */}
       <div
-        className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-out bg-neutral-900 border-b border-neutral-800 ${mobileOpen ? 'max-h-[480px]' : 'max-h-0'}`}
+        className={`md:hidden overflow-hidden bg-neutral-900 border-b border-neutral-800 transition-all duration-300 ease-out ${mobileOpen ? 'max-h-[480px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}
         ref={menuRef}
         aria-hidden={!mobileOpen}
       >
