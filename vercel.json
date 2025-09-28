@@ -14,9 +14,15 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/((?!.*\\.).*)",
-      "destination": "/index.html"
-    }
+    { "source": "/plans", "destination": "/index.html" },
+    { "source": "/services", "destination": "/index.html" },
+    { "source": "/services/websites", "destination": "/index.html" },
+    { "source": "/services/social-media", "destination": "/index.html" },
+    { "source": "/services/branding", "destination": "/index.html" },
+    { "source": "/portfolio", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/order/summary", "destination": "/index.html" },
+    { "source": "/order/details", "destination": "/index.html" },
+    { "source": "/order/success", "destination": "/index.html" }
   ]
 }
