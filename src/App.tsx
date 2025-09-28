@@ -18,7 +18,8 @@ import AppLayout from './components/AppLayout';
 const BreadcrumbsSchema: React.FC = () => {
   const location = useLocation();
   const segments = location.pathname.split('/').filter(Boolean);
-  const baseUrl = 'https://bolt3.io';
+  // Use the primary production domain for structured data URLs
+  const baseUrl = 'https://www.micrositestudio.in';
 
   const items = [
     {

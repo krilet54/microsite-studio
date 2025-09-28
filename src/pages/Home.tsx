@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useRef, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import heroVideo from '../video1.mp4';
 import websiteMockup from '../assets/websitemockup.png';
 import carouselVideo from '../assets/Red and White Retro Collage Animated Carousel Content Mobile Video.mp4';
@@ -355,10 +355,10 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <a href="/portfolio" className="inline-flex items-center gap-2 bg-[#FF2B2B] text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors shadow">
+                <Link to="/portfolio" className="inline-flex items-center gap-2 bg-[#FF2B2B] text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors shadow" aria-label="View full portfolio of work">
                   View Full Portfolio
                   <ArrowRight className="w-5 h-5" />
-                </a>
+                </Link>
               </div>
             </div>
             {/* Visual Thumbnails */}
