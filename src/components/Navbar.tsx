@@ -1,16 +1,20 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../MICROSITE red logo.png';
 
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
   // Force dark mode once on mount
   useEffect(() => {
     const root = document.documentElement;
     root.classList.add('dark');
     localStorage.setItem('theme', 'dark');
   }, []);
+
+  const closeMobile = () => setMobileOpen(false);
 
   const handleContactClick = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
@@ -23,11 +27,30 @@ export default function Navbar() {
         el.classList.add('ring-temp-contact');
         setTimeout(() => el.classList.remove('ring-temp-contact'), 1200);
       }
+      closeMobile();
       return;
     }
     // Navigate with state so Home can scroll after mount
     navigate('/', { state: { scrollTo: 'contact' } });
+    closeMobile();
   }, [location.pathname, navigate]);
+
+  // Close on route change
+  useEffect(() => { closeMobile(); }, [location.pathname]);
+
+  // Close on escape & outside click
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') closeMobile(); };
+    const onClick = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        closeMobile();
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    window.addEventListener('click', onClick);
+    return () => { window.removeEventListener('keydown', onKey); window.removeEventListener('click', onClick); };
+  }, [mobileOpen]);
 
   return (
   <nav className="bg-neutral-900 shadow-sm border-b border-neutral-800 sticky top-0 z-50">
@@ -91,12 +114,51 @@ export default function Navbar() {
           
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button className="text-gray-700 hover:text-[#FF2B2B] transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button
+              className="text-gray-200 hover:text-[#FF2B2B] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FF2B2B]/50 rounded p-1"
+              aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={mobileOpen}
+              onClick={() => setMobileOpen(o => !o)}
+            >
+              {mobileOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </button>
           </div>
+        </div>
+      </div>
+      {/* Mobile Menu Panel */}
+      <div
+        className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-out bg-neutral-900 border-b border-neutral-800 ${mobileOpen ? 'max-h-[480px]' : 'max-h-0'}`}
+        ref={menuRef}
+        aria-hidden={!mobileOpen}
+      >
+        <div className="px-6 pt-4 pb-6 flex flex-col gap-4">
+          {(() => {
+            const path = location.pathname;
+            const linkCls = (active: boolean) => `block w-full text-left px-1 py-1.5 rounded-md text-sm font-medium transition-colors ${active ? 'text-[#FF2B2B]' : 'text-gray-300 hover:text-white hover:bg-neutral-800'}`;
+            return (
+              <>
+                <Link to="/" className={linkCls(path === '/')} onClick={closeMobile}>Home</Link>
+                <Link to="/services" className={linkCls(path === '/services' || path.startsWith('/services/'))} onClick={closeMobile}>Services</Link>
+                <Link to="/plans" className={linkCls(path === '/plans')} onClick={closeMobile}>Plans</Link>
+                <Link to="/portfolio" className={linkCls(path === '/portfolio')} onClick={closeMobile}>Portfolio</Link>
+                <button onClick={handleContactClick} className={linkCls(false)}>Contact</button>
+                <button
+                  onClick={() => { navigate('/services'); closeMobile(); }}
+                  className="mt-2 bg-[#FF2B2B] text-white w-full py-2.5 rounded-lg font-semibold text-sm hover:bg-red-600 active:scale-[0.97] transition-all shadow-sm"
+                >
+                  Get Started
+                </button>
+              </>
+            );
+          })()}
         </div>
       </div>
     </nav>
