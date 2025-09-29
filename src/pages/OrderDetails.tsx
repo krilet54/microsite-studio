@@ -52,14 +52,20 @@ export default function OrderDetails() {
     // Prefer environment variables (VITE_GSHEET_ENDPOINT & VITE_GSHEET_TOKEN) to avoid hardcoding.
     // Fallbacks below use current deployed Apps Script URL; replace token placeholder if intentionally committing.
     const ENDPOINT = import.meta.env.VITE_GSHEET_ENDPOINT || 'https://script.google.com/macros/s/AKfycbyQIYDEeaB9zN_Y9JRWLfDu_UuaDb-0vX2ectRFlLLdg-gE7WtPxitaaSnFUdF0Tjoasg/exec';
-    const TOKEN = import.meta.env.VITE_GSHEET_TOKEN || 'REPLACE_WITH_SECURE_TOKEN';
+    const TOKEN = import.meta.env.VITE_GSHEET_TOKEN || 'ms_ord_r4D7XK9mQ2pF18LT0vZc';
     try {
-      // IMPORTANT: No custom headers so browser sends a simple POST (no CORS preflight)
-      // Apps Script will still receive raw text in e.postData.contents which we JSON.parse.
-      await fetch(`${ENDPOINT}?token=${encodeURIComponent(TOKEN)}`, {
+      const res = await fetch(`${ENDPOINT}?token=${encodeURIComponent(TOKEN)}`, {
         method: 'POST',
         body: JSON.stringify(order)
       });
+      const text = await res.text();
+      // Attempt to parse JSON, but tolerate plain text for diagnostics
+      let parsed: any = null;
+      try { parsed = JSON.parse(text); } catch { /* ignore */ }
+      console.log('[Order Sync] status:', res.status, 'raw:', text);
+      if (!res.ok || !parsed?.ok) {
+        console.warn('Order sync reported failure', parsed || text);
+      }
     } catch (err) {
       console.error('Sheet sync failed', err);
     }
@@ -159,10 +165,11 @@ export default function OrderDetails() {
           <div className="flex justify-end pt-4">
             <button
               disabled={!formValid}
-              onClick={() => {
+              onClick={async () => {
                 const order = confirmOrder();
                 if (order) {
-                  syncOrderToSheet(order); // async, non-blocking
+                  // Fire and allow navigation, but log backend result for debugging
+                  syncOrderToSheet(order);
                   navigate('/order/success', { state: { order } });
                 }
               }}
