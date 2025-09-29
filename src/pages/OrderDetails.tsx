@@ -49,8 +49,10 @@ export default function OrderDetails() {
 
   // Fire-and-forget sync to Google Apps Script (Option 1)
   const syncOrderToSheet = async (order: any) => {
-    const ENDPOINT = import.meta.env.VITE_GSHEET_ENDPOINT || 'https://script.google.com/macros/s/REPLACE_DEPLOY_ID/exec';
-    const TOKEN = import.meta.env.VITE_GSHEET_TOKEN || 'REPLACE_SHARED_TOKEN';
+    // Prefer environment variables (VITE_GSHEET_ENDPOINT & VITE_GSHEET_TOKEN) to avoid hardcoding.
+    // Fallbacks below use current deployed Apps Script URL; replace token placeholder if intentionally committing.
+    const ENDPOINT = import.meta.env.VITE_GSHEET_ENDPOINT || 'https://script.google.com/macros/s/AKfycbyQIYDEeaB9zN_Y9JRWLfDu_UuaDb-0vX2ectRFlLLdg-gE7WtPxitaaSnFUdF0Tjoasg/exec';
+    const TOKEN = import.meta.env.VITE_GSHEET_TOKEN || 'REPLACE_WITH_SECURE_TOKEN';
     try {
       // IMPORTANT: No custom headers so browser sends a simple POST (no CORS preflight)
       // Apps Script will still receive raw text in e.postData.contents which we JSON.parse.
