@@ -54,6 +54,9 @@ export default function OrderDetails() {
     const ENDPOINT = import.meta.env.VITE_GSHEET_ENDPOINT || 'https://script.google.com/macros/s/AKfycbyQIYDEeaB9zN_Y9JRWLfDu_UuaDb-0vX2ectRFlLLdg-gE7WtPxitaaSnFUdF0Tjoasg/exec';
     const TOKEN = import.meta.env.VITE_GSHEET_TOKEN || 'ms_ord_r4D7XK9mQ2pF18LT0vZc';
     try {
+      // Minimal signature so we can tell which token is baked into the build without exposing full secret.
+      const tokenSig = TOKEN ? `${TOKEN.slice(0,4)}…${TOKEN.slice(-2)}` : 'none';
+      console.log('[Order Sync] using endpoint:', ENDPOINT, 'tokenSig:', tokenSig);
       const res = await fetch(`${ENDPOINT}?token=${encodeURIComponent(TOKEN)}`, {
         method: 'POST',
         body: JSON.stringify(order)
