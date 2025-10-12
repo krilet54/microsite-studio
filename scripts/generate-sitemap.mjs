@@ -6,7 +6,7 @@ import { writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
 // If you later centralize routes, you can import them instead.
-const baseUrl = 'https://bolt3.io';
+const baseUrl = 'https://micro-site.studio';
 
 // Add or remove routes here as you add pages.
 const routes = [
