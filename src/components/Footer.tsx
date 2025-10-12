@@ -4,8 +4,8 @@ import logo from '../MICROSITE red logo.png';
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 dark:bg-neutral-950 text-white py-14 mt-24">
-      <div className="max-w-6xl mx-auto px-6">
+    <footer className="bg-neutral-900 dark:bg-neutral-950 text-white py-14 mt-24 w-full">
+      <div className="w-full max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-start mb-5 group">
@@ -31,6 +31,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400 text-sm">
               <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
               <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/articles" className="hover:text-white transition-colors">Articles</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
               <li><Link to="/portfolio" className="hover:text-white transition-colors">Portfolio</Link></li>
               <li><Link to="/#contact" className="hover:text-white transition-colors">Contact</Link></li>
