@@ -15,58 +15,48 @@ export default function AffordableBusinessWebsites() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 py-16 px-6">
       <Helmet>
-        <title>Affordable Business Websites: Launch Yours in ₹499 | Microsite Studio</title>
-        <meta name="description" content="Affordable business websites for small businesses in India. Pay on delivery, SEO, SSL, and 2 years maintenance. Get your website for ₹499!" />
+        <title>Get a Professional Website in India for ₹499 – No Upfront Payment | Microsite Studio</title>
+        <meta name="description" content="Get a professional website for ₹499 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
         <link rel="canonical" href="https://micro-site.studio/articles/affordable-websites-under-1000" />
-        <meta property="og:title" content="Affordable Business Websites: Launch Yours in ₹499" />
-        <meta property="og:description" content="Affordable business websites for small businesses in India. Pay on delivery, SEO, SSL, and 2 years maintenance. Get your website for ₹499!" />
+        <meta property="og:title" content="Get a Professional Website in India for ₹499 – No Upfront Payment" />
+        <meta property="og:description" content="Get a professional website for ₹499 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://micro-site.studio/articles/affordable-websites-under-1000" />
         <meta property="og:image" content="https://micro-site.studio/microsite-logo-512.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Get a Professional Website in India for ₹499 – No Upfront Payment" />
+        <meta name="twitter:description" content="Get a professional website for ₹499 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
+        <meta name="twitter:image" content="https://micro-site.studio/microsite-logo-512.png" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Affordable Business Websites: Launch Yours in ₹499",
-            "description": "Affordable business websites for small businesses in India. Pay on delivery, SEO, SSL, and 2 years maintenance. Get your website for ₹499!",
-            "image": "https://micro-site.studio/microsite-logo-512.png",
-            "author": {
-              "@type": "Organization",
-              "name": "Microsite Studio"
-            },
-            "mainEntityOfPage": "https://micro-site.studio/articles/affordable-websites-under-1000",
-            "datePublished": "2025-10-12",
-            "mainEntity": {
-              "@type": "FAQPage",
-              "@id": "https://micro-site.studio/articles/affordable-websites-under-1000#faq",
-              "name": "Affordable Websites FAQ",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "How much does a professional website cost in India?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Microsite Studio offers professional websites starting at just ₹499, with no hidden fees and pay-on-delivery."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Do I need to pay upfront for my website?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No, you pay only after your website is live and approved."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Is SEO included in the website package?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, all websites include basic on-page SEO to help you rank on Google."
-                  }
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Can I get a website for ₹499 in India?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! Microsite Studio offers professional websites for ₹499, designed for small businesses in India."
                 }
-              ]
-            }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need to pay upfront for the website?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No upfront payment required. Pay only after your website is live and approved."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does it take to deliver the website?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most websites are delivered within 3-5 business days after requirements are finalized."
+                }
+              }
+            ]
           }
         `}</script>
       </Helmet>
@@ -86,17 +76,19 @@ export default function AffordableBusinessWebsites() {
             <div className="w-full h-56 md:h-72 rounded-xl overflow-hidden mb-6 bg-gray-100 dark:bg-neutral-900 flex items-center justify-center">
               <img src="/affordable websites under 1000.png" alt="Affordable business website homepage screenshot for pet care" className="w-full h-full object-cover" />
             </div>
-            <h1 className="text-3xl font-black text-[#FF2B2B] mb-2">Affordable Business Websites: Launch Yours in ₹499</h1>
+            <h1 className="text-3xl font-black text-[#FF2B2B] mb-2">Get a Professional Website in India for ₹499 – No Upfront Payment</h1>
             <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400 mb-4">
               <span>By Microsite Studio</span>
               <span>Oct 12, 2025</span>
               <span>4 min read</span>
             </div>
             <p className="text-gray-700 dark:text-gray-300 text-lg mb-2">
-              <strong>Looking for an affordable website for your small business in India?</strong> Microsite Studio delivers high-quality, SEO-optimized websites for just ₹499. Pay only when your site is live—no upfront payment, no hidden fees. Get online fast and grow your business!
+              <strong>Looking for a cheap website for your small business in India?</strong> Microsite Studio delivers high-quality, SEO-optimized websites for just ₹499. No upfront payment, no hidden fees. Get online fast and grow your business!
             </p>
             <p className="text-gray-700 dark:text-gray-300 text-sm">
-              <Link to="/services/websites" className="text-[#FF2B2B] underline hover:text-red-600">See our ₹499 Website Plans</Link>
+              <Link to="/plans" className="text-[#FF2B2B] underline hover:text-red-600">See our ₹499 Website Plans</Link> |{' '}
+              <Link to="/contact" className="text-[#FF2B2B] underline hover:text-red-600">Contact Us</Link> |{' '}
+              <Link to="/about" className="text-[#FF2B2B] underline hover:text-red-600">About Microsite Studio</Link>
             </p>
             <div className="flex gap-3 mt-4">
               <a href="https://twitter.com/intent/tweet?url=https://micro-site.studio/articles/affordable-business-websites" target="_blank" rel="noopener" className="px-3 py-2 rounded bg-[#1DA1F2] text-white text-xs font-semibold hover:bg-blue-600 transition">Share on Twitter</a>
@@ -232,16 +224,16 @@ export default function AffordableBusinessWebsites() {
               <h2 className="text-2xl font-black text-[#FF2B2B] mb-4">Frequently Asked Questions</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-semibold text-[#FF2B2B]">How much does a professional website cost in India?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">Microsite Studio offers professional websites starting at just ₹499, with no hidden fees and pay-on-delivery.</p>
+                  <h3 className="font-semibold text-[#FF2B2B]">Can I get a website for ₹499 in India?</h3>
+                  <p className="text-gray-700 dark:text-gray-300">Yes! Microsite Studio offers professional websites for ₹499, designed for small businesses in India.</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#FF2B2B]">Do I need to pay upfront for my website?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">No, you pay only after your website is live and approved.</p>
+                  <h3 className="font-semibold text-[#FF2B2B]">Do I need to pay upfront for the website?</h3>
+                  <p className="text-gray-700 dark:text-gray-300">No upfront payment required. Pay only after your website is live and approved.</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#FF2B2B]">Is SEO included in the website package?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">Yes, all websites include basic on-page SEO to help you rank on Google.</p>
+                  <h3 className="font-semibold text-[#FF2B2B]">How long does it take to deliver the website?</h3>
+                  <p className="text-gray-700 dark:text-gray-300">Most websites are delivered within 3-5 business days after requirements are finalized.</p>
                 </div>
               </div>
             </div>
