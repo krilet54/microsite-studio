@@ -14,7 +14,7 @@ import BrandingPackages from './pages/BrandingPackages';
 import Services from './pages/Services';
 import AppLayout from './components/AppLayout';
 import Articles from './pages/Articles';
-import AffordableWebsitesUnder1000 from './pages/articles/AffordableWebsitesUnder1000';
+import AffordableBusinessWebsites from './pages/articles/AffordableWebsitesUnder1000';
 
 // Breadcrumbs JSON-LD component
 const BreadcrumbsSchema: React.FC = () => {
@@ -76,7 +76,7 @@ function App() {
             <Route path="/order/details" element={<OrderDetails />} />
             <Route path="/order/success" element={<OrderSuccess />} />
             <Route path="/articles" element={<Articles />} />
-            <Route path="/articles/affordable-websites-under-1000" element={<AffordableWebsitesUnder1000 />} />
+            <Route path="/articles/affordable-websites-under-1000" element={<AffordableBusinessWebsites />} />
           </Route>
         </Routes>
       </OrderProvider>

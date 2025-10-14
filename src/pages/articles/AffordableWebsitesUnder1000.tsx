@@ -17,11 +17,11 @@ export default function AffordableBusinessWebsites() {
       <Helmet>
         <title>Affordable Business Websites: Launch Yours in ₹499 | Microsite Studio</title>
         <meta name="description" content="Affordable business websites for small businesses in India. Pay on delivery, SEO, SSL, and 2 years maintenance. Get your website for ₹499!" />
-        <link rel="canonical" href="https://micro-site.studio/articles/affordable-business-websites" />
+        <link rel="canonical" href="https://micro-site.studio/articles/affordable-websites-under-1000" />
         <meta property="og:title" content="Affordable Business Websites: Launch Yours in ₹499" />
         <meta property="og:description" content="Affordable business websites for small businesses in India. Pay on delivery, SEO, SSL, and 2 years maintenance. Get your website for ₹499!" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://micro-site.studio/articles/affordable-business-websites" />
+        <meta property="og:url" content="https://micro-site.studio/articles/affordable-websites-under-1000" />
         <meta property="og:image" content="https://micro-site.studio/microsite-logo-512.png" />
         <script type="application/ld+json">{`
           {
@@ -34,11 +34,11 @@ export default function AffordableBusinessWebsites() {
               "@type": "Organization",
               "name": "Microsite Studio"
             },
-            "mainEntityOfPage": "https://micro-site.studio/articles/affordable-business-websites",
+            "mainEntityOfPage": "https://micro-site.studio/articles/affordable-websites-under-1000",
             "datePublished": "2025-10-12",
             "mainEntity": {
               "@type": "FAQPage",
-              "@id": "https://micro-site.studio/articles/affordable-business-websites#faq",
+              "@id": "https://micro-site.studio/articles/affordable-websites-under-1000#faq",
               "name": "Affordable Websites FAQ",
               "mainEntity": [
                 {
