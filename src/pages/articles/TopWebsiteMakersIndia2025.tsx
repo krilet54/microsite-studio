@@ -8,7 +8,7 @@ import ArticleSidebar from "../../components/ArticleSidebar";
 
 export default function TopWebsiteMakersIndia2025() {
   return (
-  <div className="min-h-screen bg-white dark:bg-neutral-950 py-16 px-6">
+    <div className="min-h-screen bg-white dark:bg-neutral-950 py-16 px-6">
       <Helmet>
         <title>Top 5 Website Makers in India 2025 | Best Website Builder Comparison, Pricing & Reviews</title>
         <meta name="description" content="Compare the top 5 website makers in India for 2025: Wix, WordPress, Shopify, freelancers, and Microsite. Honest reviews, pricing, features, FAQs, and expert tips for choosing the best website builder for your business." />
@@ -68,7 +68,7 @@ export default function TopWebsiteMakersIndia2025() {
         `}</script>
       </Helmet>
   <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
-  <main className="flex-1">
+    <main className="flex-1">
           {/* Banner placeholder */}
           <div className="w-full h-56 md:h-72 rounded-xl overflow-hidden mb-8 bg-gray-100 dark:bg-neutral-900 flex items-center justify-center">
             <img
