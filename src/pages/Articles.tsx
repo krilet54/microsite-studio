@@ -18,6 +18,16 @@ export default function Articles() {
       category: 'Websites',
       description: 'Get a high-quality, professional website for under ₹1000, pay on delivery, and enjoy 2 years of maintenance.'
     },
+    {
+      title: 'Top 5 Website Makers in India (2025 Edition) – Honest Comparison of Price, Features & Trust',
+      url: '/articles/top-website-makers-india-2025',
+      thumbnail: '/src/assets/Top 5 Website Makers in India 2025.png',
+      date: 'Oct 15, 2025',
+      author: 'Microsite Studio',
+      readTime: '7 min read',
+      category: 'Websites',
+      description: 'Compare Wix, WordPress, Shopify, freelancers, and Microsite for price, features, and reliability. Find the best website maker for your needs.'
+    },
     // Add more articles here
   ];
   const categories = ['all', 'Websites', 'SEO', 'Branding'];
