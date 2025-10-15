@@ -106,7 +106,7 @@ export default function OrderSuccess() {
         <title>Order Received | Microsite Studio</title>
         <meta name="robots" content="noindex,nofollow" />
         <meta name="description" content="Your order has been received. We will contact you shortly to begin your project." />
-        <link rel="canonical" href="https://www.micrositestudio.in/order/success" />
+  <link rel="canonical" href="https://micro-site.studio/order/success" />
       </Helmet>
       <div className="max-w-2xl mx-auto text-center">
         <div className="w-20 h-20 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center mx-auto mb-6">

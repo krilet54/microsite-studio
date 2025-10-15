@@ -49,10 +49,10 @@ export default function Plans() {
       <Helmet>
         <title>Plans & Pricing | Microsite Studio</title>
         <meta name="description" content="Pricing for ₹499 websites, social media management packages, and branding kits. Pay-after-delivery options available." />
-        <link rel="canonical" href="https://www.micrositestudio.in/plans" />
+        <link rel="canonical" href="https://www.micro-site.studio/plans" />
         <meta property="og:title" content="Plans & Pricing | Microsite Studio" />
         <meta property="og:description" content="Affordable website, social media, and branding packages for small businesses in India." />
-        <meta property="og:url" content="https://www.micrositestudio.in/plans" />
+        <meta property="og:url" content="https://www.micro-site.studio/plans" />
   <meta property="og:image" content="/og/plans.jpg" />
   <meta property="og:image:alt" content="Microsite Studio pricing plans preview card" />
   <meta name="twitter:card" content="summary_large_image" />

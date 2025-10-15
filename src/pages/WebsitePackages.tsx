@@ -109,10 +109,10 @@ export default function WebsitePackages() {
       <Helmet>
         <title>Website Packages | Microsite Studio</title>
         <meta name="description" content="Choose from ₹499 starter, business, e-commerce and custom website packages. Pay after delivery on eligible plans." />
-        <link rel="canonical" href="https://www.micrositestudio.in/services/websites" />
+        <link rel="canonical" href="https://www.micro-site.studio/services/websites" />
         <meta property="og:title" content="Website Packages | Microsite Studio" />
         <meta property="og:description" content="Affordable website development: starter, business, e-commerce & custom builds." />
-        <meta property="og:url" content="https://www.micrositestudio.in/services/websites" />
+        <meta property="og:url" content="https://www.micro-site.studio/services/websites" />
   <meta property="og:image" content="/og/website-packages.jpg" />
   <meta property="og:image:alt" content="Website packages preview card" />
   <meta name="twitter:card" content="summary_large_image" />

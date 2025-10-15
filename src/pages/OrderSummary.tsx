@@ -24,7 +24,7 @@ export default function OrderSummary() {
         <title>Starter Website Package | Microsite Studio</title>
         <meta name="robots" content="noindex,nofollow" />
         <meta name="description" content="Internal step – ₹499 starter website summary. Not intended for indexing." />
-        <link rel="canonical" href="https://www.micrositestudio.in/order/summary" />
+  <link rel="canonical" href="https://micro-site.studio/order/summary" />
       </Helmet>
       <div className="max-w-4xl mx-auto">
         {/* Title + Badge + Caption */}

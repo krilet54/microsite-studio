@@ -200,12 +200,12 @@ export default function Home() {
       <Helmet>
         <title>Microsite Studio | ₹499 Websites, Social Media & Branding</title>
         <meta name="description" content="Affordable ₹499 websites, social media management and branding kits for small businesses in India. Pay after delivery on eligible plans." />
-        <link rel="canonical" href="https://www.micrositestudio.in/" />
+        <link rel="canonical" href="https://www.micro-site.studio/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Microsite Studio" />
         <meta property="og:title" content="Microsite Studio | ₹499 Websites, Social Media & Branding" />
         <meta property="og:description" content="Professional one-page websites from ₹499 plus branding & social media services. Pay only after delivery." />
-        <meta property="og:url" content="https://www.micrositestudio.in/" />
+        <meta property="og:url" content="https://www.micro-site.studio/" />
   <meta property="og:image" content="/og/home-default.jpg" />
   <meta property="og:image:alt" content="Microsite Studio digital services preview card" />
         <meta name="twitter:card" content="summary_large_image" />

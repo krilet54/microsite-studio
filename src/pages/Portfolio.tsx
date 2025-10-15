@@ -195,11 +195,11 @@ export default function Portfolio() {
       <Helmet>
         <title>Portfolio | Microsite Studio</title>
         <meta name="description" content="Sample website projects, social media creatives, and branding kits delivered by Microsite Studio for Indian small businesses." />
-        <link rel="canonical" href="https://www.micrositestudio.in/portfolio" />
+        <link rel="canonical" href="https://www.micro-site.studio/portfolio" />
         <meta property="og:title" content="Portfolio | Microsite Studio" />
         <meta property="og:description" content="Web, social media and branding work examples." />
-        <meta property="og:url" content="https://www.micrositestudio.in/portfolio" />
-        <meta property="og:image" content="https://www.micrositestudio.in/micrositefavicon.png" />
+        <meta property="og:url" content="https://www.micro-site.studio/portfolio" />
+        <meta property="og:image" content="https://www.micro-site.studio/micrositefavicon.png" />
       </Helmet>
       {/* Header */}
       <section className="py-20 bg-gray-50 dark:bg-neutral-900 transition-colors">

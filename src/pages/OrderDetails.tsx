@@ -87,7 +87,7 @@ export default function OrderDetails() {
         <title>Order Details | Microsite Studio</title>
         <meta name="robots" content="noindex,nofollow" />
         <meta name="description" content="Internal order details form page. Not for search indexing." />
-        <link rel="canonical" href="https://www.micrositestudio.in/order/details" />
+  <link rel="canonical" href="https://micro-site.studio/order/details" />
       </Helmet>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-black text-gray-900 dark:text-white mb-2">Complete Your Order</h1>

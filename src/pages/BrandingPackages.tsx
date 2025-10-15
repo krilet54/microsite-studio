@@ -82,10 +82,10 @@ export default function BrandingPackages() {
       <Helmet>
         <title>Branding & Identity Kits | Microsite Studio</title>
         <meta name="description" content="Affordable branding & identity kits: logo, color system, typography, templates and style guides." />
-        <link rel="canonical" href="https://www.micrositestudio.in/services/branding" />
+        <link rel="canonical" href="https://www.micro-site.studio/services/branding" />
         <meta property="og:title" content="Branding & Identity Kits" />
         <meta property="og:description" content="Logo design, color palette, typography & brand assets packages." />
-        <meta property="og:url" content="https://www.micrositestudio.in/services/branding" />
+        <meta property="og:url" content="https://www.micro-site.studio/services/branding" />
   <meta property="og:image" content="/og/branding-kits.jpg" />
   <meta property="og:image:alt" content="Branding & identity kits preview card" />
   <meta name="twitter:card" content="summary_large_image" />
