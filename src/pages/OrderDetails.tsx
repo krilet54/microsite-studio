@@ -57,7 +57,10 @@ export default function OrderDetails() {
   const syncOrderToSheet = async (order: any) => {
     // Prefer environment variables (VITE_GSHEET_ENDPOINT & VITE_GSHEET_TOKEN) to avoid hardcoding.
     // Fallbacks below use current deployed Apps Script URL; replace token placeholder if intentionally committing.
-    const ENDPOINT = import.meta.env.VITE_GSHEET_ENDPOINT as string | undefined;
+  // Use a dev proxy path during local development to avoid CORS/preflight issues.
+  // Vite dev server proxies '/api/gsheet' to the real Apps Script endpoint via vite.config.ts.
+  const DEV_PROXY_PATH = '/api/gsheet';
+  const ENDPOINT = import.meta.env.DEV ? DEV_PROXY_PATH : (import.meta.env.VITE_GSHEET_ENDPOINT as string | undefined);
     const TOKEN = import.meta.env.VITE_GSHEET_TOKEN as string | undefined;
     if (!ENDPOINT || !TOKEN) {
       console.error('[Order Sync] Missing VITE_GSHEET_ENDPOINT or VITE_GSHEET_TOKEN env vars – order not sent.');
