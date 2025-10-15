@@ -68,28 +68,35 @@ export default function OrderDetails() {
       const tokenSig = `${TOKEN.slice(0,4)}…${TOKEN.slice(-2)}`;
       if (import.meta.env.DEV) console.log('[Order Sync] using endpoint:', ENDPOINT, 'tokenSig:', tokenSig);
 
-      // Primary: JSON POST
-      let res = await fetch(`${ENDPOINT}?token=${encodeURIComponent(TOKEN)}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(order),
-        redirect: 'follow'
-      });
+      // Primary: form-encoded POST to avoid CORS preflight from browsers
+      let res: Response | null = null;
+      try {
+        const form = new URLSearchParams();
+        form.append('payload', JSON.stringify(order));
+        form.append('token', TOKEN || '');
+        res = await fetch(ENDPOINT + (ENDPOINT.includes('?') ? '&' : '?') + `token=${encodeURIComponent(TOKEN || '')}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: form.toString(),
+          redirect: 'follow'
+        });
+      } catch (e) {
+        // network/CORS error — we'll attempt JSON fallback below in outer flow
+        res = null;
+      }
 
-      // If the Apps Script rejects JSON, try form-encoded fallback
-      if (!res.ok) {
+      // If form-encoded either failed or returned non-OK, try JSON POST as a fallback
+      if (!res || !res.ok) {
         try {
-          const form = new URLSearchParams();
-          form.append('payload', JSON.stringify(order));
-          form.append('token', TOKEN);
-          res = await fetch(ENDPOINT, {
+          res = await fetch(`${ENDPOINT}?token=${encodeURIComponent(TOKEN)}`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: form.toString(),
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(order),
             redirect: 'follow'
           });
         } catch (e) {
-          // ignore fallback error — will go to queue below
+          // will be caught by outer catch and queued
+          throw e;
         }
       }
 
