@@ -63,7 +63,21 @@ export default function OrderDetails() {
   const ENDPOINT = import.meta.env.DEV ? DEV_PROXY_PATH : (import.meta.env.VITE_GSHEET_ENDPOINT as string | undefined);
     const TOKEN = import.meta.env.VITE_GSHEET_TOKEN as string | undefined;
     if (!ENDPOINT || !TOKEN) {
-      console.error('[Order Sync] Missing VITE_GSHEET_ENDPOINT or VITE_GSHEET_TOKEN env vars – order not sent.');
+      // Log useful debug info in production builds so we can see what the client was built with
+      try {
+        const prodEndpoint = ENDPOINT || import.meta.env.VITE_GSHEET_ENDPOINT;
+        const prodToken = TOKEN || import.meta.env.VITE_GSHEET_TOKEN;
+        const tokenSigDebug = prodToken ? `${String(prodToken).slice(0,4)}…${String(prodToken).slice(-4)}` : '(none)';
+        console.error('[Order Sync] Missing VITE_GSHEET_ENDPOINT or VITE_GSHEET_TOKEN env vars – order not sent.', {
+          endpoint: prodEndpoint || null,
+          tokenSig: tokenSigDebug,
+        });
+        if (prodEndpoint && !String(prodEndpoint).includes('/exec')) {
+          console.warn('[Order Sync] The configured VITE_GSHEET_ENDPOINT does not contain /exec — verify you used the /exec URL from Apps Script deploy.');
+        }
+      } catch (e) {
+        console.error('[Order Sync] env debug log failed', e);
+      }
       return;
     }
     try {
