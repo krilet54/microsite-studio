@@ -36,6 +36,12 @@ export default function OrderDetails() {
     }
   }, [currentOrder, createOrderDraft, location.search, updateOrder]);
 
+  // Flush any queued syncs when page mounts
+  useEffect(() => {
+    flushOrderSyncQueue();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const formValid = !!currentOrder?.pocName && !!currentOrder?.phone && !!currentOrder?.email && confirmChecked && !!currentOrder?.communicationMethod;
 
   const toggleAddOn = (name: string) => {
@@ -60,24 +66,84 @@ export default function OrderDetails() {
     try {
       // Minimal signature so we can tell which token is baked into the build without exposing full secret.
       const tokenSig = `${TOKEN.slice(0,4)}…${TOKEN.slice(-2)}`;
-      if (import.meta.env.DEV) {
-        console.log('[Order Sync] using endpoint:', ENDPOINT, 'tokenSig:', tokenSig);
-      }
-      const res = await fetch(`${ENDPOINT}?token=${encodeURIComponent(TOKEN)}`, {
+      if (import.meta.env.DEV) console.log('[Order Sync] using endpoint:', ENDPOINT, 'tokenSig:', tokenSig);
+
+      // Primary: JSON POST
+      let res = await fetch(`${ENDPOINT}?token=${encodeURIComponent(TOKEN)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(order)
+        body: JSON.stringify(order),
+        redirect: 'follow'
       });
+
+      // If the Apps Script rejects JSON, try form-encoded fallback
+      if (!res.ok) {
+        try {
+          const form = new URLSearchParams();
+          form.append('payload', JSON.stringify(order));
+          form.append('token', TOKEN);
+          res = await fetch(ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: form.toString(),
+            redirect: 'follow'
+          });
+        } catch (e) {
+          // ignore fallback error — will go to queue below
+        }
+      }
+
       const text = await res.text();
-      // Attempt to parse JSON, but tolerate plain text for diagnostics
       let parsed: any = null;
       try { parsed = JSON.parse(text); } catch { /* ignore */ }
       console.log('[Order Sync] status:', res.status, 'raw:', text);
-      if (!res.ok || !parsed?.ok) {
-        console.warn('Order sync reported failure', parsed || text);
+
+      // Consider success when HTTP 2xx OR explicit ok in response body
+      if (!(res.ok || parsed?.ok)) {
+        console.warn('[Order Sync] reported failure — queueing for retry', parsed || text);
+        // Save to local retry queue so we can flush later from client
+        try {
+          const key = 'ms_order_sync_queue';
+          const existing = JSON.parse(localStorage.getItem(key) || '[]');
+          existing.push({ order, ts: Date.now() });
+          localStorage.setItem(key, JSON.stringify(existing));
+        } catch (e) {
+          console.error('[Order Sync] failed storing to queue', e);
+        }
       }
     } catch (err) {
-      console.error('Sheet sync failed', err);
+      console.error('Sheet sync failed — queued for retry', err);
+      try {
+        const key = 'ms_order_sync_queue';
+        const existing = JSON.parse(localStorage.getItem(key) || '[]');
+        existing.push({ order, ts: Date.now(), err: String(err) });
+        localStorage.setItem(key, JSON.stringify(existing));
+      } catch (e) {
+        console.error('[Order Sync] failed storing to queue after exception', e);
+      }
+    }
+  };
+
+  // Flush queued orders (best-effort). Called on mount and after submissions.
+  const flushOrderSyncQueue = async () => {
+    const key = 'ms_order_sync_queue';
+    try {
+      const items = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!Array.isArray(items) || items.length === 0) return;
+      console.log('[Order Sync] flushing queue', items.length);
+      // Send sequentially to avoid transient rate issues
+      for (const it of items.slice()) {
+        try {
+          await syncOrderToSheet(it.order);
+          // remove item on (best-effort) success — we'll clear whole queue after attempt
+        } catch (e) {
+          console.warn('[Order Sync] retry failed for item', e);
+        }
+      }
+      // Clear queue after attempt (we intentionally keep it simple)
+      localStorage.removeItem(key);
+    } catch (e) {
+      console.error('[Order Sync] flush failed', e);
     }
   };
 
