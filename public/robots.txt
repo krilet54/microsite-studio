@@ -4,4 +4,4 @@ Disallow: /order/summary
 Disallow: /order/details
 Allow: /
 
-Sitemap: https://www.micrositestudio.in/sitemap.xml
+Sitemap: https://micro-site.studio/sitemap.xml
