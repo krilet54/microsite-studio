@@ -49,9 +49,21 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://micro-site.studio/articles/affordable-websites-under-1000</loc>
-    <lastmod>2025-10-12T07:14:19.933Z</lastmod>
+    <loc>https://micro-site.studio/articles</loc>
+    <lastmod>2025-10-15T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://micro-site.studio/articles/affordable-websites-under-1000</loc>
+    <lastmod>2025-10-15T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://micro-site.studio/articles/top-website-makers-india-2025</loc>
+    <lastmod>2025-10-15T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
