@@ -17,16 +17,16 @@ export default function AffordableBusinessWebsites() {
       <Helmet>
         <title>Get a Professional Website in India for ₹499 – No Upfront Payment | Microsite Studio</title>
         <meta name="description" content="Get a professional website for ₹499 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
-        <link rel="canonical" href="https://micro-site.studio/articles/affordable-websites-under-1000" />
+  <link rel="canonical" href="https://micro-site.studio/articles/affordable-websites-under-1000" />
         <meta property="og:title" content="Get a Professional Website in India for ₹499 – No Upfront Payment" />
         <meta property="og:description" content="Get a professional website for ₹499 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://micro-site.studio/articles/affordable-websites-under-1000" />
-        <meta property="og:image" content="https://micro-site.studio/microsite-logo-512.png" />
+  <meta property="og:url" content="https://micro-site.studio/articles/affordable-websites-under-1000" />
+  <meta property="og:image" content="https://micro-site.studio/microsite-logo-512.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Get a Professional Website in India for ₹499 – No Upfront Payment" />
         <meta name="twitter:description" content="Get a professional website for ₹499 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
-        <meta name="twitter:image" content="https://micro-site.studio/microsite-logo-512.png" />
+  <meta name="twitter:image" content="https://micro-site.studio/microsite-logo-512.png" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",

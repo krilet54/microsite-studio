@@ -13,12 +13,12 @@ export default function TopWebsiteMakersIndia2025() {
         <title>Top 5 Website Makers in India 2025 | Best Website Builder Comparison, Pricing & Reviews</title>
         <meta name="description" content="Compare the top 5 website makers in India for 2025: Wix, WordPress, Shopify, freelancers, and Microsite. Honest reviews, pricing, features, FAQs, and expert tips for choosing the best website builder for your business." />
         <meta name="keywords" content="best website maker India, website builder India, Wix vs WordPress, Shopify India, affordable websites, website cost India, website design India, freelancers, Microsite Studio, 2025" />
-        <link rel="canonical" href="https://micro-site.studio/articles/top-website-makers-india-2025" />
+  <link rel="canonical" href="https://micro-site.studio/articles/top-website-makers-india-2025" />
         <meta property="og:title" content="Top 5 Website Makers in India 2025 | Best Website Builder Comparison, Pricing & Reviews" />
         <meta property="og:description" content="Compare the top 5 website makers in India for 2025: Wix, WordPress, Shopify, freelancers, and Microsite. Honest reviews, pricing, features, FAQs, and expert tips for choosing the best website builder for your business." />
-        <meta property="og:url" content="https://micro-site.studio/articles/top-website-makers-india-2025" />
+  <meta property="og:url" content="https://micro-site.studio/articles/top-website-makers-india-2025" />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://micro-site.studio/src/assets/Top%205%20Website%20Makers%20in%20India%202025.png" />
+  <meta property="og:image" content="https://micro-site.studio/src/assets/Top%205%20Website%20Makers%20in%20India%202025.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Top 5 Website Makers in India 2025 | Best Website Builder Comparison, Pricing & Reviews" />
         <meta name="twitter:description" content="Compare the top 5 website makers in India for 2025: Wix, WordPress, Shopify, freelancers, and Microsite. Honest reviews, pricing, features, FAQs, and expert tips for choosing the best website builder for your business." />

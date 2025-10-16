@@ -22,7 +22,7 @@ const BreadcrumbsSchema: React.FC = () => {
   const location = useLocation();
   const segments = location.pathname.split('/').filter(Boolean);
   // Use the primary production domain for structured data URLs
-  const baseUrl = 'https://www.micrositestudio.in';
+  const baseUrl = 'https://micro-site.studio';
 
   const items = [
     {

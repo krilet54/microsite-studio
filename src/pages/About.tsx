@@ -41,11 +41,11 @@ export default function About() {
       <Helmet>
         <title>About Us | Microsite Studio</title>
         <meta name="description" content="Learn about Microsite Studio – affordable websites, social media and branding solutions helping Indian small businesses grow online." />
-        <link rel="canonical" href="https://www.micro-site.studio/about" />
+  <link rel="canonical" href="https://micro-site.studio/about" />
         <meta property="og:title" content="About Microsite Studio" />
         <meta property="og:description" content="Affordable digital services for small businesses: websites, social media, branding." />
-        <meta property="og:url" content="https://www.micro-site.studio/about" />
-        <meta property="og:image" content="https://www.micro-site.studio/micrositefavicon.png" />
+  <meta property="og:url" content="https://micro-site.studio/about" />
+  <meta property="og:image" content="https://micro-site.studio/micrositefavicon.png" />
       </Helmet>
       {/* HERO */}
       <section className="relative overflow-hidden py-24 fade-up-on-scroll">

@@ -132,10 +132,10 @@ export default function SocialMediaPlans() {
       <Helmet>
         <title>Social Media Management Plans | Microsite Studio</title>
         <meta name="description" content="Monthly social media management plans: starter, growth, premium and elite. Consistent posting, engagement & analytics." />
-        <link rel="canonical" href="https://www.micro-site.studio/services/social-media" />
+  <link rel="canonical" href="https://micro-site.studio/services/social-media" />
         <meta property="og:title" content="Social Media Management Plans" />
         <meta property="og:description" content="Affordable managed social media plans to grow brand visibility and engagement." />
-        <meta property="og:url" content="https://www.micro-site.studio/services/social-media" />
+  <meta property="og:url" content="https://micro-site.studio/services/social-media" />
   <meta property="og:image" content="/og/social-media-plans.jpg" />
   <meta property="og:image:alt" content="Social media management plans preview card" />
   <meta name="twitter:card" content="summary_large_image" />
