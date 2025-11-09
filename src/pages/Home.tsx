@@ -10,9 +10,13 @@ import {
   Phone,
   Mail,
   ArrowRight,
-  Zap
+  Zap,
+  Users,
+  Target,
+  BarChart3,
+  Timer
 } from 'lucide-react';
-import { useEffect, useRef, useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import heroVideo from '../video1.mp4';
@@ -120,7 +124,6 @@ function SeamlessHeroVideo() {
 }
 
 export default function Home() {
-  const heroRef = useRef<HTMLHeadingElement | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
   const faqSchema = useMemo(() => ({
@@ -151,30 +154,79 @@ export default function Home() {
   }), []);
   // Removed svgRef (animated outline) per request to remove odd background shape.
 
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      const mod: any = await import('animejs');
-      const anime: any = mod.default || mod.anime || mod;
-      if (typeof anime !== 'function') {
-        console.warn('animejs module not callable. Keys:', Object.keys(mod));
-        return;
-      }
-      // Removed SVG path stroke animation.
-      if (!cancelled && heroRef.current) {
-        const letters = heroRef.current.querySelectorAll('.hero-word span');
-        anime({
-          targets: letters,
-          translateY: [20, 0],
-          opacity: [0, 1],
-          easing: 'easeOutQuad',
-          duration: 700,
-          delay: (_el: Element, i: number) => i * 40,
-        });
-      }
-    })();
-    return () => { cancelled = true; };
-  }, []);
+  const heroBullets = [
+    'Launch in 7 days or less (Starter plan)',
+    'SEO-ready & mobile-first from day one',
+    'Plug-and-play funnels for calls, WhatsApp & bookings'
+  ];
+
+  const icpHighlights = [
+    {
+      icon: Users,
+      title: 'Industries',
+      description: 'Local services, clinics, home services, coaching, retail & D2C, restaurants/cafes.'
+    },
+    {
+      icon: Target,
+      title: 'Stage',
+      description: 'Pre-launch, MVP, or growing teams who need consistent leads without the agency bloat.'
+    },
+    {
+      icon: Globe,
+      title: 'Geography',
+      description: 'India-first with remote-friendly execution for clients worldwide.'
+    },
+    {
+      icon: Layers,
+      title: 'Size',
+      description: 'Solo founders to lean teams of up to 50 people.'
+    }
+  ];
+
+  const outcomeMetrics = [
+    {
+      icon: BarChart3,
+      stat: '+42%',
+      caption: 'More website enquiries in 60 days (sample data — replace with real numbers)',
+      annotation: 'avg. across Starter sites, last 6 months'
+    },
+    {
+      icon: Timer,
+      stat: '7 days',
+      caption: 'Average launch timeline for Starter websites',
+      annotation: 'from kickoff call to go-live'
+    },
+    {
+      icon: Zap,
+      stat: '<2.0s',
+      caption: 'Mobile page load on standard 4G connections',
+      annotation: 'performance-first build checklist'
+    },
+    {
+      icon: MessageCircle,
+      stat: '₹349',
+      caption: 'Average cost per lead with starter funnels',
+      annotation: '3-month snapshot, sample project'
+    }
+  ];
+
+  const storySnippets = [
+    {
+      title: 'Boutique salon launch',
+      before: 'No website, enquiries only via Instagram DMs.',
+      after: '1-page site + WhatsApp CTA → 21 leads in first 30 days.'
+    },
+    {
+      title: 'Home chef collective',
+      before: 'Menu stuck in PDFs and Google Forms.',
+      after: 'Order-ready landing page → 3x more prepaid bookings.'
+    },
+    {
+      title: 'Coaching startup',
+      before: 'DIY site with slow load and no credibility cues.',
+      after: 'SEO-first microsite → 18 qualified consult calls in 6 weeks.'
+    }
+  ];
 
   // Handle smooth scroll when coming from navbar Contact (state-based) or hash
   useEffect(() => {
@@ -223,40 +275,159 @@ export default function Home() {
   <div className="absolute inset-0 z-10 bg-[radial-gradient(circle_at_30%_30%,rgba(255,43,43,0.22),transparent_60%)] dark:bg-[radial-gradient(circle_at_30%_30%,rgba(255,43,43,0.14),transparent_65%)] pointer-events-none" />
   <div className="absolute inset-0 z-20 bg-white/35 dark:bg-neutral-900/30 backdrop-blur-[2px] mix-blend-normal pointer-events-none" />
         <div className="max-w-6xl mx-auto px-6 relative z-30">
-          <div className="text-center">
-            <div className="relative inline-block mb-6">
-              <h2 ref={heroRef} className="text-5xl font-black text-gray-900 dark:text-white leading-tight hero-heading">
-                <span className="hero-word inline-block mr-3">{'Ideas'.split('').map((c,i)=>(<span key={i} className="inline-block">{c}</span>))}</span>
-                <span className="hero-word inline-block mr-3">{'into'.split('').map((c,i)=>(<span key={i} className="inline-block">{c}</span>))}</span>
-                <span className="hero-word inline-block text-[#FF2B2B]">{'Impact'.split('').map((c,i)=>(<span key={i} className="inline-block">{c}</span>))}</span>
-              </h2>
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] items-center">
+            <div className="space-y-6 text-left">
+              <span className="inline-flex items-center rounded-full bg-white/80 dark:bg-neutral-900/80 px-4 py-1 text-sm font-semibold uppercase tracking-[0.22em] text-neutral-700 dark:text-neutral-300 shadow-sm">Microsite Studio</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-900 dark:text-white max-w-xl">
+                Affordable websites that win you customers.
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-200 leading-relaxed max-w-2xl">
+                We help small businesses and startups turn ideas into impact—fast websites, credible branding, and content that drives leads.
+              </p>
+              <ul className="grid gap-3 sm:gap-4 max-w-xl">
+                {heroBullets.map(point => (
+                  <li key={point} className="flex items-start gap-3 text-base sm:text-lg text-gray-800 dark:text-gray-200 leading-snug">
+                    <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#FF2B2B]/10 text-[#FF2B2B]"><CheckCircle className="h-4 w-4" /></span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  onClick={() => navigate('/', { state: { scrollTo: 'contact' } })}
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#FF2B2B] px-8 py-4 text-lg font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-red-600"
+                  aria-label="Book a free 15 minute consultation"
+                >
+                  Get a free 15-min consult
+                  <ArrowRight className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={() => navigate('/plans')}
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-900 px-8 py-4 text-lg font-semibold text-gray-900 transition-all hover:-translate-y-0.5 hover:bg-gray-900 hover:text-white dark:border-neutral-200 dark:text-white dark:hover:bg-neutral-200 dark:hover:text-gray-900"
+                  aria-label="See pricing for Microsite Studio plans"
+                >
+                  See pricing
+                </button>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
+                <CheckCircle className="h-4 w-4 text-[#FF2B2B]" />
+                <span>No upfront fees — pay after delivery on eligible plans.</span>
+              </div>
             </div>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">Websites, social media, and branding solutions for small businesses at startup-friendly pricing.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => navigate('/order/summary')}
-                className="bg-[#FF2B2B] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
-                aria-label="Start your ₹499 website order"
-              >
-                Start Your ₹499 Website <ArrowRight className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => navigate('/services/social-media')}
-                className="border-2 border-gray-900 dark:border-neutral-200 text-gray-900 dark:text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-900 dark:hover:bg-neutral-200 hover:text-white dark:hover:text-gray-900 transition-colors"
-                aria-label="View social media management plans"
-              >
-                Social Media Plans
-              </button>
+            <div className="hidden lg:flex">
+              <div className="relative w-full">
+                <div className="absolute -inset-6 bg-gradient-to-br from-[#FF2B2B]/15 via-transparent to-transparent blur-2xl" aria-hidden="true" />
+                <div className="relative overflow-hidden rounded-3xl border border-white/40 bg-white/85 p-8 shadow-2xl backdrop-blur-sm dark:border-neutral-700/60 dark:bg-neutral-900/80">
+                  <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#FF2B2B]">
+                    <span className="h-2 w-2 rounded-full bg-[#FF2B2B]" />
+                    Recent launch snapshot
+                  </div>
+                  <p className="mt-6 text-lg font-semibold text-gray-900 dark:text-white">Starter site → live in 6 days</p>
+                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Salon in Pune jumped from DM-only enquiries to 21 WhatsApp leads in the first month.</p>
+                  <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
+                    <div className="rounded-xl border border-gray-200/70 bg-white/80 p-3 text-center shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
+                      <div className="text-2xl font-black text-gray-900 dark:text-white">7 days</div>
+                      <div className="mt-1 text-xs uppercase tracking-[0.18em] text-gray-500">Launch timeline</div>
+                    </div>
+                    <div className="rounded-xl border border-gray-200/70 bg-white/80 p-3 text-center shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
+                      <div className="text-2xl font-black text-[#FF2B2B]">21 leads</div>
+                      <div className="mt-1 text-xs uppercase tracking-[0.18em] text-gray-500">First 30 days</div>
+                    </div>
+                  </div>
+                  <div className="mt-6 rounded-2xl border border-dashed border-[#FF2B2B]/50 bg-[#FF2B2B]/5 px-5 py-4 text-sm text-[#FF2B2B] dark:text-rose-300">
+                    Includes brand kit, WhatsApp funnel, and SEO-ready copywriting.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-    {/* About */}
+    {/* ICP Explainer */}
   <section id="about" className="py-20 bg-white dark:bg-neutral-950 transition-colors">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 heading-shimmer">About Microsite</h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">Microsite helps small businesses get online with affordable websites, managed social media, and custom branding. <span className="text-[#FF2B2B] font-semibold">No upfront payment for our ₹499 website offer</span> — you pay only after delivery.</p>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid gap-12 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] items-start">
+            <div className="space-y-6">
+              <span className="inline-flex items-center gap-2 rounded-full bg-gray-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-gray-600 dark:bg-neutral-900 dark:text-neutral-300">Ideal customer profile</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white heading-shimmer">Who we’re perfect for</h2>
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                If you need a credible online presence that converts—without agency bloat—we’ll get you live in days, not months. You stay focused on service delivery while we handle the build, branding, funnels, and launch checklist.
+              </p>
+              <div className="rounded-3xl border border-dashed border-[#FF2B2B]/50 bg-[#FF2B2B]/5 px-5 py-4 text-sm text-[#FF2B2B] dark:text-rose-300">
+                India-first founders, consultants, clinics, educators, and hyperlocal retail love our pay-after-delivery model.
+              </div>
+            </div>
+            <ul className="grid gap-5 sm:grid-cols-2">
+              {icpHighlights.map(({ icon: Icon, title, description }) => (
+                <li key={title} className="group flex flex-col gap-3 rounded-2xl border border-gray-200 bg-white/70 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/80">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FF2B2B]/10 text-[#FF2B2B] group-hover:bg-[#FF2B2B]/20">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Outcome Metrics Strip */}
+      <section className="py-20 bg-neutral-900 text-white transition-colors">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold heading-shimmer text-white">Proof in performance</h2>
+              <p className="mt-3 text-base text-neutral-300">
+                What “credibility” looks like once our Starter and Growth sites go live.
+              </p>
+            </div>
+            <div className="text-xs uppercase tracking-[0.3em] text-neutral-400">Sample data — replace with real numbers</div>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {outcomeMetrics.map(({ icon: Icon, stat, caption, annotation }) => (
+              <div key={caption} className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg transition hover:-translate-y-1 hover:bg-white/10">
+                <div className="flex items-center gap-3 text-sm uppercase tracking-[0.28em] text-[#FF9AA0]">
+                  <Icon className="h-5 w-5" />
+                  Metric highlight
+                </div>
+                <div className="mt-6 text-4xl font-black text-white">{stat}</div>
+                <p className="mt-3 text-base font-medium text-neutral-100">{caption}</p>
+                <p className="mt-4 text-xs text-neutral-400">{annotation}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Before/After Snippets */}
+      <section className="py-20 bg-white dark:bg-neutral-950 transition-colors">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white heading-shimmer">Before &amp; after snapshots</h2>
+              <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">Real micro-transformations that help clients look bigger than their budget.</p>
+            </div>
+            <div className="text-sm text-gray-500 dark:text-gray-400">Each go-live includes copy, design, lead funnels, and support.</div>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {storySnippets.map(snippet => (
+              <div key={snippet.title} className="group rounded-3xl border border-gray-200 bg-white/90 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/85">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{snippet.title}</h3>
+                <div className="mt-5 grid gap-4">
+                  <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-600 dark:border-neutral-700 dark:bg-neutral-900/70 dark:text-gray-300">
+                    <span className="font-semibold uppercase tracking-[0.3em] text-gray-400 dark:text-gray-500">Before</span>
+                    <p className="mt-2 leading-relaxed">{snippet.before}</p>
+                  </div>
+                  <div className="rounded-2xl border border-[#FF2B2B]/40 bg-[#FF2B2B]/10 p-4 text-sm text-gray-800 dark:border-rose-300/40 dark:bg-rose-300/15 dark:text-white">
+                    <span className="font-semibold uppercase tracking-[0.3em] text-[#FF2B2B]">After</span>
+                    <p className="mt-2 leading-relaxed">{snippet.after}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

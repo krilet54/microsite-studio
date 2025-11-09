@@ -2,68 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://micro-site.studio/</loc>
-    <lastmod>2025-10-12T07:14:19.933Z</lastmod>
+    <lastmod>2025-11-09T18:31:17.303Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://micro-site.studio/plans</loc>
-    <lastmod>2025-10-12T07:14:19.933Z</lastmod>
+    <lastmod>2025-11-09T18:31:17.303Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://micro-site.studio/services</loc>
-    <lastmod>2025-10-12T07:14:19.933Z</lastmod>
+    <lastmod>2025-11-09T18:31:17.303Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://micro-site.studio/services/websites</loc>
-    <lastmod>2025-10-12T07:14:19.933Z</lastmod>
+    <lastmod>2025-11-09T18:31:17.303Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://micro-site.studio/services/social-media</loc>
-    <lastmod>2025-10-12T07:14:19.933Z</lastmod>
+    <lastmod>2025-11-09T18:31:17.303Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://micro-site.studio/services/branding</loc>
-    <lastmod>2025-10-12T07:14:19.933Z</lastmod>
+    <lastmod>2025-11-09T18:31:17.303Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://micro-site.studio/portfolio</loc>
-    <lastmod>2025-10-12T07:14:19.933Z</lastmod>
+    <lastmod>2025-11-09T18:31:17.303Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://micro-site.studio/about</loc>
-    <lastmod>2025-10-12T07:14:19.933Z</lastmod>
+    <lastmod>2025-11-09T18:31:17.303Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://micro-site.studio/articles</loc>
-    <lastmod>2025-10-15T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://micro-site.studio/articles/affordable-websites-under-1000</loc>
-    <lastmod>2025-10-15T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://micro-site.studio/articles/top-website-makers-india-2025</loc>
-    <lastmod>2025-10-15T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>
