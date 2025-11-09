@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /order/success
+Disallow: /order/summary
+Disallow: /order/details
+Allow: /
+
+Sitemap: https://micro-site.studio/sitemap.xml
