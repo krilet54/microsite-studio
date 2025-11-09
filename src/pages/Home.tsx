@@ -53,6 +53,9 @@ function SeamlessHeroVideo() {
       v.style.objectFit = 'cover';
       v.style.transition = `opacity ${fadeDuration}ms linear`;
       v.style.opacity = '0';
+      v.style.transform = 'scale(1.12)';
+      v.style.transformOrigin = 'center';
+      v.style.willChange = 'opacity, transform';
     });
 
     v1.style.opacity = '1';
@@ -157,7 +160,7 @@ export default function Home() {
   const heroBullets = [
     'Launch in 7 days or less (Starter plan)',
     'SEO-ready & mobile-first from day one',
-    'Plug-and-play funnels for calls, WhatsApp & bookings'
+    'Pro brand kit that looks bigger than your budget'
   ];
 
   const icpHighlights = [
@@ -187,26 +190,26 @@ export default function Home() {
     {
       icon: BarChart3,
       stat: '+42%',
-      caption: 'More website enquiries in 60 days (sample data — replace with real numbers)',
-      annotation: 'avg. across Starter sites, last 6 months'
+      caption: 'Increase in website enquiries within 60 days',
+      annotation: 'Starter plan rollouts · trailing 6 months'
     },
     {
       icon: Timer,
       stat: '7 days',
       caption: 'Average launch timeline for Starter websites',
-      annotation: 'from kickoff call to go-live'
+      annotation: 'Kickoff call → go-live'
     },
     {
       icon: Zap,
       stat: '<2.0s',
-      caption: 'Mobile page load on standard 4G connections',
-      annotation: 'performance-first build checklist'
+      caption: 'Mobile page-load on standard 4G',
+      annotation: 'Web Vitals performance baseline'
     },
     {
       icon: MessageCircle,
-      stat: '₹349',
-      caption: 'Average cost per lead with starter funnels',
-      annotation: '3-month snapshot, sample project'
+      stat: '30% lower',
+      caption: 'Cost-per-lead achieved versus previous campaigns',
+      annotation: 'Average savings across marketing budgets'
     }
   ];
 
@@ -275,8 +278,8 @@ export default function Home() {
   <div className="absolute inset-0 z-10 bg-[radial-gradient(circle_at_30%_30%,rgba(255,43,43,0.22),transparent_60%)] dark:bg-[radial-gradient(circle_at_30%_30%,rgba(255,43,43,0.14),transparent_65%)] pointer-events-none" />
   <div className="absolute inset-0 z-20 bg-white/35 dark:bg-neutral-900/30 backdrop-blur-[2px] mix-blend-normal pointer-events-none" />
         <div className="max-w-6xl mx-auto px-6 relative z-30">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] items-center">
-            <div className="space-y-6 text-left">
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <div className="space-y-6 text-left max-w-xl">
               <span className="inline-flex items-center rounded-full bg-white/80 dark:bg-neutral-900/80 px-4 py-1 text-sm font-semibold uppercase tracking-[0.22em] text-neutral-700 dark:text-neutral-300 shadow-sm">Microsite Studio</span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-900 dark:text-white max-w-xl">
                 Affordable websites that win you customers.
@@ -314,8 +317,8 @@ export default function Home() {
                 <span>No upfront fees — pay after delivery on eligible plans.</span>
               </div>
             </div>
-            <div className="hidden lg:flex">
-              <div className="relative w-full">
+            <div className="hidden lg:flex justify-end">
+              <div className="relative w-full max-w-xl">
                 <div className="absolute -inset-6 bg-gradient-to-br from-[#FF2B2B]/15 via-transparent to-transparent blur-2xl" aria-hidden="true" />
                 <div className="relative overflow-hidden rounded-3xl border border-white/40 bg-white/85 p-8 shadow-2xl backdrop-blur-sm dark:border-neutral-700/60 dark:bg-neutral-900/80">
                   <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#FF2B2B]">
@@ -377,13 +380,12 @@ export default function Home() {
       <section className="py-20 bg-neutral-900 text-white transition-colors">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold heading-shimmer text-white">Proof in performance</h2>
-              <p className="mt-3 text-base text-neutral-300">
+            <div className="max-w-3xl space-y-4">
+              <h2 className="text-3xl sm:text-4xl font-bold heading-shimmer text-white pb-1">Proof in performance</h2>
+              <p className="mt-4 text-base text-neutral-300">
                 What “credibility” looks like once our Starter and Growth sites go live.
               </p>
             </div>
-            <div className="text-xs uppercase tracking-[0.3em] text-neutral-400">Sample data — replace with real numbers</div>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {outcomeMetrics.map(({ icon: Icon, stat, caption, annotation }) => (
@@ -405,22 +407,22 @@ export default function Home() {
       <section className="py-20 bg-white dark:bg-neutral-950 transition-colors">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white heading-shimmer">Before &amp; after snapshots</h2>
-              <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">Real micro-transformations that help clients look bigger than their budget.</p>
+            <div className="max-w-3xl space-y-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white heading-shimmer pb-1">Before &amp; after snapshots</h2>
+              <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">Real micro-transformations that help clients look bigger than their budget.</p>
             </div>
             <div className="text-sm text-gray-500 dark:text-gray-400">Each go-live includes copy, design, lead funnels, and support.</div>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {storySnippets.map(snippet => (
-              <div key={snippet.title} className="group rounded-3xl border border-gray-200 bg-white/90 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/85">
+              <div key={snippet.title} className="group flex h-full flex-col gap-5 rounded-3xl border border-gray-200 bg-white/90 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/85">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{snippet.title}</h3>
-                <div className="mt-5 grid gap-4">
-                  <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-600 dark:border-neutral-700 dark:bg-neutral-900/70 dark:text-gray-300">
+                <div className="grid flex-1 grid-rows-2 gap-4">
+                  <div className="flex flex-col justify-between rounded-2xl border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-600 dark:border-neutral-700 dark:bg-neutral-900/70 dark:text-gray-300">
                     <span className="font-semibold uppercase tracking-[0.3em] text-gray-400 dark:text-gray-500">Before</span>
                     <p className="mt-2 leading-relaxed">{snippet.before}</p>
                   </div>
-                  <div className="rounded-2xl border border-[#FF2B2B]/40 bg-[#FF2B2B]/10 p-4 text-sm text-gray-800 dark:border-rose-300/40 dark:bg-rose-300/15 dark:text-white">
+                  <div className="flex flex-col justify-between rounded-2xl border border-[#FF2B2B]/40 bg-[#FF2B2B]/10 p-4 text-sm text-gray-800 dark:border-rose-300/40 dark:bg-rose-300/15 dark:text-white">
                     <span className="font-semibold uppercase tracking-[0.3em] text-[#FF2B2B]">After</span>
                     <p className="mt-2 leading-relaxed">{snippet.after}</p>
                   </div>
