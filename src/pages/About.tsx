@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Globe, Share2, Palette, CheckCircle, Target, Layers } from 'lucide-react';
+import { Globe, Share2, Palette, Target, Layers } from 'lucide-react';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
 import aboutLogo from '../assets/micrositeaboutlogo.png';
+import kmcLogo from '../assets/logokmc.png';
+import ipuLogo from '../assets/ipulogo.png';
+import jagannathLogo from '../assets/Logo_of_Jagannath_University.svg.png';
 import { Helmet } from 'react-helmet-async';
 
 export default function About() {
@@ -28,12 +31,33 @@ export default function About() {
     }
   ];
 
-  const whyPoints = [
+  const whyHighlights = [
     'Affordable, startup-friendly pricing',
     'Fast turnaround & reliable delivery',
     'Tailored for online visibility & branding',
     'Scalable services to support growth',
-    'Dedicated support and updates'
+    'Dedicated support and updates',
+    'Operator oversight on every brief'
+  ];
+
+  const teamOrigins = [
+    {
+      college: 'Kirori Mal College · DU',
+      strength: 'Story-first copy + go-to-market sprints',
+      logo: kmcLogo,
+      logoWrapperClass: 'p-0',
+      logoClass: 'object-cover scale-[1.3]'
+    },
+    {
+      college: 'Surajmal College · IP University',
+      strength: 'Full-stack builds + CRO-ready funnels',
+      logo: ipuLogo
+    },
+    {
+      college: 'Jagannath University · Jaipur',
+      strength: 'Brand systems, UI kits, and client success ops',
+      logo: jagannathLogo
+    }
   ];
 
   return (
@@ -118,11 +142,13 @@ export default function About() {
       <section className="py-24 bg-neutral-950 fade-up-on-scroll" style={{animationDelay:'200ms'}}>
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-14">Why Brands Choose Microsite</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
-            {whyPoints.map(p => (
-              <div key={p} className="flex items-start gap-3 text-sm text-gray-300 bg-neutral-900/70 rounded-xl p-5 border border-neutral-800">
-                <CheckCircle className="w-5 h-5 text-[#FF2B2B] mt-[2px]" />
-                <span>{p}</span>
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {whyHighlights.map((point, index) => (
+              <div key={point} className="rounded-2xl border border-neutral-800 bg-neutral-900/70 p-6 flex items-center gap-4 shadow-[0_12px_30px_-18px_rgba(0,0,0,0.8)]">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FF2B2B]/15 text-sm font-bold text-[#FF2B2B]">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h3 className="text-lg font-semibold text-white leading-snug">{point}</h3>
               </div>
             ))}
           </div>
@@ -144,6 +170,31 @@ export default function About() {
           <div>
             <h3 className="text-2xl font-bold flex items-center gap-2 mb-4"><Layers className="w-6 h-6 text-[#FF2B2B]" /> Vision</h3>
             <p className="text-gray-300 text-[15px] leading-relaxed">To be the go-to digital partner for small brands and emerging entrepreneurs worldwide.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* MEET OUR TEAM */}
+      <section className="py-24 bg-neutral-950 fade-up-on-scroll" style={{animationDelay:'300ms'}}>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Built by India’s sharpest operators</h2>
+            <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+              Our team comes from the best of India — alumni from Kirori Mal College (Delhi University), Surajmal College (Guru Gobind Singh Indraprastha University) and Jagannath University, Jaipur. We mix campus-honed hustle with hands-on operator experience so every engagement feels fast, structured, and human.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {teamOrigins.map(origin => (
+              <div key={origin.college} className="flex flex-col gap-4 rounded-2xl border border-neutral-800 bg-neutral-900/70 p-6 shadow-[0_12px_35px_-20px_rgba(0,0,0,0.8)]">
+                <div className="flex items-center gap-4">
+                  <div className={`shrink-0 h-16 w-16 rounded-full overflow-hidden ring-1 ring-white/15 bg-black/40 flex items-center justify-center ${origin.logoWrapperClass ?? 'p-1.5'}`}>
+                    <img src={origin.logo} alt={`${origin.college} logo`} className={`h-full w-full ${origin.logoClass ?? 'object-contain'}`} />
+                  </div>
+                  <p className="text-lg font-semibold text-white text-left leading-snug">{origin.college}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
