@@ -6,6 +6,8 @@ import sm1 from '../assets/1.png';
 import sm2 from '../assets/2.png';
 import sm3 from '../assets/3.png';
 import sm4 from '../assets/4.png';
+import ss4 from '../assets/ss4.png';
+import ss5 from '../assets/ss5.png';
 import launchTeaser from '../assets/Launch teaser.mp4';
 import seasonalPush from '../assets/Seasonal push.mp4';
 import L1Logo from '../assets/L1.png';
@@ -17,6 +19,47 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Portfolio() {
   const navigate = useNavigate();
+  const placeholderScreenshot = 'https://placehold.co/1200x675/0f172a/ffffff?text=Screenshot+Coming+Soon';
+  const websiteProjects = [
+    {
+      img: mock1,
+      href: 'https://laviedaviepetocare.vercel.app/',
+      alt: 'La Vie Davie Pet Care website screenshot',
+      title: 'Pet Care Business Landing Page',
+      modelLabel: 'Delivered under ₹499 model'
+    },
+    {
+      img: mock2,
+      href: 'https://four-paws-cat-boarding.vercel.app/',
+      alt: 'Four Paws Cat Boarding website screenshot',
+      title: 'Cat Boarding Service Site',
+      modelLabel: 'Delivered under ₹499 model'
+    },
+    {
+      img: mock3,
+      href: 'https://spikepoint.me/',
+      alt: 'Spike Point gaming platform website screenshot',
+      title: 'Gaming Platform Website',
+      modelLabel: 'Delivered under custom model',
+      status: 'Under construction'
+    },
+    {
+      img: ss4,
+      href: 'https://www.apexexamcentre.in/',
+      alt: 'Apex Exam Centre business website placeholder screenshot',
+      title: 'Apex Exam Centre · Business Website',
+      modelLabel: 'Delivered under Business Website model',
+      isPlaceholder: true
+    },
+    {
+      img: ss5,
+      href: 'https://alphadrivebusinessexpert.vercel.app/',
+      alt: 'AlphaDrive Business Expert legal website placeholder screenshot',
+      title: 'Legal Office Website · Starter Model',
+      modelLabel: 'Delivered under Starter model',
+      isPlaceholder: true
+    }
+  ];
   // Social media showcase items
   const socialItems: Array<{
     type: 'image' | 'video';
@@ -214,22 +257,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-10">Website Work</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[{
-              img: mock1,
-              href: 'https://laviedaviepetocare.vercel.app/',
-              alt: 'La Vie Davie Pet Care website screenshot',
-              title: 'Pet Care Business Landing Page'
-            },{
-              img: mock2,
-              href: 'https://four-paws-cat-boarding.vercel.app/',
-              alt: 'Four Paws Cat Boarding website screenshot',
-              title: 'Cat Boarding Service Site'
-            },{
-              img: mock3,
-              href: 'https://spike-point.vercel.app/',
-              alt: 'Spike Point website screenshot',
-              title: 'Local Utility / Service Page'
-            }].map(item => (
+            {websiteProjects.map(item => (
               <a
                 key={item.href}
                 href={item.href}
@@ -242,16 +270,21 @@ export default function Portfolio() {
                   <img
                     src={item.img}
                     alt={item.alt}
-                    className="w-full h-full object-cover object-top transition-transform duration-[900ms] group-hover:scale-[1.04]"
+                    className={`w-full h-full object-cover object-top transition-transform duration-[900ms] ${item.isPlaceholder ? '' : 'group-hover:scale-[1.04]'}`}
                     loading="lazy"
                     decoding="async"
                   />
+                  {item.status && (
+                    <span className="absolute top-2 right-2 z-10 inline-flex items-center gap-1 rounded-full bg-yellow-300/95 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-900 shadow">
+                      ⭐ {item.status}
+                    </span>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-transparent opacity-60 group-hover:opacity-70 transition-opacity" />
                   <span className="absolute bottom-2 left-2 text-[10px] font-semibold tracking-wide bg-black/45 backdrop-blur-sm text-white px-2 py-1 rounded uppercase">Live Site</span>
                 </div>
                 <div className="p-5 space-y-2">
                   <p className="text-sm font-medium text-gray-900 dark:text-gray-100 line-clamp-1">{item.title}</p>
-                  <p className="text-xs text-[#FF2B2B] font-semibold">Delivered under ₹499 model</p>
+                  <p className="text-xs text-[#FF2B2B] font-semibold">{item.modelLabel}</p>
                 </div>
               </a>
             ))}

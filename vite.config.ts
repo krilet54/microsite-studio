@@ -13,6 +13,9 @@ export default defineConfig(({ mode }) => {
       exclude: ['lucide-react'],
     },
     server: {
+      port: 5173,
+      strictPort: true,
+      open: true,
       // Proxy /api/gsheet to your Apps Script exec URL during local dev to avoid CORS
       proxy: gsheetEndpoint
         ? {

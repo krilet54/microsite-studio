@@ -30,6 +30,11 @@ import heroVideo from '../video1.mp4';
 import websiteMockup from '../assets/websitemockup.png';
 import carouselVideo from '../assets/Red and White Retro Collage Animated Carousel Content Mobile Video.mp4';
 import brandKit1 from '../assets/brandkit1.png';
+import salonSnapshot from '../assets/salonss.png';
+import petshopSnapshot from '../assets/petshopss.png';
+import hyderabadSnapshot from '../assets/hyderabadss.png';
+import fitnessSnapshot from '../assets/fitness.ss.png';
+import gamingSnapshot from '../assets/spikess.png';
 
 type HeroSnapshotMetric = {
   label: string;
@@ -38,6 +43,11 @@ type HeroSnapshotMetric = {
   suffix?: string;
   decimals?: number;
   accent?: boolean;
+};
+
+type HeroSnapshotImage = {
+  src: string;
+  alt: string;
 };
 
 type HeroSnapshot = {
@@ -49,6 +59,7 @@ type HeroSnapshot = {
   addOns: string;
   summary?: string;
   metrics: HeroSnapshotMetric[];
+  image: HeroSnapshotImage;
 };
 
 function AnimatedMetric({ value, prefix = '', suffix = '', decimals = 0, accent = false, animationKey }: HeroSnapshotMetric & { animationKey: number }) {
@@ -238,7 +249,8 @@ export default function Home() {
       metrics: [
         { label: 'Launch timeline', value: 6, suffix: ' days' },
         { label: 'Leads captured', value: 21, suffix: ' leads', accent: true }
-      ]
+      ],
+      image: { src: salonSnapshot, alt: 'Salon WhatsApp funnel landing page preview' }
     },
     {
       id: 'gaming-delhi',
@@ -251,7 +263,8 @@ export default function Home() {
       metrics: [
         { label: 'Launch timeline', value: 12, suffix: ' days' },
         { label: 'Session lift', value: 3.2, decimals: 1, suffix: '× session time', accent: true }
-      ]
+      ],
+      image: { src: gamingSnapshot, alt: 'Gaming platform landing page preview' }
     },
     {
       id: 'petshop-mumbai',
@@ -264,7 +277,8 @@ export default function Home() {
       metrics: [
         { label: 'Launch timeline', value: 5, suffix: ' days' },
         { label: 'Conversion lift', value: 2, suffix: '× conversions', accent: true }
-      ]
+      ],
+      image: { src: petshopSnapshot, alt: 'Pet shop starter site preview' }
     },
     {
       id: 'homechef-hyderabad',
@@ -277,7 +291,8 @@ export default function Home() {
       metrics: [
         { label: 'Launch timeline', value: 7, suffix: ' days' },
         { label: 'Bookings growth', value: 3, suffix: '× bookings', accent: true }
-      ]
+      ],
+      image: { src: hyderabadSnapshot, alt: 'Home chef booking microsite preview' }
     },
     {
       id: 'fitness-bengaluru',
@@ -290,7 +305,8 @@ export default function Home() {
       metrics: [
         { label: 'Launch timeline', value: 8, suffix: ' days' },
         { label: 'Qualified calls', value: 18, suffix: ' calls', accent: true }
-      ]
+      ],
+      image: { src: fitnessSnapshot, alt: 'Fitness coach growth funnel preview' }
     }
   ];
 
@@ -303,24 +319,34 @@ export default function Home() {
   const icpHighlights = [
     {
       icon: Users,
-      title: 'Industries',
-      description: 'Local services, clinics, home services, coaching, retail & D2C, restaurants/cafes.'
+      title: 'Industries · उद्योग',
+      description: 'Local services, clinics, coaching, retail, cafés.',
+      descriptionHi: 'स्थानीय सेवाएँ, क्लीनिक, कोचिंग, रिटेल, कैफ़े.'
     },
     {
       icon: Target,
-      title: 'Stage',
-      description: 'Pre-launch, MVP, or growing teams who need consistent leads without the agency bloat.'
+      title: 'Stage · चरण',
+      description: 'Pre-launch to growth teams chasing steady leads.',
+      descriptionHi: 'प्री-लॉन्च से ग्रोथ तक — भरोसेमंद लीड्स के लिए.'
     },
     {
       icon: Globe,
-      title: 'Geography',
-      description: 'India-first with remote-friendly execution for clients worldwide.'
+      title: 'Geography · क्षेत्र',
+      description: 'India-first, remote-ready for global calls.',
+      descriptionHi: 'इंडिया-फर्स्ट और रिमोट-रेडी टीम.'
     },
     {
       icon: Layers,
-      title: 'Size',
-      description: 'Solo founders to lean teams of up to 50 people.'
+      title: 'Team Size · टीम आकार',
+      description: 'Solo founders to 50-member crews.',
+      descriptionHi: 'सोलो से 50 लोगों तक की टीम.'
     }
+  ];
+
+  const icpQuickFacts = [
+    'Pay-after-delivery = हल्का cash flow.',
+    'Hindi + English launch copy ready-made.',
+    'SOPs ready, आप सर्विस संभालें — funnels हम.'
   ];
 
   const outcomeMetrics = [
@@ -347,24 +373,6 @@ export default function Home() {
       stat: '30% lower',
       caption: 'Cost-per-lead achieved versus previous campaigns',
       annotation: 'Average savings across marketing budgets'
-    }
-  ];
-
-  const storySnippets = [
-    {
-      title: 'Boutique salon launch',
-      before: 'No website, enquiries only via Instagram DMs.',
-      after: '1-page site + WhatsApp CTA → 21 leads in first 30 days.'
-    },
-    {
-      title: 'Home chef collective',
-      before: 'Menu stuck in PDFs and Google Forms.',
-      after: 'Order-ready landing page → 3x more prepaid bookings.'
-    },
-    {
-      title: 'Coaching startup',
-      before: 'DIY site with slow load and no credibility cues.',
-      after: 'SEO-first microsite → 18 qualified consult calls in 6 weeks.'
     }
   ];
 
@@ -398,6 +406,45 @@ export default function Home() {
       icon: Gauge,
       title: 'Performance-First',
       description: 'Every site is speed-tested and SEO-ready by default.'
+    }
+  ];
+
+  const serviceCards = [
+    {
+      icon: Globe,
+      title: 'Website Launch Kits',
+      description: 'One-page or growth-ready sites built to convert fast.',
+      price: '₹499',
+      priceLabel: 'Starter go-live',
+      badge: 'Most booked',
+      features: ['Pay-after-delivery promise', 'WhatsApp & lead funnels', 'Hosting + domain guidance'],
+      ctaLabel: 'Explore websites',
+      ctaPath: '/services/websites',
+      highlight: false
+    },
+    {
+      icon: Share2,
+      title: 'Social Media Pods',
+      description: 'Content, scheduling, and reporting that keeps you visible.',
+      price: '₹1,000/mo',
+      priceLabel: 'Managed plans',
+      badge: 'Growth teams',
+      features: ['Calendar + creative + copy', 'Performance dashboards', 'Elite tier adds branding kit'],
+      ctaLabel: 'View social plans',
+      ctaPath: '/services/social-media',
+      highlight: true
+    },
+    {
+      icon: Palette,
+      title: 'Branding & Identity',
+      description: 'Logos, color systems, templates, and launch collaterals.',
+      price: '₹899',
+      priceLabel: 'Identity kits',
+      badge: null,
+      features: ['Logo + typography system', 'Pitch, deck & card templates', 'Hand-off files + usage guide'],
+      ctaLabel: 'See branding work',
+      ctaPath: '/services/branding',
+      highlight: false
     }
   ];
 
@@ -618,49 +665,45 @@ export default function Home() {
                   >
                     <ArrowRight className="h-4 w-4" />
                   </button>
-                  <div className="relative min-h-[460px] bg-white/85 dark:bg-neutral-900/80">
+                  <div className="relative min-h-[520px] bg-white/90 dark:bg-neutral-900/85">
                     {heroSnapshots.map((snapshot, idx) => {
                       const isActive = idx === activeSnapshot;
+                      const serviceStack = snapshot.addOns.split('+').map(part => part.trim()).filter(Boolean);
                       return (
                         <article
                           key={snapshot.id}
-                          className={`absolute inset-0 flex h-full flex-col justify-between p-8 pb-10 transition-all duration-[600ms] ease-out ${isActive ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-6'}`}
+                          className={`absolute inset-0 flex h-full flex-col justify-between p-8 pb-8 transition-all duration-[600ms] ease-out ${isActive ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-6'}`}
                           aria-hidden={!isActive}
                         >
-                          <div>
-                            <div className="flex flex-wrap items-center justify-between gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#FF2B2B]">
-                              <div className="flex items-center gap-3">
-                                <span className="h-2 w-2 rounded-full bg-[#FF2B2B]" />
-                                Recent launch snapshot
-                              </div>
-                              <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-emerald-600 dark:text-emerald-300">
-                                <ShieldCheck className="h-3.5 w-3.5" />
-                                Verified client result
-                              </span>
+                          <div className="flex h-full flex-col gap-6">
+                            <div className="pt-2">
+                              <p className="text-center text-[11px] font-semibold uppercase tracking-[0.35em] text-gray-800 dark:text-gray-100">Recent snapshot</p>
                             </div>
-                            <p className="mt-6 text-lg font-semibold text-gray-900 dark:text-white">
-                              {`${snapshot.clientType} in ${snapshot.city} → ${snapshot.resultHighlight}`}
-                            </p>
-                            <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">
-                              {`${snapshot.resultHighlight} in ${snapshot.timeframe} | ${snapshot.addOns}`}
-                            </p>
-                          </div>
-                          <div className="mt-8 grid grid-cols-2 gap-4 text-sm">
-                            {snapshot.metrics.map(metric => (
-                              <div key={`${snapshot.id}-${metric.label}`} className="rounded-xl border border-gray-200/70 bg-white/80 p-3 text-center shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
-                                {isActive ? (
-                                  <AnimatedMetric {...metric} animationKey={activeSnapshot} />
-                                ) : (
-                                  <div className={`text-2xl font-black ${metric.accent ? 'text-[#FF2B2B]' : 'text-gray-900 dark:text-white'}`}>
-                                    {formatMetricValue(metric)}
-                                  </div>
-                                )}
-                                <div className="mt-1 text-xs uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400">{metric.label}</div>
-                              </div>
-                            ))}
-                          </div>
-                          <div className="mt-8 rounded-2xl border border-dashed border-[#FF2B2B]/50 bg-[#FF2B2B]/5 px-5 py-4 text-sm text-[#FF2B2B] dark:text-rose-300">
-                            {snapshot.summary ?? `Key add-ons: ${snapshot.addOns}`}
+                            <div className="relative mx-auto w-full">
+                              <figure className="relative mx-auto w-full rounded-[36px] bg-gradient-to-br from-gray-100 via-white to-gray-200 p-1 shadow-2xl dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-800">
+                                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[32px]">
+                                  <img
+                                    src={snapshot.image.src}
+                                    alt={snapshot.image.alt}
+                                    className="h-full w-full object-cover object-top scale-[1.2]"
+                                    loading="lazy"
+                                    decoding="async"
+                                  />
+                                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" aria-hidden="true" />
+                                </div>
+                                <span className="absolute right-5 top-5 inline-flex items-center gap-2 rounded-full bg-emerald-500 text-white px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] shadow-lg">
+                                  <ShieldCheck className="h-3 w-3" />
+                                  Verified result
+                                </span>
+                              </figure>
+                            </div>
+                            <div className="space-y-1 text-center">
+                              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{snapshot.clientType}</h3>
+                              <p className="text-sm uppercase tracking-[0.3em] text-gray-500 dark:text-gray-400">{snapshot.city}</p>
+                              <p className="text-lg font-semibold text-[#FF2B2B] dark:text-rose-300">{snapshot.resultHighlight}</p>
+                              <p className="text-sm text-gray-600 dark:text-gray-300">{`in ${snapshot.timeframe}`}</p>
+                            </div>
+                            <div aria-hidden="true" className="h-2" />
                           </div>
                         </article>
                       );
@@ -692,23 +735,39 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] items-start">
             <div className="space-y-6">
-              <span className="inline-flex items-center gap-2 rounded-full bg-gray-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-gray-600 dark:bg-neutral-900 dark:text-neutral-300">Ideal customer profile</span>
+              <span className="inline-flex items-center gap-2 rounded-full bg-gray-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-gray-600 dark:bg-neutral-900 dark:text-neutral-300">Ideal customer profile · हम किनके लिए हैं</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Who we’re perfect for</h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                If you need a credible online presence that converts—without agency bloat—we’ll get you live in days, not months. You stay focused on service delivery while we handle the build, branding, funnels, and launch checklist.
-              </p>
-              <div className="rounded-3xl border border-dashed border-[#FF2B2B]/50 bg-[#FF2B2B]/5 px-5 py-4 text-sm text-[#FF2B2B] dark:text-rose-300">
-                India-first founders, consultants, clinics, educators, and hyperlocal retail love our pay-after-delivery model.
+              <div className="space-y-3 text-gray-700 dark:text-gray-300">
+                <p className="text-lg leading-relaxed">
+                  Quick credibility, zero drama. We spin up sites + funnels in days so your leads don’t wait.
+                  <span className="block text-base text-gray-600 dark:text-gray-400">बस सेवा संभालिए — वेबसाइट, कॉपी, funnel की भागदौड़ हम पर छोड़िए.</span>
+                </p>
+                <ul className="space-y-2 text-sm">
+                  {icpQuickFacts.map(fact => (
+                    <li key={fact} className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-[#FF2B2B] flex-shrink-0 mt-0.5" />
+                      <span>{fact}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-3xl border border-dashed border-[#FF2B2B]/30 bg-[#FF2B2B]/5 px-5 py-4 text-sm text-[#FF2B2B] dark:text-rose-200">
+                India-first founders, consultants, clinics, ed-tech & retail teams को हमारा pay-after model भरोसा देता है.
               </div>
             </div>
             <ul className="grid gap-5 sm:grid-cols-2">
-              {icpHighlights.map(({ icon: Icon, title, description }) => (
+              {icpHighlights.map(({ icon: Icon, title, description, descriptionHi }) => (
                 <li key={title} className="group flex flex-col gap-3 rounded-2xl border border-gray-200 bg-white/70 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/80">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FF2B2B]/10 text-[#FF2B2B] group-hover:bg-[#FF2B2B]/20">
                     <Icon className="h-5 w-5" />
                   </span>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{description}</p>
+                  <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
+                    {description}
+                    {descriptionHi && (
+                      <span className="mt-1 block text-xs text-gray-500 dark:text-gray-400">{descriptionHi}</span>
+                    )}
+                  </p>
                 </li>
               ))}
             </ul>
@@ -743,80 +802,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Before/After Snippets */}
-      <section className="py-20 bg-white dark:bg-neutral-950 transition-colors">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <div className="max-w-3xl space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white pb-1">Before &amp; after snapshots</h2>
-              <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">Real micro-transformations that help clients look bigger than their budget.</p>
-            </div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">Each go-live includes copy, design, lead funnels, and support.</div>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {storySnippets.map(snippet => (
-              <div key={snippet.title} className="group flex h-full flex-col gap-5 rounded-3xl border border-gray-200 bg-white/90 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/85">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{snippet.title}</h3>
-                <div className="grid flex-1 grid-rows-2 gap-4">
-                  <div className="flex flex-col justify-between rounded-2xl border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-600 dark:border-neutral-700 dark:bg-neutral-900/70 dark:text-gray-300">
-                    <span className="font-semibold uppercase tracking-[0.3em] text-gray-400 dark:text-gray-500">Before</span>
-                    <p className="mt-2 leading-relaxed">{snippet.before}</p>
-                  </div>
-                  <div className="flex flex-col justify-between rounded-2xl border border-[#FF2B2B]/40 bg-[#FF2B2B]/10 p-4 text-sm text-gray-800 dark:border-rose-300/40 dark:bg-rose-300/15 dark:text-white">
-                    <span className="font-semibold uppercase tracking-[0.3em] text-[#FF2B2B]">After</span>
-                    <p className="mt-2 leading-relaxed">{snippet.after}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services */}
   <section id="services" className="py-20 bg-gray-50 dark:bg-neutral-900 transition-colors">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-16">Our Services</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-neutral-950 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-transparent dark:border-neutral-800">
-              <div className="w-16 h-16 bg-[#FF2B2B] rounded-lg flex items-center justify-center mb-6"><Globe className="w-8 h-8 text-white" /></div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Websites</h3>
-              <p className="text-[#FF2B2B] font-bold text-lg mb-4">Starting at ₹499</p>
-              <ul className="text-gray-700 dark:text-gray-300 space-y-2 mb-6">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF2B2B]" /> One-page professional website</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF2B2B]" /> Mobile responsive</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF2B2B]" /> Pay after delivery</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF2B2B]" /> Add-ons: hosting, domain, upgrades</li>
-              </ul>
-              <button onClick={() => navigate('/services/websites')} className="w-full bg-[#FF2B2B] text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors">Get Started</button>
-            </div>
-            <div className="bg-white dark:bg-neutral-950 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-transparent dark:border-neutral-800">
-              <div className="w-16 h-16 bg-[#FF2B2B] rounded-lg flex items-center justify-center mb-6"><Share2 className="w-8 h-8 text-white" /></div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Social Media Management</h3>
-              <p className="text-[#FF2B2B] font-bold text-lg mb-4">Starting ₹1,000/month</p>
-              <div className="text-gray-700 dark:text-gray-300 mb-6">
-                <p className="font-semibold mb-2">Packages:</p>
-                <ul className="space-y-1">
-                  <li>• Starter</li>
-                  <li>• Growth</li>
-                  <li>• Premium</li>
-                  <li>• Elite <span className="text-[#FF2B2B]">(includes free branding kit)</span></li>
+          <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <span className="inline-flex items-center justify-center rounded-full bg-white px-5 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-gray-600 dark:bg-neutral-800 dark:text-neutral-300">Service Stack</span>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white">Everything you need to look legit</h2>
+            <p className="text-gray-600 dark:text-gray-300">Web, social, or branding — every engagement ships with pay-after confidence and measurable impact.</p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            {serviceCards.map(({ icon: Icon, title, description, price, priceLabel, badge, features, ctaLabel, ctaPath, highlight }) => (
+              <div
+                key={title}
+                className={`relative flex h-full flex-col gap-6 rounded-3xl border p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-2xl ${highlight ? 'border-transparent bg-gradient-to-br from-[#0F172A] via-[#111827] to-[#1F2937] text-white' : 'border-gray-200 bg-white dark:border-neutral-800 dark:bg-neutral-900/90'}`}
+              >
+                {badge && (
+                  <span className={`absolute -top-3 left-6 inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] shadow ${highlight ? 'bg-white/15 text-white border border-white/20' : 'bg-[#FF2B2B]/10 text-[#FF2B2B]'}`}>
+                    {badge}
+                  </span>
+                )}
+                <div className="flex items-start gap-4">
+                  <span className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${highlight ? 'bg-white/10 text-white' : 'bg-[#FF2B2B]/10 text-[#FF2B2B]'}`}>
+                    <Icon className="h-6 w-6" />
+                  </span>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{title}</h3>
+                    <p className={`mt-2 text-sm ${highlight ? 'text-white/80' : 'text-gray-600 dark:text-gray-300'}`}>{description}</p>
+                  </div>
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className={`text-3xl font-black ${highlight ? 'text-white' : 'text-gray-900 dark:text-white'}`}>{price}</span>
+                  <span className={`text-sm font-medium ${highlight ? 'text-white/70' : 'text-gray-500 dark:text-gray-400'}`}>{priceLabel}</span>
+                </div>
+                <ul className={`space-y-2 text-sm ${highlight ? 'text-white/85' : 'text-gray-700 dark:text-gray-200'}`}>
+                  {features.map(feature => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <CheckCircle className={`h-4 w-4 flex-shrink-0 ${highlight ? 'text-white/80' : 'text-[#FF2B2B]'}`} />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
                 </ul>
+                <button
+                  onClick={() => navigate(ctaPath)}
+                  className={`inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold transition ${highlight ? 'bg-white text-gray-900 hover:bg-slate-100' : 'bg-[#FF2B2B] text-white hover:bg-red-600'}`}
+                >
+                  {ctaLabel}
+                  <ArrowRight className="h-4 w-4" />
+                </button>
               </div>
-              <button onClick={() => navigate('/services/social-media')} className="w-full bg-[#FF2B2B] text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors">View Plans</button>
-            </div>
-            <div className="bg-white dark:bg-neutral-950 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-transparent dark:border-neutral-800">
-              <div className="w-16 h-16 bg-[#FF2B2B] rounded-lg flex items-center justify-center mb-6"><Palette className="w-8 h-8 text-white" /></div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Branding & Identity Kits</h3>
-              <p className="text-[#FF2B2B] font-bold text-lg mb-4">Starting ₹899</p>
-              <ul className="text-gray-700 dark:text-gray-300 space-y-2 mb-6">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF2B2B]" /> Logo design</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF2B2B]" /> Color palette & fonts</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF2B2B]" /> Style guide</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF2B2B]" /> Templates & business cards</li>
-              </ul>
-              <button onClick={() => navigate('/services/branding')} className="w-full bg-[#FF2B2B] text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors">Get Branded</button>
-            </div>
+            ))}
           </div>
         </div>
       </section>
