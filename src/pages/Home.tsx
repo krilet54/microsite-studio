@@ -209,6 +209,45 @@ function SeamlessHeroVideo() {
 export default function Home() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isProjectSubmitting, setIsProjectSubmitting] = useState(false);
+  const [projectFeedback, setProjectFeedback] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+
+  const handleProjectSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (isProjectSubmitting) return;
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const phoneValue = formData.get('phone')?.toString().trim();
+
+    if (phoneValue && !/^\d{10}$/.test(phoneValue)) {
+      setProjectFeedback({ type: 'error', message: 'Please enter a valid 10-digit phone number.' });
+      return;
+    }
+    formData.append('_cc', 'skumarnaveen1442@gmail.com');
+    formData.append('_subject', 'New project inquiry from Microsite Studio');
+    formData.append('_captcha', 'false');
+    formData.append('_template', 'box');
+
+    try {
+      setIsProjectSubmitting(true);
+      const response = await fetch('https://formsubmit.co/ajax/kirpesh54@gmail.com', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json'
+        },
+        body: formData
+      });
+
+      if (!response.ok) throw new Error('Failed to send');
+      form.reset();
+      setProjectFeedback({ type: 'success', message: 'Thanks! We will reach out to you within 24 hours.' });
+    } catch (error) {
+      console.error('Contact form submission failed', error);
+      setProjectFeedback({ type: 'error', message: 'Something went wrong. Please try again or WhatsApp us directly.' });
+    } finally {
+      setIsProjectSubmitting(false);
+    }
+  };
   const faqSchema = useMemo(() => ({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -1044,19 +1083,46 @@ export default function Home() {
             </div>
             <div className="bg-gray-50 dark:bg-neutral-900 p-8 rounded-xl transition-colors">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Start Your Project</h3>
-              <form className="space-y-4">
-                <input type="text" placeholder="Your Name" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]" />
-                <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]" />
-                <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]" />
-                <select className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]">
-                  <option>Select Service</option>
-                  <option>Website (₹499)</option>
-                  <option>Social Media Management</option>
-                  <option>Branding & Identity</option>
-                  <option>Complete Package</option>
+              <form
+                className="space-y-4"
+                action="https://formsubmit.co/ajax/kirpesh54@gmail.com"
+                method="POST"
+                onSubmit={handleProjectSubmit}
+              >
+                <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+                <input type="text" name="name" required placeholder="Your Name" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]" />
+                <input type="email" name="email" required placeholder="Email Address" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]" />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  inputMode="numeric"
+                  pattern="\d{10}"
+                  maxLength={10}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]"
+                />
+                <select name="service" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]">
+                  <option value="">Select Service</option>
+                  <option value="Website (₹499)">Website (₹499)</option>
+                  <option value="Social Media Management">Social Media Management</option>
+                  <option value="Branding & Identity">Branding & Identity</option>
+                  <option value="Complete Package">Complete Package</option>
                 </select>
-                <textarea rows={4} placeholder="Tell us about your business..." className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]" />
-                <button className="w-full bg-[#FF2B2B] text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors">Send Message</button>
+                <textarea name="message" rows={4} placeholder="Tell us about your business..." className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]" />
+                {projectFeedback && (
+                  <div
+                    className={`rounded-xl border px-4 py-3 text-sm font-medium transition-colors ${
+                      projectFeedback.type === 'success'
+                        ? 'bg-[#FF2B2B]/20 border-[#FF2B2B]/40 text-white'
+                        : 'bg-red-600/20 border-red-500/40 text-red-100'
+                    }`}
+                  >
+                    {projectFeedback.message}
+                  </div>
+                )}
+                <button type="submit" disabled={isProjectSubmitting} className="w-full bg-[#FF2B2B] text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
+                  {isProjectSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
               </form>
             </div>
           </div>

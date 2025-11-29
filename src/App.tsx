@@ -16,6 +16,7 @@ import AppLayout from './components/AppLayout';
 import Articles from './pages/Articles';
 import AffordableBusinessWebsites from './pages/articles/AffordableWebsitesUnder1000';
 import TopWebsiteMakersIndia2025 from './pages/articles/TopWebsiteMakersIndia2025';
+import GotClient from './pages/GotClient';
 
 // Breadcrumbs JSON-LD component
 const BreadcrumbsSchema: React.FC = () => {
@@ -79,6 +80,7 @@ function App() {
             <Route path="/articles" element={<Articles />} />
             <Route path="/articles/affordable-websites-under-1000" element={<AffordableBusinessWebsites />} />
             <Route path="/articles/top-website-makers-india-2025" element={<TopWebsiteMakersIndia2025 />} />
+            <Route path="/got-client" element={<GotClient />} />
           </Route>
         </Routes>
       </OrderProvider>

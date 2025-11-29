@@ -119,6 +119,12 @@ export default function Navbar() {
             >
               <span>Get Started</span>
             </button>
+            <Link
+              to="/got-client"
+              className="border border-white/20 text-white px-5 py-2 rounded-lg font-semibold hover:bg-white/10 active:scale-[0.97] transition-all"
+            >
+              Got a Client?
+            </Link>
             {/* Theme toggle removed */}
           </div>
           
@@ -167,6 +173,13 @@ export default function Navbar() {
                 >
                   Get Started
                 </button>
+                <Link
+                  to="/got-client"
+                  onClick={closeMobile}
+                  className="border border-white/20 text-white w-full text-center py-2.5 rounded-lg font-semibold text-sm hover:bg-white/10 transition-colors"
+                >
+                  Got a Client?
+                </Link>
               </>
             );
           })()}

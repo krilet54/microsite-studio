@@ -139,3 +139,30 @@
 		animation: none;
 	}
 }
+
+/* Affiliate hero gradient animation */
+@keyframes affiliate-gradient-drift {
+	0% { transform: translate3d(-6%, -4%, 0) scale(1); }
+	50% { transform: translate3d(6%, 4%, 0) scale(1.1); }
+	100% { transform: translate3d(-6%, -4%, 0) scale(1); }
+}
+
+.affiliate-hero-gradient {
+	position: absolute;
+	inset: -30%;
+	background:
+		radial-gradient(circle at 12% 28%, rgba(255,115,115,0.9), transparent 60%),
+		radial-gradient(circle at 78% 18%, rgba(255,40,40,0.75), transparent 55%),
+		radial-gradient(circle at 50% 80%, rgba(255,34,87,0.45), transparent 65%),
+		radial-gradient(circle at 60% 65%, rgba(12,12,12,0.95), rgba(0,0,0,0.98)),
+		linear-gradient(135deg, rgba(255,42,42,0.35), rgba(2,2,23,0.95));
+	filter: blur(32px) saturate(115%);
+	opacity: 1;
+	mix-blend-mode: lighten;
+	pointer-events: none;
+	animation: affiliate-gradient-drift 12s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.affiliate-hero-gradient { animation: none; }
+}
