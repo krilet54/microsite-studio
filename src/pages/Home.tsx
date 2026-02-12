@@ -1077,9 +1077,32 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-16 heading-shimmer">Get In Touch</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="flex items-center gap-4"><div className="w-12 h-12 bg-[#FF2B2B] rounded-lg flex items-center justify-center"><MessageCircle className="w-6 h-6 text-white" /></div><div><h3 className="font-semibold text-gray-900 dark:text-white">WhatsApp</h3><p className="text-gray-600 dark:text-gray-400">Quick responses on WhatsApp</p></div></div>
-              <div className="flex items-center gap-4"><div className="w-12 h-12 bg-[#FF2B2B] rounded-lg flex items-center justify-center"><Phone className="w-6 h-6 text-white" /></div><div><h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3><p className="text-gray-600 dark:text-gray-400">Call us for immediate assistance</p></div></div>
-              <div className="flex items-center gap-4"><div className="w-12 h-12 bg-[#FF2B2B] rounded-lg flex items-center justify-center"><Mail className="w-6 h-6 text-white" /></div><div><h3 className="font-semibold text-gray-900 dark:text-white">Email</h3><p className="text-gray-600 dark:text-gray-400">Send us your requirements</p></div></div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-[#FF2B2B] rounded-lg flex items-center justify-center"><MessageCircle className="w-6 h-6 text-white" /></div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">WhatsApp</h3>
+                  <p className="text-gray-600 dark:text-gray-400">Quick responses on WhatsApp</p>
+                  <p className="mt-2"><a href="https://wa.me/919060868026" target="_blank" rel="noopener noreferrer" className="text-[#FF2B2B] font-medium">+91-9060868026</a></p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-[#FF2B2B] rounded-lg flex items-center justify-center"><Phone className="w-6 h-6 text-white" /></div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3>
+                  <p className="text-gray-600 dark:text-gray-400">Call us for immediate assistance</p>
+                  <p className="mt-2 text-gray-900 dark:text-gray-100">
+                    <a href="tel:+919060868026" className="text-[#FF2B2B] font-medium mr-4">+91-9060868026</a>
+                    <a href="tel:+919873943222" className="text-[#FF2B2B] font-medium">+91-9873943222</a>
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-[#FF2B2B] rounded-lg flex items-center justify-center"><Mail className="w-6 h-6 text-white" /></div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
+                  <p className="text-gray-600 dark:text-gray-400">Send us your requirements</p>
+                </div>
+              </div>
             </div>
             <div className="bg-gray-50 dark:bg-neutral-900 p-8 rounded-xl transition-colors">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Start Your Project</h3>
