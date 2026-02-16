@@ -128,7 +128,7 @@ export default function Plans() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Business Website</h3>
               </div>
-              <div className="text-4xl font-black text-gray-900 dark:text-white mb-6">₹3,000–₹5,000</div>
+              <div className="text-4xl font-black text-gray-900 dark:text-white mb-6">starts from ₹3,000</div>
               <ul className="text-gray-700 dark:text-gray-300 space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-[#FF2B2B] flex-shrink-0" />
@@ -167,7 +167,7 @@ export default function Plans() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white">E-commerce Website</h3>
               </div>
-              <div className="text-4xl font-black text-gray-900 dark:text-white mb-6">₹8,000–₹15,000+</div>
+              <div className="text-4xl font-black text-gray-900 dark:text-gray-100 mb-6">starts from ₹15,000</div>
               <ul className="text-gray-700 dark:text-gray-300 space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-[#FF2B2B] flex-shrink-0" />
@@ -191,7 +191,7 @@ export default function Plans() {
                 </li>
               </ul>
               <button
-                onClick={() => openWhatsApp('Hi, I would like to enquire about the E-commerce Website plan (₹8,000–₹15,000+).')}
+                onClick={() => openWhatsApp('Hi, I would like to enquire about the E-commerce Website plan (starts from ₹15,000).')}
                 className="w-full border-2 border-[#FF2B2B] text-[#FF2B2B] py-3 rounded-lg font-semibold hover:bg-[#FF2B2B] hover:text-white transition-colors"
               >
                 Enquire Now

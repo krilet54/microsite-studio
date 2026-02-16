@@ -39,7 +39,7 @@ const websitePackages: WebPackage[] = [
     key: 'business',
     title: 'Business Website',
     subtitle: 'Everything in Starter + multi-page credibility',
-    price: 'From ₹3,000',
+    price: 'starts from ₹3,000',
     features: [
       'Up to 5 pages',
       'Custom layout',
@@ -53,7 +53,7 @@ const websitePackages: WebPackage[] = [
     key: 'ecommerce',
     title: 'E-commerce Website',
     subtitle: 'Everything in Starter + online selling capability',
-    price: 'From ₹8,000',
+    price: 'starts from ₹15,000',
     features: [
       'Product & catalog pages',
       'Payment integration',
