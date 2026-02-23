@@ -26,14 +26,14 @@ export default function Portfolio() {
       href: 'https://laviedaviepetocare.vercel.app/',
       alt: 'La Vie Davie Pet Care website screenshot',
       title: 'Pet Care Business Landing Page',
-      modelLabel: 'Delivered under ₹499 model'
+      modelLabel: 'Delivered under ₹999 model'
     },
     {
       img: mock2,
       href: 'https://four-paws-cat-boarding.vercel.app/',
       alt: 'Four Paws Cat Boarding website screenshot',
       title: 'Cat Boarding Service Site',
-      modelLabel: 'Delivered under ₹499 model'
+      modelLabel: 'Delivered under ₹999 model'
     },
     {
       img: mock3,
@@ -56,6 +56,22 @@ export default function Portfolio() {
       href: 'https://alphadrivebusinessexpert.vercel.app/',
       alt: 'AlphaDrive Business Expert legal website placeholder screenshot',
       title: 'Legal Office Website · Starter Model',
+      modelLabel: 'Delivered under Starter model',
+      isPlaceholder: true
+    }
+    ,
+    {
+      img: placeholderScreenshot,
+      href: 'https://ms-rajasthan-marbles-sanitary-and-t-two.vercel.app/',
+      alt: 'MS Rajasthan Marbles & Granite Shop screenshot',
+      title: 'MS Rajasthan · Marbles, Tiles & Granite Shop',
+      modelLabel: 'Delivered under custom model'
+    },
+    {
+      img: placeholderScreenshot,
+      href: 'https://www.sobha-world-city.com/',
+      alt: 'Sobha World City property landing page screenshot',
+      title: 'Sobha World City · Property Landing Page',
       modelLabel: 'Delivered under Starter model',
       isPlaceholder: true
     }
@@ -606,7 +622,7 @@ export default function Portfolio() {
               className="bg-white text-[#FF2B2B] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-[#FF2B2B]"
               aria-label="View website packages"
             >
-              Get a Website for ₹499
+              Get a Website for ₹999
             </button>
             <button
               onClick={() => navigate('/services/social-media')}

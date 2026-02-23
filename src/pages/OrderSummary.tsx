@@ -11,10 +11,10 @@ export default function OrderSummary() {
   useEffect(() => {
     // This page always represents the 499 Website starter package.
     if (!currentOrder) {
-      createOrderDraft('GUEST', { serviceType: 'Website', packageName: '₹499 Starter Website' });
-    } else if (currentOrder.serviceType !== 'Website' || currentOrder.packageName !== '₹499 Starter Website') {
+      createOrderDraft('GUEST', { serviceType: 'Website', packageName: '₹999 Starter Website' });
+    } else if (currentOrder.serviceType !== 'Website' || currentOrder.packageName !== '₹999 Starter Website') {
       // Override any previous different draft (e.g., branding/basic) to reflect this page's canonical package.
-      updateOrder({ serviceType: 'Website', packageName: '₹499 Starter Website' });
+      updateOrder({ serviceType: 'Website', packageName: '₹999 Starter Website' });
     }
   }, [currentOrder, createOrderDraft, updateOrder]);
 
@@ -23,7 +23,7 @@ export default function OrderSummary() {
       <Helmet>
         <title>Starter Website Package | Microsite Studio</title>
         <meta name="robots" content="noindex,nofollow" />
-        <meta name="description" content="Internal step – ₹499 starter website summary. Not intended for indexing." />
+        <meta name="description" content="Internal step – ₹999 starter website summary. Not intended for indexing." />
   <link rel="canonical" href="https://micro-site.studio/order/summary" />
       </Helmet>
       <div className="max-w-4xl mx-auto">
@@ -31,7 +31,7 @@ export default function OrderSummary() {
         <div className="text-center mb-16">
           <div className="flex items-start justify-center gap-2 flex-wrap">
             <h1 className="relative inline-block text-[2.55rem] leading-[1.1] font-extrabold tracking-tight text-white/95">
-              ₹499 Starter Website Package
+              ₹999 Starter Website Package
               <span className="absolute left-1/2 -bottom-3 h-[2px] w-32 -translate-x-1/2 rounded bg-gradient-to-r from-transparent via-[#FF2B2B] to-transparent opacity-70" />
             </h1>
             <span className="relative -mt-1 text-[8px] tracking-wide font-semibold px-2 py-[3px] rounded border border-[#FF2B2B]/45 text-[#FF2B2B] bg-transparent backdrop-blur-sm">

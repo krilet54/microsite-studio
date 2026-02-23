@@ -37,7 +37,7 @@ export default function Plans() {
       '@type': 'OfferCatalog',
       name: 'Core Services',
       itemListElement: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '₹499 Starter Website' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '₹999 Starter Website' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Management (Monthly)' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding & Identity Kit' } }
       ]
@@ -48,7 +48,7 @@ export default function Plans() {
   <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
       <Helmet>
         <title>Plans & Pricing | Microsite Studio</title>
-        <meta name="description" content="Pricing for ₹499 websites, social media management packages, and branding kits. Pay-after-delivery options available." />
+        <meta name="description" content="Pricing for ₹999 websites, social media management packages, and branding kits. Pay-after-delivery options available." />
   <link rel="canonical" href="https://micro-site.studio/plans" />
         <meta property="og:title" content="Plans & Pricing | Microsite Studio" />
         <meta property="og:description" content="Affordable website, social media, and branding packages for small businesses in India." />
@@ -89,7 +89,7 @@ export default function Plans() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Starter Website</h3>
               </div>
-              <div className="text-4xl font-black text-[#FF2B2B] mb-6">₹499</div>
+              <div className="text-4xl font-black text-[#FF2B2B] mb-6">₹999</div>
               <ul className="text-gray-700 dark:text-gray-300 space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-[#FF2B2B] flex-shrink-0" />
@@ -581,7 +581,7 @@ export default function Plans() {
               onClick={() => navigate('/services/websites')}
               className="bg-white text-[#FF2B2B] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
             >
-              Start with ₹499 Website <ArrowRight className="w-5 h-5" />
+              Start with ₹999 Website <ArrowRight className="w-5 h-5" />
             </button>
             <button
               onClick={() => navigate('/services/social-media')}

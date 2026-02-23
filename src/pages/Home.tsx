@@ -453,7 +453,7 @@ export default function Home() {
       icon: Globe,
       title: 'Website Launch Kits',
       description: 'One-page or growth-ready sites built to convert fast.',
-      price: '₹499',
+      price: '₹999',
       priceLabel: 'Starter go-live',
       badge: 'Most booked',
       features: ['Pay-after-delivery promise', 'WhatsApp & lead funnels', 'Hosting + domain guidance'],

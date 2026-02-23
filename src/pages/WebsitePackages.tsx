@@ -18,10 +18,10 @@ interface WebPackage {
 
 const websitePackages: WebPackage[] = [
   {
-    key: 'starter-499',
-    title: '₹499 Starter Website',
-    subtitle: 'Single-page launch presence',
-    price: '₹499',
+  key: 'starter-499',
+  title: '₹999 Starter Website',
+  subtitle: 'Single-page launch presence',
+  price: '₹999',
     highlight: true,
     features: [
       '1-page professional website',
@@ -108,7 +108,7 @@ export default function WebsitePackages() {
   <div className="min-h-screen bg-white dark:bg-neutral-950 pt-20 pb-24 px-6">
       <Helmet>
         <title>Website Packages | Microsite Studio</title>
-        <meta name="description" content="Choose from ₹499 starter, business, e-commerce and custom website packages. Pay after delivery on eligible plans." />
+        <meta name="description" content="Choose from ₹999 starter, business, e-commerce and custom website packages. Pay after delivery on eligible plans." />
   <link rel="canonical" href="https://micro-site.studio/services/websites" />
         <meta property="og:title" content="Website Packages | Microsite Studio" />
         <meta property="og:description" content="Affordable website development: starter, business, e-commerce & custom builds." />

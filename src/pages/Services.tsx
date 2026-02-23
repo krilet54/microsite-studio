@@ -18,7 +18,7 @@ export default function Services() {
     {
       key: 'web',
       title: 'Website Packages',
-      priceHint: 'Starting ₹499',
+      priceHint: 'Starting ₹999',
       desc: 'Fast, mobile-friendly websites built for credibility and conversion—landing pages, business sites, and e‑commerce foundations.',
       bullets: ['Mobile responsive', 'Custom layout', 'SEO ready', 'Fast delivery'],
       icon: <Globe className="w-8 h-8 text-[#FF2B2B]" />,
@@ -165,7 +165,7 @@ export default function Services() {
           <h2 className="text-4xl font-bold leading-tight">Ready to pick a starting point?</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/services/websites" className="bg-white text-[#FF2B2B] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-                Start with ₹499 Website <ArrowRight className="w-5 h-5" />
+                Start with ₹999 Website <ArrowRight className="w-5 h-5" />
               </Link>
               <Link to="/services/social-media" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#FF2B2B] transition-colors">
                 Explore Social Plans
