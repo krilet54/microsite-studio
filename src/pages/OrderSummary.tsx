@@ -9,7 +9,7 @@ export default function OrderSummary() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // This page always represents the 499 Website starter package.
+    // This page always represents the ₹999 website starter package.
     if (!currentOrder) {
       createOrderDraft('GUEST', { serviceType: 'Website', packageName: '₹999 Starter Website' });
     } else if (currentOrder.serviceType !== 'Website' || currentOrder.packageName !== '₹999 Starter Website') {
@@ -97,7 +97,7 @@ export default function OrderSummary() {
         {/* CTA */}
         <div className="text-center">
           <button
-            onClick={() => navigate('/order/details?package=starter499')}
+            onClick={() => navigate('/order/details?package=starter999')}
             className="inline-flex items-center justify-center bg-[#FF2B2B] text-white px-9 py-3.5 rounded-lg font-semibold text-sm tracking-tight hover:brightness-110 hover:scale-[1.015] active:scale-[0.98] transition-all shadow-lg shadow-[#FF2B2B]/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF2B2B] focus:ring-offset-neutral-950 will-change-transform"
           >
             Get Started (No Payment Yet)

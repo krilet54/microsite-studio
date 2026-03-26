@@ -24,7 +24,7 @@ export default function Footer() {
                 <p className="text-[#FF2B2B]/90 text-[10px] font-medium mt-2 tracking-[0.24em] uppercase">Ideas Into Impact</p>
               </div>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">Helping small businesses get online with affordable websites, social media management, and branding solutions.</p>
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">Helping businesses grow online with web engineering, digital marketing, and branding systems.</p>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
@@ -41,8 +41,8 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li><Link to="/services/websites" className="hover:text-white transition-colors">₹499 Websites</Link></li>
-              <li><Link to="/services/social-media" className="hover:text-white transition-colors">Social Media</Link></li>
+              <li><Link to="/services/websites" className="hover:text-white transition-colors">₹999 Websites</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors">Digital Marketing &amp; Growth</Link></li>
               <li><Link to="/services/branding" className="hover:text-white transition-colors">Branding</Link></li>
               <li><Link to="/services" className="hover:text-white transition-colors">All Services</Link></li>
             </ul>

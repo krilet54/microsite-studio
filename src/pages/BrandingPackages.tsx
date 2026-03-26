@@ -190,7 +190,7 @@ export default function BrandingPackages() {
         </div>
         {/* Note */}
         <div className="text-center mt-10 fade-up-on-scroll" style={{animationDelay: '420ms'}}>
-          <p className="text-gray-600 dark:text-gray-400 text-sm"><span className="font-semibold text-[#FF2B2B]">Note:</span> Elite social media clients get Premium Kit free.</p>
+          <p className="text-gray-600 dark:text-gray-400 text-sm"><span className="font-semibold text-[#FF2B2B]">Note:</span> Premium kit includes complete brand asset delivery for launch readiness.</p>
         </div>
         {/* Footer CTA - full width aligned with cards */}
         <div className="mt-20 fade-up-on-scroll" style={{animationDelay: '520ms'}}>

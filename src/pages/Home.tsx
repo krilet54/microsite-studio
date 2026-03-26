@@ -254,7 +254,7 @@ export default function Home() {
     'mainEntity': [
       {
         '@type': 'Question',
-        'name': 'Do I need to pay upfront for the ₹499 website?',
+        'name': 'Do I need to pay upfront for the ₹999 website?',
         'acceptedAnswer': { '@type': 'Answer', 'text': 'No. You only pay after the starter website is delivered and approved.' }
       },
       {
@@ -269,8 +269,8 @@ export default function Home() {
       },
       {
         '@type': 'Question',
-        'name': 'Do you also manage social media and branding?',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. We offer social media management plans and branding & identity kits that integrate with your website growth.' }
+        'name': 'Do you also support digital marketing and branding?',
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. We support digital marketing strategy and branding & identity kits that integrate with your website growth.' }
       }
     ]
   }), []);
@@ -463,14 +463,14 @@ export default function Home() {
     },
     {
       icon: Share2,
-      title: 'Social Media Pods',
-      description: 'Content, scheduling, and reporting that keeps you visible.',
-      price: '₹1,000/mo',
-      priceLabel: 'Managed plans',
+      title: 'Digital Marketing & Growth',
+      description: 'Campaigns, SEO, and content systems built to scale enquiries.',
+      price: 'Custom',
+      priceLabel: 'Growth retainers',
       badge: 'Growth teams',
-      features: ['Calendar + creative + copy', 'Performance dashboards', 'Elite tier adds branding kit'],
-      ctaLabel: 'View social plans',
-      ctaPath: '/services/social-media',
+      features: ['SEO + performance marketing', 'Campaign dashboards', 'Content and funnel optimization'],
+      ctaLabel: 'Explore growth services',
+      ctaPath: '/services',
       highlight: true
     },
     {
@@ -521,8 +521,8 @@ export default function Home() {
       rating: 4.8
     },
     {
-      quote: '“My social media now looks professional and I see more enquiries.”',
-      clientType: 'Social Media Client',
+      quote: '“Their growth campaigns look professional and we now get more qualified enquiries.”',
+      clientType: 'Digital Marketing Client',
       rating: 4.9
     },
     {
@@ -613,18 +613,18 @@ export default function Home() {
   return (
   <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
       <Helmet>
-        <title>Microsite Studio | ₹499 Websites, Social Media & Branding</title>
-        <meta name="description" content="Affordable ₹499 websites, social media management and branding kits for small businesses in India. Pay after delivery on eligible plans." />
+        <title>Microsite Studio | ₹999 Websites, Digital Marketing & Branding</title>
+        <meta name="description" content="Affordable ₹999 websites, digital marketing systems and branding kits for small businesses in India. Pay after delivery on eligible plans." />
   <link rel="canonical" href="https://micro-site.studio/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Microsite Studio" />
-        <meta property="og:title" content="Microsite Studio | ₹499 Websites, Social Media & Branding" />
-        <meta property="og:description" content="Professional one-page websites from ₹499 plus branding & social media services. Pay only after delivery." />
+        <meta property="og:title" content="Microsite Studio | ₹999 Websites, Digital Marketing & Branding" />
+        <meta property="og:description" content="Professional one-page websites from ₹999 plus branding and digital marketing services. Pay only after delivery." />
   <meta property="og:url" content="https://micro-site.studio/" />
   <meta property="og:image" content="/og/home-default.jpg" />
   <meta property="og:image:alt" content="Microsite Studio digital services preview card" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Microsite Studio | ₹499 Websites, Social Media & Branding" />
+        <meta name="twitter:title" content="Microsite Studio | ₹999 Websites, Digital Marketing & Branding" />
         <meta name="twitter:description" content="Affordable websites & digital services. Pay after delivery." />
   <meta name="twitter:image" content="/og/home-default.jpg" />
   <meta name="twitter:image:alt" content="Microsite Studio digital services preview card" />
@@ -1056,16 +1056,16 @@ export default function Home() {
             <button
               onClick={() => navigate('/order/summary')}
               className="bg-white text-[#FF2B2B] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              aria-label="Start your ₹499 website order"
+              aria-label="Start your ₹999 website order"
             >
-              Start Your ₹499 Website
+              Start Your ₹999 Website
             </button>
             <button
-              onClick={() => navigate('/services/social-media')}
+              onClick={() => navigate('/services')}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#FF2B2B] transition-colors"
-              aria-label="Go to social media management plans"
+              aria-label="Explore digital marketing services"
             >
-              Get Social Media Managed
+              Explore Growth Services
             </button>
           </div>
         </div>
@@ -1126,8 +1126,8 @@ export default function Home() {
                 />
                 <select name="service" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]">
                   <option value="">Select Service</option>
-                  <option value="Website (₹499)">Website (₹499)</option>
-                  <option value="Social Media Management">Social Media Management</option>
+                  <option value="Website (₹999)">Website (₹999)</option>
+                  <option value="Digital Marketing & Growth">Digital Marketing & Growth</option>
                   <option value="Branding & Identity">Branding & Identity</option>
                   <option value="Complete Package">Complete Package</option>
                 </select>
@@ -1158,7 +1158,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center">Frequently Asked Questions</h2>
           <div className="grid md:grid-cols-2 gap-8 text-sm text-gray-700 dark:text-gray-300">
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Do I need to pay upfront for the ₹499 website?</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Do I need to pay upfront for the ₹999 website?</h3>
               <p>No. You only pay after we deliver and you approve the starter website.</p>
             </div>
             <div>
@@ -1170,8 +1170,8 @@ export default function Home() {
               <p>Yes—your one‑page build can expand into multi‑page or e‑commerce without a rebuild.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Do you handle branding & social?</h3>
-              <p>Yes. We offer branding kits and social media management that plug into the same growth path.</p>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Do you handle branding & digital marketing?</h3>
+              <p>Yes. We offer branding kits and digital marketing support that plug into the same growth path.</p>
             </div>
           </div>
         </div>

@@ -2,6 +2,30 @@ import { Link } from 'react-router-dom';
 
 const featuredArticles = [
   {
+    title: 'How Microsite Studio Works for Websites',
+    url: '/articles/how-microsite-studio-works-for-websites',
+    thumbnail: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    date: 'Mar 26, 2026',
+    author: 'Microsite Studio',
+    readTime: '6 min read',
+  },
+  {
+    title: 'How Microsite Studio Works for Digital Marketing',
+    url: '/articles/how-microsite-studio-works-for-digital-marketing',
+    thumbnail: 'https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    date: 'Mar 26, 2026',
+    author: 'Microsite Studio',
+    readTime: '6 min read',
+  },
+  {
+    title: 'How Microsite Studio Works for Branding',
+    url: '/articles/how-microsite-studio-works-for-branding',
+    thumbnail: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    date: 'Mar 26, 2026',
+    author: 'Microsite Studio',
+    readTime: '6 min read',
+  },
+  {
     title: 'Affordable Professional Websites Under ₹1000 – Pay on Delivery',
     url: '/articles/affordable-websites-under-1000',
   thumbnail: '/affordable websites under 1000.png',

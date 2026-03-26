@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Globe, Share2, Palette, Target, Layers } from 'lucide-react';
+import { Globe, Palette, Target, Layers } from 'lucide-react';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
 import aboutLogo from '../assets/micrositeaboutlogo.png';
 import kmcLogo from '../assets/logokmc.png';
@@ -16,12 +16,6 @@ export default function About() {
       title: 'Website Development',
       desc: 'Modern, responsive, conversion-focused sites for brands & professionals.',
       link: '/services/websites'
-    },
-    {
-      icon: <Share2 className="w-8 h-8 text-[#FF2B2B]" />,
-      title: 'Social Media Management',
-      desc: 'Content, engagement and strategy to grow visibility & trust.',
-      link: '/services/social-media'
     },
     {
       icon: <Palette className="w-8 h-8 text-[#FF2B2B]" />,
@@ -64,10 +58,10 @@ export default function About() {
     <div className="min-h-screen bg-neutral-950 text-white pt-24">
       <Helmet>
         <title>About Us | Microsite Studio</title>
-        <meta name="description" content="Learn about Microsite Studio – affordable websites, social media and branding solutions helping Indian small businesses grow online." />
+        <meta name="description" content="Learn about Microsite Studio – scalable web engineering, digital marketing, and branding systems for growing businesses." />
   <link rel="canonical" href="https://micro-site.studio/about" />
         <meta property="og:title" content="About Microsite Studio" />
-        <meta property="og:description" content="Affordable digital services for small businesses: websites, social media, branding." />
+        <meta property="og:description" content="Scalable digital services for small businesses: web engineering, digital marketing, and branding." />
   <meta property="og:url" content="https://micro-site.studio/about" />
   <meta property="og:image" content="https://micro-site.studio/micrositefavicon.png" />
       </Helmet>

@@ -15,7 +15,7 @@ export default function OrderDetails() {
 
     // Map known package query params to service/package pairs (extensible for future plans)
     const packageMap: Record<string, { serviceType: string; packageName: string }> = {
-      starter499: { serviceType: 'Website', packageName: '₹999 Starter Website' }
+      starter999: { serviceType: 'Website', packageName: '₹999 Starter Website' }
       // Add more mappings here as needed e.g. social-starter, branding-basic etc.
     };
 
@@ -235,7 +235,7 @@ export default function OrderDetails() {
           <div className="pt-2 border-t border-dashed border-neutral-300 dark:border-neutral-700">
             <h2 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-4 tracking-wide">Optional Add-Ons</h2>
             <div className="grid sm:grid-cols-2 gap-4 text-sm">
-              {['Branding & Identity Kit','Social Media Management','SEO Optimisation','Additional Web Pages','Logo Redesign','Business Email Setup','Marketing Templates'].map(item => (
+              {['Branding & Identity Kit','Digital Marketing Strategy','SEO Optimisation','Additional Web Pages','Logo Redesign','Business Email Setup','Marketing Templates'].map(item => (
                 <label key={item} className="flex items-start gap-2 cursor-pointer group">
                   <input type="checkbox" checked={addOnChecked(item)} onChange={() => toggleAddOn(item)} className="mt-1 w-4 h-4 accent-[#FF2B2B]" />
                   <span className="text-gray-700 dark:text-gray-300 group-hover:text-white transition-colors">{item}</span>

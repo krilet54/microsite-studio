@@ -9,13 +9,15 @@ import OrderDetails from './pages/OrderDetails';
 import OrderSuccess from './pages/OrderSuccess';
 import { OrderProvider } from './context/OrderContext';
 import WebsitePackages from './pages/WebsitePackages';
-import SocialMediaPlans from './pages/SocialMediaPlans';
 import BrandingPackages from './pages/BrandingPackages';
 import Services from './pages/Services';
 import AppLayout from './components/AppLayout';
 import Articles from './pages/Articles';
 import AffordableBusinessWebsites from './pages/articles/AffordableWebsitesUnder1000';
 import TopWebsiteMakersIndia2025 from './pages/articles/TopWebsiteMakersIndia2025';
+import HowMicrositeStudioWorksWebsites from './pages/articles/HowMicrositeStudioWorksWebsites';
+import HowMicrositeStudioWorksDigitalMarketing from './pages/articles/HowMicrositeStudioWorksDigitalMarketing';
+import HowMicrositeStudioWorksBranding from './pages/articles/HowMicrositeStudioWorksBranding';
 import GotClient from './pages/GotClient';
 
 // Breadcrumbs JSON-LD component
@@ -73,13 +75,15 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/order/summary" element={<OrderSummary />} />
             <Route path="/services/websites" element={<WebsitePackages />} />
-            <Route path="/services/social-media" element={<SocialMediaPlans />} />
             <Route path="/services/branding" element={<BrandingPackages />} />
             <Route path="/order/details" element={<OrderDetails />} />
             <Route path="/order/success" element={<OrderSuccess />} />
             <Route path="/articles" element={<Articles />} />
             <Route path="/articles/affordable-websites-under-1000" element={<AffordableBusinessWebsites />} />
             <Route path="/articles/top-website-makers-india-2025" element={<TopWebsiteMakersIndia2025 />} />
+            <Route path="/articles/how-microsite-studio-works-for-websites" element={<HowMicrositeStudioWorksWebsites />} />
+            <Route path="/articles/how-microsite-studio-works-for-digital-marketing" element={<HowMicrositeStudioWorksDigitalMarketing />} />
+            <Route path="/articles/how-microsite-studio-works-for-branding" element={<HowMicrositeStudioWorksBranding />} />
             <Route path="/got-client" element={<GotClient />} />
           </Route>
         </Routes>

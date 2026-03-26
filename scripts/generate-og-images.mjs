@@ -26,7 +26,7 @@ const brand = {
 const cards = [
   { file: 'home-default.jpg', title: 'Build & Launch Faster', subtitle: 'Modern Web & Brand Services' },
   { file: 'website-packages.jpg', title: 'Website Packages', subtitle: 'Fast. Responsive. SEO Ready.' },
-  { file: 'social-media-plans.jpg', title: 'Social Media Plans', subtitle: 'Grow Audience Consistently' },
+  { file: 'digital-marketing.jpg', title: 'Digital Marketing & Growth', subtitle: 'Traffic. Leads. Revenue.' },
   { file: 'branding-kits.jpg', title: 'Branding Kits', subtitle: 'Cohesive Visual Identity' },
   { file: 'plans.jpg', title: 'Pricing & Plans', subtitle: 'Transparent. Flexible. Scalable.' }
 ];

@@ -14,10 +14,15 @@ const routes = [
   '/plans',
   '/services',
   '/services/websites',
-  '/services/social-media',
   '/services/branding',
   '/portfolio',
-  '/about'
+  '/about',
+  '/articles',
+  '/articles/affordable-websites-under-1000',
+  '/articles/top-website-makers-india-2025',
+  '/articles/how-microsite-studio-works-for-websites',
+  '/articles/how-microsite-studio-works-for-digital-marketing',
+  '/articles/how-microsite-studio-works-for-branding'
 ];
 
 const now = new Date().toISOString();

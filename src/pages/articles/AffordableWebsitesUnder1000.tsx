@@ -15,17 +15,17 @@ export default function AffordableBusinessWebsites() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 py-16 px-6">
       <Helmet>
-        <title>Get a Professional Website in India for ₹499 – No Upfront Payment | Microsite Studio</title>
-        <meta name="description" content="Get a professional website for ₹499 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
+          <title>Get a Professional Website in India for ₹999 – No Upfront Payment | Microsite Studio</title>
+          <meta name="description" content="Get a professional website for ₹999 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
   <link rel="canonical" href="https://micro-site.studio/articles/affordable-websites-under-1000" />
-        <meta property="og:title" content="Get a Professional Website in India for ₹499 – No Upfront Payment" />
-        <meta property="og:description" content="Get a professional website for ₹499 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
+          <meta property="og:title" content="Get a Professional Website in India for ₹999 – No Upfront Payment" />
+          <meta property="og:description" content="Get a professional website for ₹999 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
         <meta property="og:type" content="article" />
   <meta property="og:url" content="https://micro-site.studio/articles/affordable-websites-under-1000" />
   <meta property="og:image" content="https://micro-site.studio/microsite-logo-512.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Get a Professional Website in India for ₹499 – No Upfront Payment" />
-        <meta name="twitter:description" content="Get a professional website for ₹499 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
+        <meta name="twitter:title" content="Get a Professional Website in India for ₹999 – No Upfront Payment" />
+        <meta name="twitter:description" content="Get a professional website for ₹999 in India. No upfront payment, SEO included, fast delivery. Perfect for small businesses. Pay after launch!" />
   <meta name="twitter:image" content="https://micro-site.studio/microsite-logo-512.png" />
         <script type="application/ld+json">{`
           {
@@ -34,10 +34,10 @@ export default function AffordableBusinessWebsites() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Can I get a website for ₹499 in India?",
+                "name": "Can I get a website for ₹999 in India?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes! Microsite Studio offers professional websites for ₹499, designed for small businesses in India."
+                  "text": "Yes! Microsite Studio offers professional websites for ₹999, designed for small businesses in India."
                 }
               },
               {
@@ -76,17 +76,17 @@ export default function AffordableBusinessWebsites() {
             <div className="w-full h-56 md:h-72 rounded-xl overflow-hidden mb-6 bg-gray-100 dark:bg-neutral-900 flex items-center justify-center">
               <img src="/affordable websites under 1000.png" alt="Affordable business website homepage screenshot for pet care" className="w-full h-full object-cover" />
             </div>
-            <h1 className="text-3xl font-black text-[#FF2B2B] mb-2">Get a Professional Website in India for ₹499 – No Upfront Payment</h1>
+            <h1 className="text-3xl font-black text-[#FF2B2B] mb-2">Get a Professional Website in India for ₹999 – No Upfront Payment</h1>
             <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400 mb-4">
               <span>By Microsite Studio</span>
               <span>Oct 12, 2025</span>
               <span>4 min read</span>
             </div>
             <p className="text-gray-700 dark:text-gray-300 text-lg mb-2">
-              <strong>Looking for a cheap website for your small business in India?</strong> Microsite Studio delivers high-quality, SEO-optimized websites for just ₹499. No upfront payment, no hidden fees. Get online fast and grow your business!
+              <strong>Looking for a cheap website for your small business in India?</strong> Microsite Studio delivers high-quality, SEO-optimized websites for just ₹999. No upfront payment, no hidden fees. Get online fast and grow your business!
             </p>
             <p className="text-gray-700 dark:text-gray-300 text-sm">
-              <Link to="/plans" className="text-[#FF2B2B] underline hover:text-red-600">See our ₹499 Website Plans</Link> |{' '}
+              <Link to="/plans" className="text-[#FF2B2B] underline hover:text-red-600">See our ₹999 Website Plans</Link> |{' '}
               <Link to="/contact" className="text-[#FF2B2B] underline hover:text-red-600">Contact Us</Link> |{' '}
               <Link to="/about" className="text-[#FF2B2B] underline hover:text-red-600">About Microsite Studio</Link>
             </p>
@@ -99,14 +99,14 @@ export default function AffordableBusinessWebsites() {
           <section id="why" className="mb-8">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Why Choose Microsite Studio for Affordable Business Websites?</h2>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
-              <li><strong>Affordable Pricing:</strong> Get a complete, functional website for just ₹499.</li>
+              <li><strong>Affordable Pricing:</strong> Get a complete, functional website for just ₹999.</li>
               <li><strong>Pay on Delivery:</strong> No upfront payment; pay only after your website is ready and approved.</li>
               <li><strong>Transparent Costs:</strong> No hidden charges, no surprise fees.</li>
               <li><strong>SEO-Optimized:</strong> On-page SEO included to help your business rank on Google.</li>
             </ul>
           </section>
           <section id="package" className="mb-8">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">What’s Included in Our ₹499 Website Package?</h2>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">What’s Included in Our ₹999 Website Package?</h2>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
               <li><strong>Custom Design:</strong> Tailored to your brand and business needs.</li>
               <li><strong>Responsive Layout:</strong> Optimized for desktop, tablet, and mobile.</li>
@@ -166,7 +166,7 @@ export default function AffordableBusinessWebsites() {
                 </div>
                 <div className="p-5 space-y-2">
                   <p className="text-sm font-medium text-gray-900 dark:text-gray-100 line-clamp-1">Pet Care Business Landing Page</p>
-                  <p className="text-xs text-[#FF2B2B] font-semibold">Delivered under ₹499 model</p>
+                  <p className="text-xs text-[#FF2B2B] font-semibold">Delivered under ₹999 model</p>
                 </div>
               </a>
               {/* Cat Boarding Service Site */}
@@ -190,7 +190,7 @@ export default function AffordableBusinessWebsites() {
                 </div>
                 <div className="p-5 space-y-2">
                   <p className="text-sm font-medium text-gray-900 dark:text-gray-100 line-clamp-1">Cat Boarding Service Site</p>
-                  <p className="text-xs text-[#FF2B2B] font-semibold">Delivered under ₹499 model</p>
+                  <p className="text-xs text-[#FF2B2B] font-semibold">Delivered under ₹999 model</p>
                 </div>
               </a>
               {/* Spike Point website screenshot */}
@@ -214,7 +214,7 @@ export default function AffordableBusinessWebsites() {
                 </div>
                 <div className="p-5 space-y-2">
                   <p className="text-sm font-medium text-gray-900 dark:text-gray-100 line-clamp-1">Local Utility / Service Page</p>
-                  <p className="text-xs text-[#FF2B2B] font-semibold">Delivered under ₹499 model</p>
+                  <p className="text-xs text-[#FF2B2B] font-semibold">Delivered under ₹999 model</p>
                 </div>
               </a>
             </div>
@@ -224,8 +224,8 @@ export default function AffordableBusinessWebsites() {
               <h2 className="text-2xl font-black text-[#FF2B2B] mb-4">Frequently Asked Questions</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-semibold text-[#FF2B2B]">Can I get a website for ₹499 in India?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">Yes! Microsite Studio offers professional websites for ₹499, designed for small businesses in India.</p>
+                  <h3 className="font-semibold text-[#FF2B2B]">Can I get a website for ₹999 in India?</h3>
+                  <p className="text-gray-700 dark:text-gray-300">Yes! Microsite Studio offers professional websites for ₹999, designed for small businesses in India.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#FF2B2B]">Do I need to pay upfront for the website?</h3>

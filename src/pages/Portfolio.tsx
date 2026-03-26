@@ -7,7 +7,11 @@ import sm2 from '../assets/2.png';
 import sm3 from '../assets/3.png';
 import sm4 from '../assets/4.png';
 import ss4 from '../assets/ss4.png';
-import ss5 from '../assets/ss5.png';
+import nabhasLive from '../assets/portfolio/nabhas-live.jpg';
+import kreviaLive from '../assets/portfolio/krevia-live.jpg';
+import msnBridgeKeysLive from '../assets/portfolio/msnbridgekeys-live.jpg';
+import msRajasthanLive from '../assets/portfolio/msrajasthan-live.jpg';
+import sobhaLive from '../assets/portfolio/sobha-live.jpg';
 import launchTeaser from '../assets/Launch teaser.mp4';
 import seasonalPush from '../assets/Seasonal push.mp4';
 import L1Logo from '../assets/L1.png';
@@ -19,7 +23,6 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Portfolio() {
   const navigate = useNavigate();
-  const placeholderScreenshot = 'https://placehold.co/1200x675/0f172a/ffffff?text=Screenshot+Coming+Soon';
   const websiteProjects = [
     {
       img: mock1,
@@ -52,28 +55,40 @@ export default function Portfolio() {
       isPlaceholder: true
     },
     {
-      img: ss5,
-      href: 'https://alphadrivebusinessexpert.vercel.app/',
-      alt: 'AlphaDrive Business Expert legal website placeholder screenshot',
-      title: 'Legal Office Website · Starter Model',
-      modelLabel: 'Delivered under Starter model',
-      isPlaceholder: true
+      img: nabhasLive,
+      href: 'https://nabhas.co.in/',
+      alt: 'Nabhas website preview',
+      title: 'Nabhas · Business Website',
+      modelLabel: 'Delivered under Website Launch model'
+    },
+    {
+      img: kreviaLive,
+      href: 'https://kreviaagency.vercel.app/index.html',
+      alt: 'Krevia Agency website preview',
+      title: 'Krevia Agency · Portfolio Website',
+      modelLabel: 'Delivered under custom model'
+    },
+    {
+      img: msnBridgeKeysLive,
+      href: 'https://msnbridgekeys.vercel.app/',
+      alt: 'MSN Bridge Keys website preview',
+      title: 'MSN Bridge Keys · Service Website',
+      modelLabel: 'Delivered under Starter model'
     }
     ,
     {
-      img: placeholderScreenshot,
+      img: msRajasthanLive,
       href: 'https://ms-rajasthan-marbles-sanitary-and-t-two.vercel.app/',
       alt: 'MS Rajasthan Marbles & Granite Shop screenshot',
       title: 'MS Rajasthan · Marbles, Tiles & Granite Shop',
       modelLabel: 'Delivered under custom model'
     },
     {
-      img: placeholderScreenshot,
+      img: sobhaLive,
       href: 'https://www.sobha-world-city.com/',
       alt: 'Sobha World City property landing page screenshot',
       title: 'Sobha World City · Property Landing Page',
-      modelLabel: 'Delivered under Starter model',
-      isPlaceholder: true
+      modelLabel: 'Delivered under Starter model'
     }
   ];
   // Social media showcase items
@@ -590,23 +605,23 @@ export default function Portfolio() {
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800">
               <Globe className="w-8 h-8 mx-auto text-[#FF2B2B] mb-3" />
-              <p className="text-3xl font-bold text-gray-900 dark:text-white">10+</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Websites Delivered</p>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white">30+</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Projects Delivered</p>
             </div>
             <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800">
               <Share2 className="w-8 h-8 mx-auto text-[#FF2B2B] mb-3" />
-              <p className="text-3xl font-bold text-gray-900 dark:text-white">Social</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Media Clients Onboarded</p>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white">25+</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Digital Marketing Campaigns Delivered</p>
             </div>
             <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800">
               <Palette className="w-8 h-8 mx-auto text-[#FF2B2B] mb-3" />
-              <p className="text-3xl font-bold text-gray-900 dark:text-white">Brand</p>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white">12+</p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Branding Kits Completed</p>
             </div>
             <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800">
               <CheckCircle className="w-8 h-8 mx-auto text-[#FF2B2B] mb-3" />
-              <p className="text-3xl font-bold text-gray-900 dark:text-white">Trusted</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Pay-after-delivery Model</p>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white">18+</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Websites & Landing Pages Launched</p>
             </div>
           </div>
         </div>
@@ -625,11 +640,11 @@ export default function Portfolio() {
               Get a Website for ₹999
             </button>
             <button
-              onClick={() => navigate('/services/social-media')}
+              onClick={() => navigate('/services')}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#FF2B2B] transition-colors focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-[#FF2B2B]"
-              aria-label="View social media management plans"
+              aria-label="View full services overview"
             >
-              Start Social Media Management
+              Explore Full Service Stack
             </button>
           </div>
         </div>

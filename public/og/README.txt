@@ -1,7 +1,7 @@
 Placeholder directory for Open Graph / Twitter card images (1200x630 recommended). Add optimized .jpg or .png assets here:
 - home-default.jpg
 - website-packages.jpg
-- social-media-plans.jpg
+- digital-marketing.jpg
 - branding-kits.jpg
 - plans.jpg
 

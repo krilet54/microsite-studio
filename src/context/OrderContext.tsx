@@ -7,7 +7,7 @@ export interface WebsiteOrderDetails {
   pocName: string;
   phone: string;
   email: string;
-  serviceType?: string; // Website, Social Media Management, Branding, etc.
+  serviceType?: string; // Website, Digital Marketing, Branding, etc.
   packageName?: string; // Specific plan/package selected
   industry?: string;
   domainPreference?: string;
@@ -77,7 +77,7 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
       email: '',
       // Provide sensible defaults so success page can always show something even if user entered via direct link
       serviceType: initial?.serviceType !== undefined ? initial.serviceType : 'Website',
-      packageName: initial?.packageName !== undefined ? initial.packageName : '₹499 Starter Website',
+      packageName: initial?.packageName !== undefined ? initial.packageName : '₹999 Starter Website',
       addOns: [],
       otherAddOn: '',
       communicationMethod: undefined,

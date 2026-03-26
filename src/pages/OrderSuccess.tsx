@@ -38,7 +38,7 @@ export default function OrderSuccess() {
     doc.text('MICROSITE STUDIO', 40, y); y += lineHeight;
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(11);
-    doc.text('Websites • Branding • Social Media', 40, y); y += lineHeight + 10;
+    doc.text('Websites • Digital Marketing • Branding', 40, y); y += lineHeight + 10;
 
     // Title & meta
     doc.setFontSize(15);

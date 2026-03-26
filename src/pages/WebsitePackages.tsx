@@ -18,7 +18,7 @@ interface WebPackage {
 
 const websitePackages: WebPackage[] = [
   {
-  key: 'starter-499',
+  key: 'starter-999',
   title: '₹999 Starter Website',
   subtitle: 'Single-page launch presence',
   price: '₹999',
@@ -148,7 +148,7 @@ export default function WebsitePackages() {
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF2B2B] text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow">Most Popular</span>
               )}
               <div className="w-16 h-16 rounded-xl bg-[#FF2B2B]/10 text-[#FF2B2B] flex items-center justify-center mb-6">
-                {pkg.key === 'starter-499' && <Globe className="w-8 h-8" />}
+                {pkg.key === 'starter-999' && <Globe className="w-8 h-8" />}
                 {pkg.key === 'business' && <LayoutGrid className="w-8 h-8" />}
                 {pkg.key === 'ecommerce' && <ShoppingCart className="w-8 h-8" />}
                 {pkg.key === 'custom' && <Briefcase className="w-8 h-8" />}

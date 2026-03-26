@@ -23,7 +23,7 @@ import {
   MousePointer,
 } from 'lucide-react';
 
-const serviceOptions = ['Website', 'Branding', 'Social Media', 'Ads', 'Other'];
+const serviceOptions = ['Website', 'Branding', 'Digital Marketing', 'Ads', 'Other'];
 const budgetOptions = ['Below ₹10K', '₹10K - ₹25K', '₹25K - ₹50K', '₹50K - ₹1L', '₹1L+'];
 const steps = [
   {
@@ -307,7 +307,7 @@ export default function GotClient() {
                     <p className="text-xs uppercase tracking-[0.35em] text-white/60 mb-2">Open Roles</p>
                     <ul className="space-y-2 text-sm text-gray-200">
                       <li className="flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-[#FF2B2B]" /> Social Media Intern
+                        <CheckCircle2 className="w-4 h-4 text-[#FF2B2B]" /> Digital Marketing Intern
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-[#FF2B2B]" /> Growth & Strategy Intern

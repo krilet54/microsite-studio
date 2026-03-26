@@ -9,6 +9,36 @@ export default function Articles() {
   // Example articles data
   const articles = [
     {
+      title: 'How Microsite Studio Works for Websites: Process, Timeline, and SEO Setup',
+      url: '/articles/how-microsite-studio-works-for-websites',
+      thumbnail: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      date: 'Mar 26, 2026',
+      author: 'Microsite Studio',
+      readTime: '6 min read',
+      category: 'Websites',
+      description: 'A practical breakdown of the Microsite Studio website function: discovery, design, development, SEO setup, and launch.'
+    },
+    {
+      title: 'How Microsite Studio Works for Digital Marketing: SEO, Ads, and Lead Funnels',
+      url: '/articles/how-microsite-studio-works-for-digital-marketing',
+      thumbnail: 'https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      date: 'Mar 26, 2026',
+      author: 'Microsite Studio',
+      readTime: '6 min read',
+      category: 'Digital Marketing',
+      description: 'Learn how our digital marketing function combines SEO, paid ads, social strategy, and conversion optimization for growth.'
+    },
+    {
+      title: 'How Microsite Studio Works for Branding: Logo, Identity System, and Collateral',
+      url: '/articles/how-microsite-studio-works-for-branding',
+      thumbnail: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      date: 'Mar 26, 2026',
+      author: 'Microsite Studio',
+      readTime: '6 min read',
+      category: 'Branding',
+      description: 'See how the Microsite Studio branding workflow turns positioning into visual identity, templates, and consistent brand assets.'
+    },
+    {
       title: 'Affordable Professional Websites Under ₹1000 – Pay on Delivery',
       url: '/articles/affordable-websites-under-1000',
   thumbnail: '/affordable websites under 1000.png',
@@ -30,7 +60,7 @@ export default function Articles() {
     },
     // Add more articles here
   ];
-  const categories = ['all', 'Websites', 'SEO', 'Branding'];
+  const categories = ['all', 'Websites', 'Digital Marketing', 'Branding'];
   const filtered = articles.filter(a => (category === 'all' || a.category === category) && a.title.toLowerCase().includes(search.toLowerCase()));
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 py-16 px-6">

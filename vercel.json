@@ -17,7 +17,6 @@
   { "source": "/plans", "destination": "/index.html" },
   { "source": "/services", "destination": "/index.html" },
   { "source": "/services/websites", "destination": "/index.html" },
-  { "source": "/services/social-media", "destination": "/index.html" },
   { "source": "/services/branding", "destination": "/index.html" },
   { "source": "/portfolio", "destination": "/index.html" },
   { "source": "/about", "destination": "/index.html" },

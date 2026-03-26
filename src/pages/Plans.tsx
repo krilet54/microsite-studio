@@ -1,6 +1,5 @@
 import { 
   Globe, 
-  Share2, 
   Palette, 
   CheckCircle, 
   Star,
@@ -38,7 +37,7 @@ export default function Plans() {
       name: 'Core Services',
       itemListElement: [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '₹999 Starter Website' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Management (Monthly)' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Digital Marketing & Growth Systems' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding & Identity Kit' } }
       ]
     }
@@ -48,10 +47,10 @@ export default function Plans() {
   <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
       <Helmet>
         <title>Plans & Pricing | Microsite Studio</title>
-        <meta name="description" content="Pricing for ₹999 websites, social media management packages, and branding kits. Pay-after-delivery options available." />
+        <meta name="description" content="Pricing for ₹999 websites, digital marketing growth systems, and branding kits. Pay-after-delivery options available." />
   <link rel="canonical" href="https://micro-site.studio/plans" />
         <meta property="og:title" content="Plans & Pricing | Microsite Studio" />
-        <meta property="og:description" content="Affordable website, social media, and branding packages for small businesses in India." />
+        <meta property="og:description" content="Affordable website, digital marketing, and branding packages for small businesses in India." />
   <meta property="og:url" content="https://micro-site.studio/plans" />
   <meta property="og:image" content="/og/plans.jpg" />
   <meta property="og:image:alt" content="Microsite Studio pricing plans preview card" />
@@ -201,187 +200,45 @@ export default function Plans() {
         </div>
       </section>
 
-    {/* Social Media Management Section */}
-  <section id="social-media" className="py-20 bg-gray-50 dark:bg-neutral-900 transition-colors scroll-mt-24">
+    {/* Digital Marketing & Growth Section */}
+  <section id="digital-marketing" className="py-20 bg-gray-50 dark:bg-neutral-900 transition-colors scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-16">Social Media Management</h2>
-          
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-4">Digital Marketing &amp; Growth</h2>
+          <p className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-14">
+            We build marketing systems that drive traffic, leads, and measurable revenue growth.
+          </p>
+
           <div className="grid md:grid-cols-4 gap-6">
-            {/* Starter Plan */}
             <div className="bg-white dark:bg-neutral-950 p-6 rounded-xl shadow-lg border border-transparent dark:border-neutral-800 transition-colors">
-              <div className="text-center mb-6">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <div className="w-10 h-10 bg-[#FF2B2B] rounded-lg flex items-center justify-center">
-                    <Share2 className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">Starter</h3>
-                </div>
-                <div className="text-3xl font-black text-[#FF2B2B] mb-1">₹1,000</div>
-                <div className="text-gray-600 text-sm">/month</div>
+              <div className="w-10 h-10 bg-[#FF2B2B] rounded-lg flex items-center justify-center mb-4">
+                <Megaphone className="w-5 h-5 text-white" />
               </div>
-              <ul className="text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-sm">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  1–2 posts/week
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Facebook & Instagram
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Basic captions
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Comment replies
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Monthly summary
-                </li>
-              </ul>
-              <button
-                onClick={() => navigate('/services/social-media')}
-                className="w-full bg-[#FF2B2B] text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition-colors text-sm"
-              >
-                Subscribe
-              </button>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Search Marketing</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300">SEO, keyword research &amp; content mapping, Search Engine Marketing.</p>
             </div>
 
-            {/* Growth Plan */}
             <div className="bg-white dark:bg-neutral-950 p-6 rounded-xl shadow-lg border border-transparent dark:border-neutral-800 transition-colors">
-              <div className="text-center mb-6">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <div className="w-10 h-10 bg-[#FF2B2B] rounded-lg flex items-center justify-center">
-                    <BarChart3 className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">Growth</h3>
-                </div>
-                <div className="text-3xl font-black text-[#FF2B2B] mb-1">₹1,999</div>
-                <div className="text-gray-600 text-sm">/month</div>
+              <div className="w-10 h-10 bg-[#FF2B2B] rounded-lg flex items-center justify-center mb-4">
+                <BarChart3 className="w-5 h-5 text-white" />
               </div>
-              <ul className="text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-sm">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  3 posts/week
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Facebook, Instagram, LinkedIn
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Branded graphics
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Hashtag research
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Performance insights
-                </li>
-              </ul>
-              <button
-                onClick={() => navigate('/services/social-media')}
-                className="w-full bg-[#FF2B2B] text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition-colors text-sm"
-              >
-                Subscribe
-              </button>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Performance Marketing</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Google Ads, social media ads, sales funnel design and optimization.</p>
             </div>
 
-            {/* Premium Plan */}
             <div className="bg-white dark:bg-neutral-950 p-6 rounded-xl shadow-lg border border-transparent dark:border-neutral-800 transition-colors">
-              <div className="text-center mb-6">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <div className="w-10 h-10 bg-[#FF2B2B] rounded-lg flex items-center justify-center">
-                    <Camera className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">Premium</h3>
-                </div>
-                <div className="text-3xl font-black text-[#FF2B2B] mb-1">₹2,999</div>
-                <div className="text-gray-600 text-sm">/month</div>
+              <div className="w-10 h-10 bg-[#FF2B2B] rounded-lg flex items-center justify-center mb-4">
+                <Camera className="w-5 h-5 text-white" />
               </div>
-              <ul className="text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-sm">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  4–5 posts/week
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  WhatsApp Business + Meta + LinkedIn
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Stories + reels
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Full engagement support
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Monthly analytics
-                </li>
-              </ul>
-              <button
-                onClick={() => navigate('/services/social-media')}
-                className="w-full bg-[#FF2B2B] text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition-colors text-sm"
-              >
-                Subscribe
-              </button>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Social Media Marketing</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300">A/c setup &amp; management, content strategy &amp; planning, creative design &amp; copywriting.</p>
             </div>
 
-            {/* Elite Plan */}
-            <div className="bg-white dark:bg-neutral-950 p-6 rounded-xl shadow-lg border-2 border-[#FF2B2B] dark:border-[#FF2B2B] relative transition-colors">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-[#FF2B2B] text-white px-3 py-1 rounded-full text-xs font-semibold">
-                  Best Value
-                </span>
+            <div className="bg-white dark:bg-neutral-950 p-6 rounded-xl shadow-lg border border-transparent dark:border-neutral-800 transition-colors">
+              <div className="w-10 h-10 bg-[#FF2B2B] rounded-lg flex items-center justify-center mb-4">
+                <Mail className="w-5 h-5 text-white" />
               </div>
-              <div className="text-center mb-6">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <div className="w-10 h-10 bg-[#FF2B2B] rounded-lg flex items-center justify-center">
-                    <Star className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">Elite</h3>
-                </div>
-                <div className="text-3xl font-black text-[#FF2B2B] mb-1">₹3,999</div>
-                <div className="text-gray-600 text-sm">/month</div>
-              </div>
-              <ul className="text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-sm">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Daily posts
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  All major platforms
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Campaigns + reels + shorts
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Lead follow-ups
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  Strategy call monthly
-                </li>
-                <li className="flex items-center gap-2">
-                  <Star className="w-4 h-4 text-[#FF2B2B] flex-shrink-0" />
-                  <span className="font-semibold text-[#FF2B2B]">FREE Branding Kit</span>
-                </li>
-              </ul>
-              <button
-                onClick={() => navigate('/services/social-media')}
-                className="w-full bg-[#FF2B2B] text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition-colors text-sm"
-              >
-                Subscribe
-              </button>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Content &amp; Media</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Copywriting &amp; content strategy, video and email marketing, creative campaigns.</p>
             </div>
           </div>
         </div>
@@ -506,7 +363,7 @@ export default function Plans() {
           
           <div className="text-center mt-8">
             <p className="text-gray-600 dark:text-gray-400">
-              <span className="font-semibold text-[#FF2B2B]">Note:</span> Elite social media clients get Premium Kit free.
+              <span className="font-semibold text-[#FF2B2B]">Note:</span> Premium branding kits include advanced rollout assets and governance support.
             </p>
           </div>
         </div>
@@ -584,10 +441,10 @@ export default function Plans() {
               Start with ₹999 Website <ArrowRight className="w-5 h-5" />
             </button>
             <button
-              onClick={() => navigate('/services/social-media')}
+              onClick={() => navigate('/services')}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#FF2B2B] transition-colors"
             >
-              Explore Social Media Plans
+              Explore Full Service Stack
             </button>
           </div>
         </div>

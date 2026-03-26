@@ -61,7 +61,6 @@ export default function AppLayout() {
     } else if (pathname.startsWith('/services/')) {
       crumbs.push({ label: 'Services', to: '/services' });
       if (pathname === '/services/websites') crumbs.push({ label: 'Websites' });
-      else if (pathname === '/services/social-media') crumbs.push({ label: 'Social Media' });
       else if (pathname === '/services/branding') crumbs.push({ label: 'Branding' });
     } else if (pathname.startsWith('/order/summary')) {
       // Trail: Home / Services / Websites / Summary
