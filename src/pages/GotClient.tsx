@@ -178,15 +178,40 @@ export default function GotClient() {
     }
   };
 
+  const pageUrl = 'https://micro-site.studio/got-client';
+  const pageTitle = 'Got a Client? Submit Affiliate Lead | Microsite Studio';
+  const pageDescription =
+    'Submit client leads and earn 30% commission with Microsite Studio. Fast affiliate payouts, WhatsApp updates, and transparent tracking.';
+  const pageImage = 'https://micro-site.studio/micrositefavicon.png';
+
+  const affiliatePageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: pageTitle,
+    url: pageUrl,
+    description: pageDescription,
+    inLanguage: 'en-IN',
+  };
+
   return (
     <div className="bg-neutral-950 text-white min-h-screen pt-16 md:pt-0 pb-24">
       <Helmet>
-        <title>Got a Client? Submit Affiliate Lead | Microsite Studio</title>
-        <meta
-          name="description"
-          content="Submit client leads and earn 30% commission with Microsite Studio. Fast affiliate payouts, WhatsApp updates, and transparent tracking."
-        />
-        <link rel="canonical" href="https://micro-site.studio/got-client" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:image" content={pageImage} />
+        <meta property="og:image:alt" content="Microsite Studio affiliate lead submission page" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Microsite Studio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
+        <script type="application/ld+json">{JSON.stringify(affiliatePageSchema)}</script>
       </Helmet>
 
       <section className="pt-8 md:pt-0 pb-24">

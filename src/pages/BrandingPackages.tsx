@@ -86,10 +86,14 @@ export default function BrandingPackages() {
         <meta property="og:title" content="Branding & Identity Kits" />
         <meta property="og:description" content="Logo design, color palette, typography & brand assets packages." />
   <meta property="og:url" content="https://micro-site.studio/services/branding" />
-  <meta property="og:image" content="/og/branding-kits.jpg" />
+      <meta property="og:image" content="https://micro-site.studio/og/branding-kits.jpg" />
   <meta property="og:image:alt" content="Branding & identity kits preview card" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Microsite Studio" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="/og/branding-kits.jpg" />
+      <meta name="twitter:title" content="Branding & Identity Kits | Microsite Studio" />
+      <meta name="twitter:description" content="Affordable logo design, brand identity systems, and visual assets for business growth." />
+      <meta name="twitter:image" content="https://micro-site.studio/og/branding-kits.jpg" />
   <meta name="twitter:image:alt" content="Branding & identity kits preview card" />
         <script type="application/ld+json">{JSON.stringify(brandingSchema)}</script>
       </Helmet>

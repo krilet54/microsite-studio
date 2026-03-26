@@ -52,10 +52,14 @@ export default function Plans() {
         <meta property="og:title" content="Plans & Pricing | Microsite Studio" />
         <meta property="og:description" content="Affordable website, digital marketing, and branding packages for small businesses in India." />
   <meta property="og:url" content="https://micro-site.studio/plans" />
-  <meta property="og:image" content="/og/plans.jpg" />
+      <meta property="og:image" content="https://micro-site.studio/og/plans.jpg" />
   <meta property="og:image:alt" content="Microsite Studio pricing plans preview card" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Microsite Studio" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="/og/plans.jpg" />
+      <meta name="twitter:title" content="Plans & Pricing | Microsite Studio" />
+      <meta name="twitter:description" content="Pricing for ₹999 websites, digital marketing growth systems, and branding kits." />
+      <meta name="twitter:image" content="https://micro-site.studio/og/plans.jpg" />
   <meta name="twitter:image:alt" content="Microsite Studio pricing plans preview card" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>

@@ -62,12 +62,52 @@ export default function Articles() {
   ];
   const categories = ['all', 'Websites', 'Digital Marketing', 'Branding'];
   const filtered = articles.filter(a => (category === 'all' || a.category === category) && a.title.toLowerCase().includes(search.toLowerCase()));
+
+  const pageUrl = 'https://micro-site.studio/articles';
+  const pageTitle = 'Articles | Microsite Studio';
+  const pageDescription =
+    'Read expert articles on website strategy, SEO, digital marketing, and branding systems for small businesses in India.';
+  const pageImage = 'https://micro-site.studio/micrositefavicon.png';
+
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    inLanguage: 'en-IN',
+  };
+
+  const articleListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: articles.map((article, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: article.title,
+      url: `https://micro-site.studio${article.url}`,
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 py-16 px-6">
       <Helmet>
-        <title>Articles | Microsite Studio</title>
-        <meta name="description" content="Read expert articles on affordable websites, branding, and digital solutions for small businesses in India." />
-        <link rel="canonical" href="https://micro-site.studio/articles" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:image" content={pageImage} />
+        <meta property="og:image:alt" content="Microsite Studio article and guide listing" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Microsite Studio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
+        <script type="application/ld+json">{JSON.stringify([collectionSchema, articleListSchema])}</script>
       </Helmet>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
         <main className="flex-1">

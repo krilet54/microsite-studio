@@ -54,16 +54,48 @@ export default function About() {
     }
   ];
 
+  const pageUrl = 'https://micro-site.studio/about';
+  const pageTitle = 'About Us | Microsite Studio';
+  const pageDescription =
+    'Learn about Microsite Studio: scalable web engineering, digital marketing, and branding systems for growing businesses.';
+  const pageImage = 'https://micro-site.studio/micrositefavicon.png';
+
+  const aboutPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: pageTitle,
+    url: pageUrl,
+    description: pageDescription,
+  };
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Microsite Studio',
+    url: 'https://micro-site.studio',
+    logo: pageImage,
+    sameAs: ['https://micro-site.studio'],
+  };
+
   return (
     <div className="min-h-screen bg-neutral-950 text-white pt-24">
       <Helmet>
-        <title>About Us | Microsite Studio</title>
-        <meta name="description" content="Learn about Microsite Studio – scalable web engineering, digital marketing, and branding systems for growing businesses." />
-  <link rel="canonical" href="https://micro-site.studio/about" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href={pageUrl} />
         <meta property="og:title" content="About Microsite Studio" />
         <meta property="og:description" content="Scalable digital services for small businesses: web engineering, digital marketing, and branding." />
-  <meta property="og:url" content="https://micro-site.studio/about" />
-  <meta property="og:image" content="https://micro-site.studio/micrositefavicon.png" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:image" content={pageImage} />
+        <meta property="og:image:alt" content="Microsite Studio team and company profile" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Microsite Studio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
+        <script type="application/ld+json">{JSON.stringify([aboutPageSchema, organizationSchema])}</script>
       </Helmet>
       {/* HERO */}
       <section className="relative overflow-hidden py-24 fade-up-on-scroll">

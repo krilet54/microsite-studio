@@ -16,22 +16,79 @@ import { Helmet } from 'react-helmet-async';
 const sectionNav = ['Overview', 'Services', 'Our Work', 'Why Us'];
 
 export default function Services() {
+  const pageUrl = 'https://micro-site.studio/services';
+  const pageTitle = 'Services | Microsite Studio';
+  const pageDescription =
+    'Scalable digital systems for web engineering, digital marketing, and brand identity built for performance and long-term growth.';
+  const pageImage = 'https://micro-site.studio/micrositefavicon.png';
+
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: pageTitle,
+    url: pageUrl,
+    description: pageDescription,
+    inLanguage: 'en-IN',
+  };
+
+  const serviceCatalogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${pageUrl}#services-catalog`,
+    name: 'Microsite Studio Services',
+    serviceType: 'Web Engineering, Digital Marketing & Brand Strategy',
+    provider: {
+      '@type': 'Organization',
+      name: 'Microsite Studio',
+      url: 'https://micro-site.studio',
+    },
+    areaServed: 'IN',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Core Service Lines',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: 'Web Engineering & Infrastructure' },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: 'Digital Marketing & Growth' },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: 'Brand Strategy & Visual Identity' },
+        },
+      ],
+    },
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
       <Helmet>
-        <title>Services | Microsite Studio</title>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta
-          name="description"
-          content="Scalable digital systems for web engineering, digital marketing, and brand identity built for performance and long-term growth."
+          name="keywords"
+          content="web engineering, infrastructure setup, digital marketing, brand strategy, identity design, website development India"
         />
-        <link rel="canonical" href="https://micro-site.studio/services" />
-        <meta property="og:title" content="Services | Microsite Studio" />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
         <meta
           property="og:description"
           content="We build scalable digital systems for online growth: infrastructure, marketing, and brand identity."
         />
-        <meta property="og:url" content="https://micro-site.studio/services" />
-        <meta property="og:image" content="https://micro-site.studio/micrositefavicon.png" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:image" content={pageImage} />
+        <meta property="og:image:alt" content="Microsite Studio services overview" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Microsite Studio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
+        <script type="application/ld+json">{JSON.stringify([webPageSchema, serviceCatalogSchema])}</script>
       </Helmet>
 
       <section className="py-20 bg-gray-50 dark:bg-neutral-900 transition-colors">

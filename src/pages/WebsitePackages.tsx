@@ -113,10 +113,14 @@ export default function WebsitePackages() {
         <meta property="og:title" content="Website Packages | Microsite Studio" />
         <meta property="og:description" content="Affordable website development: starter, business, e-commerce & custom builds." />
   <meta property="og:url" content="https://micro-site.studio/services/websites" />
-  <meta property="og:image" content="/og/website-packages.jpg" />
+      <meta property="og:image" content="https://micro-site.studio/og/website-packages.jpg" />
   <meta property="og:image:alt" content="Website packages preview card" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Microsite Studio" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="/og/website-packages.jpg" />
+      <meta name="twitter:title" content="Website Packages | Microsite Studio" />
+      <meta name="twitter:description" content="Compare starter, business, e-commerce and custom website packages with pay-after-delivery options." />
+      <meta name="twitter:image" content="https://micro-site.studio/og/website-packages.jpg" />
   <meta name="twitter:image:alt" content="Website packages preview card" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>

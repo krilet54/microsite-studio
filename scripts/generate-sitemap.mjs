@@ -17,6 +17,7 @@ const routes = [
   '/services/branding',
   '/portfolio',
   '/about',
+  '/got-client',
   '/articles',
   '/articles/affordable-websites-under-1000',
   '/articles/top-website-makers-india-2025',

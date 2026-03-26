@@ -264,16 +264,48 @@ export default function Portfolio() {
     touchStartX.current = null; touchStartY.current = null;
   };
 
+  const pageUrl = 'https://micro-site.studio/portfolio';
+  const pageTitle = 'Portfolio | Microsite Studio';
+  const pageDescription =
+    'Website launches, digital creatives, and branding systems delivered by Microsite Studio for Indian small businesses.';
+  const pageImage = 'https://micro-site.studio/micrositefavicon.png';
+
+  const portfolioSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: pageTitle,
+    url: pageUrl,
+    description: pageDescription,
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: websiteProjects.map((project, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: project.title,
+        url: project.href,
+      })),
+    },
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
       <Helmet>
-        <title>Portfolio | Microsite Studio</title>
-        <meta name="description" content="Sample website projects, social media creatives, and branding kits delivered by Microsite Studio for Indian small businesses." />
-  <link rel="canonical" href="https://micro-site.studio/portfolio" />
-        <meta property="og:title" content="Portfolio | Microsite Studio" />
-        <meta property="og:description" content="Web, social media and branding work examples." />
-  <meta property="og:url" content="https://micro-site.studio/portfolio" />
-  <meta property="og:image" content="https://micro-site.studio/micrositefavicon.png" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:image" content={pageImage} />
+        <meta property="og:image:alt" content="Microsite Studio portfolio showcase" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Microsite Studio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
+        <script type="application/ld+json">{JSON.stringify(portfolioSchema)}</script>
       </Helmet>
       {/* Header */}
       <section className="py-20 bg-gray-50 dark:bg-neutral-900 transition-colors">
