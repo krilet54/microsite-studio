@@ -9,12 +9,12 @@ export default function OrderSummary() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // This page always represents the ₹999 website starter package.
+    // This page always represents the starter website package.
     if (!currentOrder) {
-      createOrderDraft('GUEST', { serviceType: 'Website', packageName: '₹999 Starter Website' });
-    } else if (currentOrder.serviceType !== 'Website' || currentOrder.packageName !== '₹999 Starter Website') {
+      createOrderDraft('GUEST', { serviceType: 'Website', packageName: '₹1,500 onwards Starter Website' });
+    } else if (currentOrder.serviceType !== 'Website' || currentOrder.packageName !== '₹1,500 onwards Starter Website') {
       // Override any previous different draft (e.g., branding/basic) to reflect this page's canonical package.
-      updateOrder({ serviceType: 'Website', packageName: '₹999 Starter Website' });
+      updateOrder({ serviceType: 'Website', packageName: '₹1,500 onwards Starter Website' });
     }
   }, [currentOrder, createOrderDraft, updateOrder]);
 
@@ -23,7 +23,7 @@ export default function OrderSummary() {
       <Helmet>
         <title>Starter Website Package | Microsite Studio</title>
         <meta name="robots" content="noindex,nofollow" />
-        <meta name="description" content="Internal step – ₹999 starter website summary. Not intended for indexing." />
+        <meta name="description" content="Internal step – ₹1,500 onwards starter website summary. Not intended for indexing." />
   <link rel="canonical" href="https://micro-site.studio/order/summary" />
       </Helmet>
       <div className="max-w-4xl mx-auto">
@@ -31,7 +31,7 @@ export default function OrderSummary() {
         <div className="text-center mb-16">
           <div className="flex items-start justify-center gap-2 flex-wrap">
             <h1 className="relative inline-block text-[2.55rem] leading-[1.1] font-extrabold tracking-tight text-white/95">
-              ₹999 Starter Website Package
+              ₹1,500 onwards Starter Website Package
               <span className="absolute left-1/2 -bottom-3 h-[2px] w-32 -translate-x-1/2 rounded bg-gradient-to-r from-transparent via-[#FF2B2B] to-transparent opacity-70" />
             </h1>
             <span className="relative -mt-1 text-[8px] tracking-wide font-semibold px-2 py-[3px] rounded border border-[#FF2B2B]/45 text-[#FF2B2B] bg-transparent backdrop-blur-sm">
@@ -97,7 +97,7 @@ export default function OrderSummary() {
         {/* CTA */}
         <div className="text-center">
           <button
-            onClick={() => navigate('/order/details?package=starter999')}
+            onClick={() => navigate('/order/details?package=starter1500')}
             className="inline-flex items-center justify-center bg-[#FF2B2B] text-white px-9 py-3.5 rounded-lg font-semibold text-sm tracking-tight hover:brightness-110 hover:scale-[1.015] active:scale-[0.98] transition-all shadow-lg shadow-[#FF2B2B]/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF2B2B] focus:ring-offset-neutral-950 will-change-transform"
           >
             Get Started (No Payment Yet)

@@ -18,10 +18,10 @@ interface WebPackage {
 
 const websitePackages: WebPackage[] = [
   {
-  key: 'starter-999',
-  title: '₹999 Starter Website',
+  key: 'starter-1500',
+  title: '₹1,500 onwards Starter Website',
   subtitle: 'Single-page launch presence',
-  price: '₹999',
+  price: '₹1,500 onwards',
     highlight: true,
     features: [
       '1-page professional website',
@@ -108,7 +108,7 @@ export default function WebsitePackages() {
   <div className="min-h-screen bg-white dark:bg-neutral-950 pt-20 pb-24 px-6">
       <Helmet>
         <title>Website Packages | Microsite Studio</title>
-        <meta name="description" content="Choose from ₹999 starter, business, e-commerce and custom website packages. Pay after delivery on eligible plans." />
+        <meta name="description" content="Choose from ₹1,500 onwards starter, business, e-commerce and custom website packages. Pay after delivery on eligible plans." />
   <link rel="canonical" href="https://micro-site.studio/services/websites" />
         <meta property="og:title" content="Website Packages | Microsite Studio" />
         <meta property="og:description" content="Affordable website development: starter, business, e-commerce & custom builds." />
@@ -152,7 +152,7 @@ export default function WebsitePackages() {
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF2B2B] text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow">Most Popular</span>
               )}
               <div className="w-16 h-16 rounded-xl bg-[#FF2B2B]/10 text-[#FF2B2B] flex items-center justify-center mb-6">
-                {pkg.key === 'starter-999' && <Globe className="w-8 h-8" />}
+                {pkg.key === 'starter-1500' && <Globe className="w-8 h-8" />}
                 {pkg.key === 'business' && <LayoutGrid className="w-8 h-8" />}
                 {pkg.key === 'ecommerce' && <ShoppingCart className="w-8 h-8" />}
                 {pkg.key === 'custom' && <Briefcase className="w-8 h-8" />}

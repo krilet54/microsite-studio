@@ -36,7 +36,7 @@ export default function Plans() {
       '@type': 'OfferCatalog',
       name: 'Core Services',
       itemListElement: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '₹999 Starter Website' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '₹1,500 onwards Starter Website' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Digital Marketing & Growth Systems' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding & Identity Kit' } }
       ]
@@ -47,7 +47,7 @@ export default function Plans() {
   <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
       <Helmet>
         <title>Plans & Pricing | Microsite Studio</title>
-        <meta name="description" content="Pricing for ₹999 websites, digital marketing growth systems, and branding kits. Pay-after-delivery options available." />
+        <meta name="description" content="Pricing for ₹1,500 onwards websites, digital marketing growth systems, and branding kits. Pay-after-delivery options available." />
   <link rel="canonical" href="https://micro-site.studio/plans" />
         <meta property="og:title" content="Plans & Pricing | Microsite Studio" />
         <meta property="og:description" content="Affordable website, digital marketing, and branding packages for small businesses in India." />
@@ -58,7 +58,7 @@ export default function Plans() {
       <meta property="og:site_name" content="Microsite Studio" />
   <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Plans & Pricing | Microsite Studio" />
-      <meta name="twitter:description" content="Pricing for ₹999 websites, digital marketing growth systems, and branding kits." />
+  <meta name="twitter:description" content="Pricing for ₹1,500 onwards websites, digital marketing growth systems, and branding kits." />
       <meta name="twitter:image" content="https://micro-site.studio/og/plans.jpg" />
   <meta name="twitter:image:alt" content="Microsite Studio pricing plans preview card" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
@@ -92,7 +92,7 @@ export default function Plans() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Starter Website</h3>
               </div>
-              <div className="text-4xl font-black text-[#FF2B2B] mb-6">₹999</div>
+              <div className="text-4xl font-black text-[#FF2B2B] mb-6">₹1,500 onwards</div>
               <ul className="text-gray-700 dark:text-gray-300 space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-[#FF2B2B] flex-shrink-0" />

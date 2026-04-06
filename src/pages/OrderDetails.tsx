@@ -15,7 +15,8 @@ export default function OrderDetails() {
 
     // Map known package query params to service/package pairs (extensible for future plans)
     const packageMap: Record<string, { serviceType: string; packageName: string }> = {
-      starter999: { serviceType: 'Website', packageName: '₹999 Starter Website' }
+      starter1500: { serviceType: 'Website', packageName: '₹1,500 onwards Starter Website' },
+      starter999: { serviceType: 'Website', packageName: '₹1,500 onwards Starter Website' }
       // Add more mappings here as needed e.g. social-starter, branding-basic etc.
     };
 
@@ -190,7 +191,7 @@ export default function OrderDetails() {
             </div>
             <div>
               <label className="block text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1">Selected Package *</label>
-              <input disabled value={currentOrder?.packageName || '₹999 Starter Website'} className="w-full px-4 py-3 rounded-lg border-2 border-[#FF2B2B] bg-neutral-100 dark:bg-neutral-800 text-gray-900 dark:text-gray-100 text-sm font-semibold shadow-sm" />
+              <input disabled value={currentOrder?.packageName || '₹1,500 onwards Starter Website'} className="w-full px-4 py-3 rounded-lg border-2 border-[#FF2B2B] bg-neutral-100 dark:bg-neutral-800 text-gray-900 dark:text-gray-100 text-sm font-semibold shadow-sm" />
             </div>
             <div>
               <label className="block text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1">Business Name *</label>

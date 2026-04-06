@@ -77,7 +77,7 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
       email: '',
       // Provide sensible defaults so success page can always show something even if user entered via direct link
       serviceType: initial?.serviceType !== undefined ? initial.serviceType : 'Website',
-      packageName: initial?.packageName !== undefined ? initial.packageName : '₹999 Starter Website',
+      packageName: initial?.packageName !== undefined ? initial.packageName : '₹1,500 onwards Starter Website',
       addOns: [],
       otherAddOn: '',
       communicationMethod: undefined,
