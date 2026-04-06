@@ -52,7 +52,7 @@ export default function TopWebsiteMakersIndia2025() {
                 "name": "How much does a professional website cost in India?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Website costs in India range from ₹999 (Microsite) to ₹50,000+ (agencies). See our comparison table for details."
+                  "text": "Website costs in India range from ₹1,500 onwards (Microsite) to ₹50,000+ (agencies). See our comparison table for details."
                 }
               },
               {
@@ -231,10 +231,10 @@ export default function TopWebsiteMakersIndia2025() {
             <div className="flex-grow border-t border-gray-300 dark:border-neutral-700"></div>
           </div>
           <section className="mb-10">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 mt-8">5. Microsite (India) – Professional Website at Just ₹999 with AI-Powered Design</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 mt-8">5. Microsite (India) – Professional Website from ₹1,500 onwards with AI-Powered Design</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-2">Let’s talk about the fastest-growing website solution in India right now.</p>
             <p className="text-gray-700 dark:text-gray-300 mb-2">Microsite is a startup built by a team of designers & AI engineers, focused on making professional websites affordable for everyone.</p>
-            <p className="text-gray-700 dark:text-gray-300 mb-2">At first glance, people think:<br />“How can they make a proper website at ₹999? Must be low quality.”</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-2">At first glance, people think:<br />“How can they make a proper website from ₹1,500 onwards? Must be low quality.”</p>
             <p className="text-gray-700 dark:text-gray-300 mb-2">That’s a fair doubt — because traditionally, websites were manually coded by developers charging ₹10,000 to ₹50,000.</p>
             <p className="text-gray-700 dark:text-gray-300 mb-2">But here’s the truth:</p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-2">
@@ -319,7 +319,7 @@ export default function TopWebsiteMakersIndia2025() {
                 <tr className="hover:bg-gray-50 dark:hover:bg-neutral-900">
                   <td className="px-4 py-2">Microsite</td>
                   <td className="px-4 py-2">Business Owners</td>
-                  <td className="px-4 py-2">₹999 One-time</td>
+                  <td className="px-4 py-2">₹1,500 onwards</td>
                   <td className="px-4 py-2">Easiest</td>
                   <td className="px-4 py-2">Lowest</td>
                   <td className="px-4 py-2">Dedicated Support</td>
@@ -372,7 +372,7 @@ export default function TopWebsiteMakersIndia2025() {
               </div>
               <div className="bg-white rounded-xl p-4 mb-6 flex items-center gap-3 border border-gray-200">
                 <span className="text-2xl text-[#FF2B2B]">🌟</span>
-                <span className="text-[#FF2B2B] font-semibold">Visit micro-site.studio / Contact Us and get started for ₹999.<br />Tomorrow, your business could be on Google. Why wait?</span>
+                <span className="text-[#FF2B2B] font-semibold">Visit micro-site.studio / Contact Us and get started from ₹1,500 onwards.<br />Tomorrow, your business could be on Google. Why wait?</span>
               </div>
               <div className="flex gap-4">
                 <Link to="/services/websites" className="inline-block px-6 py-3 rounded-lg bg-[#FF2B2B] text-white font-semibold shadow hover:bg-red-600 transition">Get Started</Link>

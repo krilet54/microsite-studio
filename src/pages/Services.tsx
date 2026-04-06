@@ -127,7 +127,7 @@ export default function Services() {
                   Most Popular
                 </div>
                 <h3 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-2">Website Launch Kits</h3>
-                <p className="text-sm font-semibold text-[#FF2B2B] mb-4">Starting at ₹999</p>
+                <p className="text-sm font-semibold text-[#FF2B2B] mb-4">Starting at ₹1,500 onwards</p>
                 <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-5">
                   We design and develop high-performance web platforms tailored to your business objectives, with clear structure,
                   fast loading speed, and growth-ready architecture.

@@ -29,14 +29,14 @@ export default function Portfolio() {
       href: 'https://laviedaviepetocare.vercel.app/',
       alt: 'La Vie Davie Pet Care website screenshot',
       title: 'Pet Care Business Landing Page',
-      modelLabel: 'Delivered under ₹999 model'
+      modelLabel: 'Delivered under ₹1,500 onwards model'
     },
     {
       img: mock2,
       href: 'https://four-paws-cat-boarding.vercel.app/',
       alt: 'Four Paws Cat Boarding website screenshot',
       title: 'Cat Boarding Service Site',
-      modelLabel: 'Delivered under ₹999 model'
+      modelLabel: 'Delivered under ₹1,500 onwards model'
     },
     {
       img: mock3,
@@ -669,7 +669,7 @@ export default function Portfolio() {
               className="bg-white text-[#FF2B2B] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-[#FF2B2B]"
               aria-label="View website packages"
             >
-              Get a Website for ₹999
+              Get a Website from ₹1,500 onwards
             </button>
             <button
               onClick={() => navigate('/services')}

@@ -254,7 +254,7 @@ export default function Home() {
     'mainEntity': [
       {
         '@type': 'Question',
-        'name': 'Do I need to pay upfront for the ₹999 website?',
+        'name': 'Do I need to pay upfront for the ₹1,500 onwards website?',
         'acceptedAnswer': { '@type': 'Answer', 'text': 'No. You only pay after the starter website is delivered and approved.' }
       },
       {
@@ -453,7 +453,7 @@ export default function Home() {
       icon: Globe,
       title: 'Website Launch Kits',
       description: 'One-page or growth-ready sites built to convert fast.',
-      price: '₹999',
+      price: '₹1,500 onwards',
       priceLabel: 'Starter go-live',
       badge: 'Most booked',
       features: ['Pay-after-delivery promise', 'WhatsApp & lead funnels', 'Hosting + domain guidance'],
@@ -613,18 +613,18 @@ export default function Home() {
   return (
   <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
       <Helmet>
-        <title>Microsite Studio | ₹999 Websites, Digital Marketing & Branding</title>
-        <meta name="description" content="Affordable ₹999 websites, digital marketing systems and branding kits for small businesses in India. Pay after delivery on eligible plans." />
+      <title>Microsite Studio | ₹1,500 onwards Websites, Digital Marketing & Branding</title>
+      <meta name="description" content="Affordable websites starting at ₹1,500 onwards, digital marketing systems and branding kits for small businesses in India. Pay after delivery on eligible plans." />
   <link rel="canonical" href="https://micro-site.studio/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Microsite Studio" />
-        <meta property="og:title" content="Microsite Studio | ₹999 Websites, Digital Marketing & Branding" />
-        <meta property="og:description" content="Professional one-page websites from ₹999 plus branding and digital marketing services. Pay only after delivery." />
+      <meta property="og:title" content="Microsite Studio | ₹1,500 onwards Websites, Digital Marketing & Branding" />
+      <meta property="og:description" content="Professional one-page websites from ₹1,500 onwards plus branding and digital marketing services. Pay only after delivery." />
   <meta property="og:url" content="https://micro-site.studio/" />
   <meta property="og:image" content="/og/home-default.jpg" />
   <meta property="og:image:alt" content="Microsite Studio digital services preview card" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Microsite Studio | ₹999 Websites, Digital Marketing & Branding" />
+      <meta name="twitter:title" content="Microsite Studio | ₹1,500 onwards Websites, Digital Marketing & Branding" />
         <meta name="twitter:description" content="Affordable websites & digital services. Pay after delivery." />
   <meta name="twitter:image" content="/og/home-default.jpg" />
   <meta name="twitter:image:alt" content="Microsite Studio digital services preview card" />
@@ -1056,9 +1056,9 @@ export default function Home() {
             <button
               onClick={() => navigate('/order/summary')}
               className="bg-white text-[#FF2B2B] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              aria-label="Start your ₹999 website order"
+              aria-label="Start your ₹1,500 onwards website order"
             >
-              Start Your ₹999 Website
+              Start Your ₹1,500 onwards Website
             </button>
             <button
               onClick={() => navigate('/services')}
@@ -1126,7 +1126,7 @@ export default function Home() {
                 />
                 <select name="service" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-[#FF2B2B]">
                   <option value="">Select Service</option>
-                  <option value="Website (₹999)">Website (₹999)</option>
+                  <option value="Website (₹1,500 onwards)">Website (₹1,500 onwards)</option>
                   <option value="Digital Marketing & Growth">Digital Marketing & Growth</option>
                   <option value="Branding & Identity">Branding & Identity</option>
                   <option value="Complete Package">Complete Package</option>
@@ -1158,7 +1158,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center">Frequently Asked Questions</h2>
           <div className="grid md:grid-cols-2 gap-8 text-sm text-gray-700 dark:text-gray-300">
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Do I need to pay upfront for the ₹999 website?</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Do I need to pay upfront for the ₹1,500 onwards website?</h3>
               <p>No. You only pay after we deliver and you approve the starter website.</p>
             </div>
             <div>

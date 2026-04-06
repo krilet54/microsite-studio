@@ -442,7 +442,7 @@ export default function Plans() {
               onClick={() => navigate('/services/websites')}
               className="bg-white text-[#FF2B2B] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
             >
-              Start with ₹999 Website <ArrowRight className="w-5 h-5" />
+              Start with ₹1,500 onwards Website <ArrowRight className="w-5 h-5" />
             </button>
             <button
               onClick={() => navigate('/services')}
