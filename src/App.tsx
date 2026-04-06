@@ -10,6 +10,7 @@ import OrderSuccess from './pages/OrderSuccess';
 import { OrderProvider } from './context/OrderContext';
 import WebsitePackages from './pages/WebsitePackages';
 import BrandingPackages from './pages/BrandingPackages';
+import DigitalMarketingPackages from './pages/DigitalMarketingPackages';
 import Services from './pages/Services';
 import AppLayout from './components/AppLayout';
 import Articles from './pages/Articles';
@@ -75,6 +76,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/order/summary" element={<OrderSummary />} />
             <Route path="/services/websites" element={<WebsitePackages />} />
+            <Route path="/services/digital-marketing" element={<DigitalMarketingPackages />} />
             <Route path="/services/branding" element={<BrandingPackages />} />
             <Route path="/order/details" element={<OrderDetails />} />
             <Route path="/order/success" element={<OrderSuccess />} />

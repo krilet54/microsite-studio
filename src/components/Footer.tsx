@@ -42,7 +42,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li><Link to="/services/websites" className="hover:text-white transition-colors">₹1,500 onwards Websites</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Digital Marketing &amp; Growth</Link></li>
+              <li><Link to="/services/digital-marketing" className="hover:text-white transition-colors">Digital Marketing &amp; Growth</Link></li>
               <li><Link to="/services/branding" className="hover:text-white transition-colors">Branding</Link></li>
               <li><Link to="/services" className="hover:text-white transition-colors">All Services</Link></li>
             </ul>

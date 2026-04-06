@@ -470,7 +470,7 @@ export default function Home() {
       badge: 'Growth teams',
       features: ['SEO + performance marketing', 'Campaign dashboards', 'Content and funnel optimization'],
       ctaLabel: 'Explore growth services',
-      ctaPath: '/services',
+      ctaPath: '/services/digital-marketing',
       highlight: true
     },
     {
@@ -1061,7 +1061,7 @@ export default function Home() {
               Start Your ₹1,500 onwards Website
             </button>
             <button
-              onClick={() => navigate('/services')}
+              onClick={() => navigate('/services/digital-marketing')}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#FF2B2B] transition-colors"
               aria-label="Explore digital marketing services"
             >

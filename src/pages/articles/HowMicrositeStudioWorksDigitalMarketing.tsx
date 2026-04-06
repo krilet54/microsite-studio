@@ -149,7 +149,7 @@ export default function HowMicrositeStudioWorksDigitalMarketing() {
               terms such as digital marketing services India, SEO services for small business, and Google Ads management.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link to="/services" className="px-5 py-2.5 rounded-lg bg-[#FF2B2B] text-white font-semibold hover:bg-red-600 transition-colors">
+              <Link to="/services/digital-marketing" className="px-5 py-2.5 rounded-lg bg-[#FF2B2B] text-white font-semibold hover:bg-red-600 transition-colors">
                 Explore Digital Growth Services
               </Link>
               <Link to="/" className="px-5 py-2.5 rounded-lg border border-[#FF2B2B] text-[#FF2B2B] font-semibold hover:bg-[#FF2B2B] hover:text-white transition-colors">
@@ -190,7 +190,7 @@ export default function HowMicrositeStudioWorksDigitalMarketing() {
               <li>Content and Media: campaign copy systems, video hooks, and nurture content.</li>
             </ul>
             <p className="text-gray-700 dark:text-gray-300 mt-4">
-              Explore our <Link to="/services" className="text-[#FF2B2B] underline">Digital Marketing and Growth</Link> stack and align channel scope with business goals.
+              Explore our <Link to="/services/digital-marketing" className="text-[#FF2B2B] underline">Digital Marketing and Growth</Link> stack and align channel scope with business goals.
             </p>
           </section>
 
@@ -248,7 +248,7 @@ export default function HowMicrositeStudioWorksDigitalMarketing() {
               Build a unified SEO, paid, and content strategy that improves lead quality and campaign efficiency.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/services" className="px-5 py-2.5 rounded-lg bg-[#FF2B2B] text-white font-semibold hover:bg-red-600 transition-colors">
+              <Link to="/services/digital-marketing" className="px-5 py-2.5 rounded-lg bg-[#FF2B2B] text-white font-semibold hover:bg-red-600 transition-colors">
                 Start Growth Strategy
               </Link>
               <Link to="/" className="px-5 py-2.5 rounded-lg border border-[#FF2B2B] text-[#FF2B2B] font-semibold hover:bg-[#FF2B2B] hover:text-white transition-colors">

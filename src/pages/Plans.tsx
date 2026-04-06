@@ -245,6 +245,15 @@ export default function Plans() {
               <p className="text-sm text-gray-700 dark:text-gray-300">Copywriting &amp; content strategy, video and email marketing, creative campaigns.</p>
             </div>
           </div>
+
+          <div className="mt-10 text-center">
+            <button
+              onClick={() => navigate('/services/digital-marketing')}
+              className="inline-flex items-center justify-center gap-2 bg-[#FF2B2B] text-white px-7 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors"
+            >
+              Explore Digital Growth Plans <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </section>
 
