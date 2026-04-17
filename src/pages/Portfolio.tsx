@@ -637,22 +637,22 @@ export default function Portfolio() {
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800">
               <Globe className="w-8 h-8 mx-auto text-[#FF2B2B] mb-3" />
-              <p className="text-3xl font-bold text-gray-900 dark:text-white">30+</p>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white">20+</p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Projects Delivered</p>
             </div>
             <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800">
               <Share2 className="w-8 h-8 mx-auto text-[#FF2B2B] mb-3" />
-              <p className="text-3xl font-bold text-gray-900 dark:text-white">25+</p>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white">5+</p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Digital Marketing Campaigns Delivered</p>
             </div>
             <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800">
               <Palette className="w-8 h-8 mx-auto text-[#FF2B2B] mb-3" />
-              <p className="text-3xl font-bold text-gray-900 dark:text-white">12+</p>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white">10+</p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Branding Kits Completed</p>
             </div>
             <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800">
               <CheckCircle className="w-8 h-8 mx-auto text-[#FF2B2B] mb-3" />
-              <p className="text-3xl font-bold text-gray-900 dark:text-white">18+</p>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white">15+</p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Websites & Landing Pages Launched</p>
             </div>
           </div>

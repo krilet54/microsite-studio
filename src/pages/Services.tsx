@@ -497,7 +497,7 @@ export default function Services() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-6">
             <div className="rounded-2xl border border-gray-200 dark:border-neutral-700 bg-white dark:bg-neutral-950 p-8 text-center shadow-sm hover:shadow-lg transition-shadow">
-              <div className="text-3xl font-black mb-2 bg-gradient-to-r from-[#FF2B2B] to-[#FF5555] bg-clip-text text-transparent">100+</div>
+              <div className="text-3xl font-black mb-2 bg-gradient-to-r from-[#FF2B2B] to-[#FF5555] bg-clip-text text-transparent">20+</div>
               <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">Successful Projects Delivered</p>
             </div>
             <div className="rounded-2xl border border-gray-200 dark:border-neutral-700 bg-white dark:bg-neutral-950 p-8 text-center shadow-sm hover:shadow-lg transition-shadow">
