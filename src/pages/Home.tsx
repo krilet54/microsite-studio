@@ -26,9 +26,9 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
-import heroImage from '../assets/mockup1.png';
 import websiteMockup from '../assets/mockup1.png';
 import carouselVideo from '../assets/video11.mp4';
+import videoLqip from '../assets/video11-lqip.jpg';
 import brandKit1 from '../assets/micrositeaboutlogo.png';
 import salonSnapshot from '../assets/mockup2.png';
 import petshopSnapshot from '../assets/mockup3.png';
@@ -106,17 +106,21 @@ function AnimatedMetric({ value, prefix = '', suffix = '', decimals = 0, accent 
 }
 // Seamless looping background video component (crossfades two instances to mask hard cut)
 function SeamlessHeroVideo() {
+  const [isReady, setIsReady] = useState(false);
+
   return (
     <div className="absolute inset-0 z-0" aria-hidden="true">
       <video
         src={carouselVideo}
-        className="w-full h-full object-cover"
+        poster={videoLqip}
+        className={`w-full h-full object-cover transition-all duration-700 ${isReady ? 'blur-none scale-100' : 'blur-xl scale-105'}`}
         autoPlay
         loop
         muted
         playsInline
         preload="metadata"
-        poster={heroImage}
+        onLoadedData={() => setIsReady(true)}
+        onError={() => setIsReady(true)}
       />
       <div className="absolute inset-0 bg-black/40" />
       <div className="absolute inset-0 brightness-[0.75] contrast-[1.05] saturate-[1.15] mix-blend-normal" />
