@@ -1,12 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import ArticleSidebar from '../../components/ArticleSidebar';
+import LeadMagnetOptIn from '../../components/LeadMagnetOptIn';
 
 export default function Top6PassiveIncomeStudents() {
   const pageUrl = 'https://micro-site.studio/articles/top-6-passive-income-students';
   const pageTitle = 'Top 6 Legit Passive Income Ideas For Students (College & School Friendly)';
   const pageDescription = 'Six practical, low-barrier passive income ideas students can start today — referral commissions, digital products, print-on-demand, UGC stock, micro-templates and short-form content.';
-  const imageUrl = 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200';
+  const imageUrl = '/og/top6-passive-income.svg';
   const datePublished = '2026-04-17';
 
   const articleSchema = {
@@ -40,8 +41,20 @@ export default function Top6PassiveIncomeStudents() {
         <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        {/** FAQ schema for featured snippets */}
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          'mainEntity': [
+            { '@type': 'Question', 'name': 'How quickly can a student earn via referrals?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'With a warm local lead you can earn within 24–72 hours after the client approves and pays. Results vary.' } },
+            { '@type': 'Question', 'name': 'Do I need technical skills to earn with referrals?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Referrals need outreach skills and local relationships — Microsite Studio handles delivery.' } },
+            { '@type': 'Question', 'name': 'What should I price my digital product at?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Start small: ₹99–₹499 for simple templates or notes. Test demand, then increase price.' } }
+          ]
+        })}</script>
       </Helmet>
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
@@ -51,8 +64,20 @@ export default function Top6PassiveIncomeStudents() {
             <h1 className="text-3xl font-black text-gray-900 dark:text-white mb-3">{pageTitle}</h1>
             <p className="text-gray-700 dark:text-gray-300">By Microsite Studio · {datePublished} · 6 min read</p>
           </header>
+          <LeadMagnetOptIn />
 
           <section className="max-w-none text-gray-700 dark:text-gray-300">
+            {/* Tweet URL */}
+            {/** build a prefilled tweet link */}
+            <div className="mt-3">
+              {(() => {
+                const tweetText = 'Students — try one small passive-income experiment this month: refer local clients, sell a tiny digital product, or make short videos.';
+                const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText + ' ' + pageUrl)}`;
+                return (
+                  <a href={tweetUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-[#1DA1F2]">Share this article on X</a>
+                );
+              })()}
+            </div>
             <p className="mb-4"><strong>TL;DR:</strong> Students can build simple, low-cost passive income streams in parallel with studies — start with one idea, validate it for 30 days, then scale. Referral programs (like Microsite Studio’s 30% commission) and lightweight digital products are the fastest paths.</p>
 
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-6 mb-3">Why students should pick one small experiment</h2>
