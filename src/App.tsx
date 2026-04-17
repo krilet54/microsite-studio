@@ -20,6 +20,7 @@ import HowMicrositeStudioWorksWebsites from './pages/articles/HowMicrositeStudio
 import HowMicrositeStudioWorksDigitalMarketing from './pages/articles/HowMicrositeStudioWorksDigitalMarketing';
 import HowMicrositeStudioWorksBranding from './pages/articles/HowMicrositeStudioWorksBranding';
 import HowIMade1500In24Hours from './pages/articles/HowIMade1500In24Hours';
+import Top6PassiveIncomeStudents from './pages/articles/Top6PassiveIncomeStudents';
 import GotClient from './pages/GotClient';
 
 // Breadcrumbs JSON-LD component
@@ -88,6 +89,7 @@ function App() {
             <Route path="/articles/how-microsite-studio-works-for-digital-marketing" element={<HowMicrositeStudioWorksDigitalMarketing />} />
             <Route path="/articles/how-microsite-studio-works-for-branding" element={<HowMicrositeStudioWorksBranding />} />
             <Route path="/articles/how-i-made-1500-in-24-hours" element={<HowIMade1500In24Hours />} />
+            <Route path="/articles/top-6-passive-income-students" element={<Top6PassiveIncomeStudents />} />
             <Route path="/got-client" element={<GotClient />} />
           </Route>
         </Routes>
