@@ -108,8 +108,17 @@ function AnimatedMetric({ value, prefix = '', suffix = '', decimals = 0, accent 
 function SeamlessHeroVideo() {
   return (
     <div className="absolute inset-0 z-0" aria-hidden="true">
+      <video
+        src={carouselVideo}
+        className="w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        poster={heroImage}
+      />
       <div className="absolute inset-0 bg-black/40" />
-      <img src={heroImage} alt="" className="w-full h-full object-cover" />
       <div className="absolute inset-0 brightness-[0.75] contrast-[1.05] saturate-[1.15] mix-blend-normal" />
     </div>
   );
