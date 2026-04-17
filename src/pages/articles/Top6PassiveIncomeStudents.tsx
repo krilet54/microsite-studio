@@ -7,7 +7,7 @@ export default function Top6PassiveIncomeStudents() {
   const pageUrl = 'https://micro-site.studio/articles/top-6-passive-income-students';
   const pageTitle = 'Top 6 Legit Passive Income Ideas For Students (College & School Friendly)';
   const pageDescription = 'Six practical, low-barrier passive income ideas students can start today — referral commissions, digital products, print-on-demand, UGC stock, micro-templates and short-form content.';
-  const imageUrl = '/og/top6-passive-income.png';
+  const imageUrl = 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200';
   const datePublished = '2026-04-17';
 
   const articleSchema = {
