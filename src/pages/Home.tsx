@@ -28,7 +28,7 @@ import { Helmet } from 'react-helmet-async';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import heroImage from '../assets/mockup1.png';
 import websiteMockup from '../assets/mockup1.png';
-// carousel video removed (file unavailable)
+import carouselVideo from '../assets/video11.mp4';
 import brandKit1 from '../assets/micrositeaboutlogo.png';
 import salonSnapshot from '../assets/mockup2.png';
 import petshopSnapshot from '../assets/mockup3.png';
