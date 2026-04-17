@@ -26,15 +26,15 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
-import heroVideo from '../video1.mp4';
-import websiteMockup from '../assets/websitemockup.png';
-import carouselVideo from '../assets/Red and White Retro Collage Animated Carousel Content Mobile Video.mp4';
-import brandKit1 from '../assets/brandkit1.png';
-import salonSnapshot from '../assets/salonss.png';
-import petshopSnapshot from '../assets/petshopss.png';
-import hyderabadSnapshot from '../assets/hyderabadss.png';
-import fitnessSnapshot from '../assets/fitness.ss.png';
-import gamingSnapshot from '../assets/spikess.png';
+import heroImage from '../assets/mockup1.png';
+import websiteMockup from '../assets/mockup1.png';
+// carousel video removed (file unavailable)
+import brandKit1 from '../assets/micrositeaboutlogo.png';
+import salonSnapshot from '../assets/mockup2.png';
+import petshopSnapshot from '../assets/mockup3.png';
+import hyderabadSnapshot from '../assets/ss5.png';
+import fitnessSnapshot from '../assets/mockup2.png';
+import gamingSnapshot from '../assets/mockup3.png';
 
 type HeroSnapshotMetric = {
   label: string;
@@ -106,101 +106,10 @@ function AnimatedMetric({ value, prefix = '', suffix = '', decimals = 0, accent 
 }
 // Seamless looping background video component (crossfades two instances to mask hard cut)
 function SeamlessHeroVideo() {
-  const v1Ref = useRef<HTMLVideoElement | null>(null);
-  const v2Ref = useRef<HTMLVideoElement | null>(null);
-  const activeRef = useRef<1 | 2>(1);
-  const fadingRef = useRef(false);
-
-  // Tunable values
-  const fadeDuration = 1000; // ms for crossfade transition
-  const overlap = 1200; // ms before end of active video to start the next
-
-  useEffect(() => {
-    const v1 = v1Ref.current;
-    const v2 = v2Ref.current;
-    if (!v1 || !v2) return;
-
-    // Base setup
-    [v1, v2].forEach(v => {
-      v.muted = true;
-      v.playsInline = true;
-      v.loop = false; // we manually handle seamless loop logic
-      v.preload = 'auto';
-      v.style.position = 'absolute';
-      v.style.inset = '0';
-      v.style.width = '100%';
-      v.style.height = '100%';
-      v.style.objectFit = 'cover';
-      v.style.transition = `opacity ${fadeDuration}ms linear`;
-      v.style.opacity = '0';
-      v.style.transform = 'scale(1.12)';
-      v.style.transformOrigin = 'center';
-      v.style.willChange = 'opacity, transform';
-    });
-
-    v1.style.opacity = '1';
-
-    let cleanup: (() => void) | null = null;
-
-    function attachTimeUpdate(video: HTMLVideoElement) {
-      const handler = () => {
-        if (fadingRef.current) return;
-        if (!video.duration || isNaN(video.duration)) return;
-        const remainingMs = (video.duration - video.currentTime) * 1000;
-        if (remainingMs <= overlap) {
-          startCrossfade();
-        }
-      };
-      video.addEventListener('timeupdate', handler);
-      cleanup = () => video.removeEventListener('timeupdate', handler);
-    }
-
-    function startCrossfade() {
-      const fromVideo = activeRef.current === 1 ? v1 : v2;
-      const toVideo = activeRef.current === 1 ? v2 : v1;
-      if (!fromVideo || !toVideo) return; // safety guard
-      fadingRef.current = true;
-      toVideo.currentTime = 0;
-      toVideo.play().catch(() => {});
-      requestAnimationFrame(() => { // ensure style applied next frame
-        if (toVideo && fromVideo) {
-          toVideo.style.opacity = '1';
-          fromVideo.style.opacity = '0';
-        }
-      });
-      setTimeout(() => {
-        activeRef.current = activeRef.current === 1 ? 2 : 1;
-        fadingRef.current = false;
-        cleanup?.();
-        const current = activeRef.current === 1 ? v1 : v2;
-        if (current) attachTimeUpdate(current);
-      }, fadeDuration + 30);
-    }
-
-    // Start first video after metadata is available
-    const startIfReady = () => {
-      if (v1.readyState >= 2) {
-        v1.play().catch(() => {});
-        attachTimeUpdate(v1);
-      } else {
-        v1.addEventListener('loadeddata', () => {
-          v1.play().catch(() => {});
-          attachTimeUpdate(v1);
-        }, { once: true });
-      }
-    };
-    startIfReady();
-
-    return () => {
-      cleanup?.();
-    };
-  }, [fadeDuration, overlap]);
-
   return (
     <div className="absolute inset-0 z-0" aria-hidden="true">
       <div className="absolute inset-0 bg-black/40" />
-      <video ref={v1Ref} src={heroVideo} playsInline muted preload="auto" />
-      <video ref={v2Ref} src={heroVideo} playsInline muted preload="auto" />
+      <img src={heroImage} alt="" className="w-full h-full object-cover" />
       <div className="absolute inset-0 brightness-[0.75] contrast-[1.05] saturate-[1.15] mix-blend-normal" />
     </div>
   );

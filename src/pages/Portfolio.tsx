@@ -2,21 +2,18 @@ import { Globe, Share2, Palette, CheckCircle, X, ArrowLeft as ArrowL, ArrowRight
 import mock1 from '../assets/mockup1.png';
 import mock2 from '../assets/mockup2.png';
 import mock3 from '../assets/mockup3.png';
-import sm1 from '../assets/1.png';
+import sm1 from '../assets/ss5.png';
 import sm2 from '../assets/2.png';
-import sm3 from '../assets/3.png';
-import sm4 from '../assets/4.png';
-import ss4 from '../assets/ss4.png';
+import sm3 from '../assets/mockup1.png';
+import sm4 from '../assets/mockup2.png';
+import ss4 from '../assets/ss5.png';
 import nabhasLive from '../assets/portfolio/nabhas-live.jpg';
 import kreviaLive from '../assets/portfolio/krevia-live.jpg';
-import msnBridgeKeysLive from '../assets/portfolio/msnbridgekeys-live.jpg';
-import msRajasthanLive from '../assets/portfolio/msrajasthan-live.jpg';
 import sobhaLive from '../assets/portfolio/sobha-live.jpg';
-import launchTeaser from '../assets/Launch teaser.mp4';
-import seasonalPush from '../assets/Seasonal push.mp4';
-import L1Logo from '../assets/L1.png';
-import L2Logo from '../assets/L2.png';
-import L3Logo from '../assets/L3.png';
+// fallback logos (replaced removed L1/L2/L3 assets)
+import L1Logo from '../assets/micrositeaboutlogo.png';
+import L2Logo from '../assets/logokmc.png';
+import L3Logo from '../assets/ipulogo.png';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
@@ -69,27 +66,12 @@ export default function Portfolio() {
       modelLabel: 'Delivered under custom model'
     },
     {
-      img: msnBridgeKeysLive,
-      href: 'https://msnbridgekeys.vercel.app/',
-      alt: 'MSN Bridge Keys website preview',
-      title: 'MSN Bridge Keys · Service Website',
-      modelLabel: 'Delivered under Starter model'
-    }
-    ,
-    {
-      img: msRajasthanLive,
-      href: 'https://ms-rajasthan-marbles-sanitary-and-t-two.vercel.app/',
-      alt: 'MS Rajasthan Marbles & Granite Shop screenshot',
-      title: 'MS Rajasthan · Marbles, Tiles & Granite Shop',
-      modelLabel: 'Delivered under custom model'
-    },
-    {
       img: sobhaLive,
       href: 'https://www.sobha-world-city.com/',
       alt: 'Sobha World City property landing page screenshot',
       title: 'Sobha World City · Property Landing Page',
       modelLabel: 'Delivered under Starter model'
-    }
+    },
   ];
   // Social media showcase items
   const socialItems: Array<{
@@ -101,9 +83,7 @@ export default function Portfolio() {
     { type: 'image', src: sm1, label: 'Restaurant branding', alt: 'Restaurant branding carousel graphic' },
     { type: 'image', src: sm2, label: 'Coaching page growth', alt: 'Coaching page growth social post' },
     { type: 'image', src: sm3, label: 'Local salon promos', alt: 'Local salon promotional design' },
-    { type: 'image', src: sm4, label: 'Festive campaign', alt: 'Festive campaign creative' },
-    { type: 'video', src: launchTeaser, label: 'Launch teaser', alt: 'Launch teaser animation' },
-    { type: 'video', src: seasonalPush, label: 'Seasonal push', alt: 'Seasonal push animation' }
+    { type: 'image', src: sm4, label: 'Festive campaign', alt: 'Festive campaign creative' }
   ];
 
   // Branding kits data
