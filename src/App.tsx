@@ -19,6 +19,7 @@ import TopWebsiteMakersIndia2025 from './pages/articles/TopWebsiteMakersIndia202
 import HowMicrositeStudioWorksWebsites from './pages/articles/HowMicrositeStudioWorksWebsites';
 import HowMicrositeStudioWorksDigitalMarketing from './pages/articles/HowMicrositeStudioWorksDigitalMarketing';
 import HowMicrositeStudioWorksBranding from './pages/articles/HowMicrositeStudioWorksBranding';
+import HowIMade1500In24Hours from './pages/articles/HowIMade1500In24Hours';
 import GotClient from './pages/GotClient';
 
 // Breadcrumbs JSON-LD component
@@ -86,6 +87,7 @@ function App() {
             <Route path="/articles/how-microsite-studio-works-for-websites" element={<HowMicrositeStudioWorksWebsites />} />
             <Route path="/articles/how-microsite-studio-works-for-digital-marketing" element={<HowMicrositeStudioWorksDigitalMarketing />} />
             <Route path="/articles/how-microsite-studio-works-for-branding" element={<HowMicrositeStudioWorksBranding />} />
+            <Route path="/articles/how-i-made-1500-in-24-hours" element={<HowIMade1500In24Hours />} />
             <Route path="/got-client" element={<GotClient />} />
           </Route>
         </Routes>
