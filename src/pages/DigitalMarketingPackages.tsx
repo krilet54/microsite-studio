@@ -218,15 +218,15 @@ export default function DigitalMarketingPackages() {
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-[#FF2B2B]/10 to-[#FF2B2B]/5 border border-[#FF2B2B]/20">
               <Award className="w-4 h-4 text-[#FF2B2B]" />
-              <span className="text-xs font-semibold text-[#FF2B2B] tracking-wide">DATA-DRIVEN GROWTH SYSTEMS</span>
+              <span className="text-xs font-semibold text-[#FF2B2B] tracking-wide">PERFORMANCE MARKETING & GROWTH</span>
             </div>
 
             <h1 className="text-[2.9rem] md:text-[3.2rem] leading-[1.05] font-extrabold tracking-tight text-gray-900 dark:text-white mb-5">
-              Digital Marketing & Growth
+              Digital Marketing That Lowers CPL & Scales Qualified Leads
               <span className="absolute left-1/2 -bottom-3 h-[3px] w-40 -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-[#FF2B2B] to-transparent" />
             </h1>
             <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 font-medium tracking-tight">
-              Structured growth infrastructure focused on qualified leads, conversion quality, and measurable ROI.
+              Integrated paid, organic, and conversion systems focused on lowering cost-per-lead and improving lead quality.
             </p>
 
             {/* Trust Badges */}
@@ -253,7 +253,7 @@ export default function DigitalMarketingPackages() {
           title="Why This Service Exists"
           description={
             <>
-              Most marketing fails because channels run in isolation. We unify search, paid media, content, and conversion flow into one growth system so your spend converts into real opportunities.
+              Marketing often fails because channels run independently. We combine search, paid media, content, and conversion engineering into a single growth system that lowers CPL, improves lead quality, and ties activity to revenue.
             </>
           }
           className="mb-12 mt-12"
@@ -335,7 +335,7 @@ export default function DigitalMarketingPackages() {
 
         <div className="grid gap-4 sm:grid-cols-3 mb-16">
           {[
-            { icon: BarChart3, metric: '30%↓', label: 'Average cost-per-lead reduction' },
+            { icon: BarChart3, metric: '30%↓', label: 'Average CPL reduction across active campaigns' },
             { icon: ShieldCheck, metric: '2-3 weeks', label: 'Directionally useful performance data' },
             { icon: MessageCircle, metric: 'Weekly', label: 'Optimization and reporting cadence' },
           ].map((item) => (
@@ -362,12 +362,12 @@ export default function DigitalMarketingPackages() {
         <div className="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/70 dark:bg-neutral-900/60 p-10 md:p-12">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div className="max-w-2xl">
-              <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-3">
-                Want a Growth Plan Tailored to Your Business?
-              </h3>
-              <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
-                Share your offer, current channels, and goals. We will recommend the right growth model and realistic KPI targets.
-              </p>
+                  <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-3">
+                    Need a growth plan focused on lowering CPL?
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
+                    Share your offer, current channels, and goals — we'll recommend a practical growth model and realistic KPI targets.
+                  </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <button
