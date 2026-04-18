@@ -300,17 +300,17 @@ export default function WebsitePackages() {
                 <span className="font-extrabold text-[#FF2B2B]">{pkg.price}</span>
               </div>
               <ul className="text-[13px] text-gray-700 dark:text-gray-300 space-y-2.5 mb-7 leading-relaxed">
-                {pkg.features.map(f => (
+                {pkg.features.map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#FF2B2B] mt-0.5 flex-shrink-0" />
                     <span>{f}</span>
-                  {[
-                    { icon: CreditCard, label: 'Pay after delivery' },
-                    { icon: ShieldCheck, label: '2-year free maintenance' },
-                    { icon: Clock, label: '7-day delivery' },
-                    { icon: MessagesSquare, label: 'WhatsApp support' },
-                    { icon: Layers, label: 'No hidden charges' }
-                  ].map(item => (
+                  </li>
+                ))}
+              </ul>
+              <button
+                onClick={() => handleSelect(pkg)}
+                className={`mt-auto w-full text-sm font-bold rounded-xl px-4 py-3 transition-all tracking-tight will-change-transform ${pkg.mode === 'direct-starter' ? 'bg-gradient-to-r from-[#FF2B2B] to-[#FF5555] text-white hover:shadow-lg hover:shadow-[#FF2B2B]/40 hover:scale-[1.02] active:scale-[0.95]' : 'border-2 border-[#FF2B2B] text-[#FF2B2B] hover:bg-[#FF2B2B] hover:text-white hover:scale-[1.02] active:scale-[0.95]'}`}
+              >
                 {pkg.cta}
               </button>
               {pkg.mode !== 'direct-starter' && (
