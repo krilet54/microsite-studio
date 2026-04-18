@@ -198,9 +198,9 @@ export default function BrandingPackages() {
         <div className="relative max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-[#FF2B2B]/10 to-[#FF2B2B]/5 border border-[#FF2B2B]/20">
+              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-[#FF2B2B]/10 to-[#FF2B2B]/5 border border-[#FF2B2B]/20">
               <Award className="w-4 h-4 text-[#FF2B2B]" />
-              <span className="text-xs font-semibold text-[#FF2B2B] tracking-wide">TRUSTED BRAND SYSTEMS SINCE 2020</span>
+              <span className="text-xs font-semibold text-[#FF2B2B] tracking-wide">TRUSTED BRAND SYSTEMS</span>
             </div>
 
             <h1 className="text-[2.9rem] md:text-[3.2rem] leading-[1.05] font-extrabold tracking-tight text-gray-900 dark:text-white mb-5">
