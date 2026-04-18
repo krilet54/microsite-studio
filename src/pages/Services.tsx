@@ -48,42 +48,41 @@ const services: ServiceSection[] = [
   {
     id: 'websites',
     eyebrow: 'Service 01',
-    title: 'WEB ENGINEERING & DIGITAL INFRASTRUCTURE',
-    priceTag: 'From ₹1,500 onwards',
+    title: 'WEB ENGINEERING',
+    priceTag: '',
     summary:
-      'Scalable digital systems built for launch readiness, operational stability, and long-term online growth.',
-    fit: 'Best for founders and local businesses that need a high-credibility online presence fast.',
+      'Your website is not a brochure. It is your most active salesperson. We engineer web infrastructure that captures leads, signals credibility, and scales with your business.',
+    fit: 'Founders, local businesses, and growing teams that need a professional digital presence — built fast, without agency bloat.',
     outcomes: [
-      'Production-ready infrastructure designed for reliability and scale',
-      'Clear website-to-marketing continuity for long-term business growth',
-      'Better performance, discoverability, and conversion readiness from day one',
+      'Websites that convert visitors into inquiries from day one',
+      'SEO-ready architecture that builds organic reach over time',
+      'Infrastructure that scales without a full rebuild',
     ],
     deliverables: [
-      'Static Websites from ₹1,500 onwards',
-      'Dynamic Web from ₹3,000 onwards',
-      'Applications',
-      'E-Commerce Platforms from ₹15,000 onwards',
-      'Portal Systems based on client requirements and needs',
-      'Custom solutions',
+      'Static and dynamic websites',
+      'E-commerce platforms',
+      'Portal and application systems',
+      'Domain, hosting, and deployment',
+      'SEO foundations and speed optimisation',
     ],
     metrics: [
       { value: '2-7 days', label: 'Typical launch window' },
       { value: '4.8/5', label: 'Average client rating' },
     ],
     review: {
-      quote: 'They built my website and I only paid after delivery. Smooth and quick.',
-      author: 'Website Client · Verified',
+      quote: 'The website truly reflects our vision and represents our brand exactly the way we had hoped.',
+      author: 'APEX Exam Centre · Delhi · Verified Client',
     },
     primaryCta: { label: 'Explore Website Packages', to: '/services/websites' },
-    secondaryCta: { label: 'See Website Proof', to: '/portfolio' },
+    secondaryCta: { label: 'Read Case Study', to: '/articles' },
   },
   {
     id: 'growth',
     eyebrow: 'Service 02',
     title: 'Digital Marketing & Growth',
-    priceTag: 'Monthly growth systems',
-    summary: 'Turn SEO, paid media, and funnel optimization into one measurable lead-generation engine.',
-    fit: 'Best for teams with an active offer who need predictable qualified leads, not vanity traffic.',
+    priceTag: '',
+    summary: 'Most businesses don\'t have a traffic problem. They have a conversion problem. We build growth systems that fix both — unifying SEO, paid media, and funnel strategy into one accountable engine.',
+    fit: 'Teams with an established offer who need qualified leads consistently — not one-off campaigns.',
     outcomes: [
       'Lower cost per qualified lead with weekly optimization loops',
       'Better lead quality from tighter channel-fit and messaging',
@@ -100,8 +99,8 @@ const services: ServiceSection[] = [
       { value: 'Weekly', label: 'Optimization cadence' },
     ],
     review: {
-      quote: 'Their growth campaigns look professional and we now get more qualified enquiries.',
-      author: 'Digital Marketing Client · Verified',
+      quote: 'Since engaging Microsite Studio for digital growth, our inbound inquiry quality has improved measurably.',
+      author: 'Growth Client · Verified',
     },
     primaryCta: { label: 'Explore Growth Services', to: '/services/digital-marketing' },
     secondaryCta: { label: 'Read Growth Framework', to: '/articles/how-microsite-studio-works-for-digital-marketing' },
@@ -109,10 +108,10 @@ const services: ServiceSection[] = [
   {
     id: 'branding',
     eyebrow: 'Service 03',
-    title: 'Branding & Identity Kits',
-    priceTag: 'Structured packages from ₹899',
-    summary: 'Build a consistent identity so your brand looks premium across every touchpoint.',
-    fit: 'Best for businesses with scattered visuals who need a usable and consistent brand system.',
+    title: 'Brand Identity',
+    priceTag: '',
+    summary: 'First impressions are made in seconds and remembered for years. We build brand identity systems that make your business look credible at every touchpoint — from logo to launch collateral.',
+    fit: 'New businesses launching their identity, and growing businesses whose visuals no longer reflect their current positioning.',
     outcomes: [
       'Higher trust at first impression',
       'Stronger recall through consistent visual language',
@@ -129,8 +128,8 @@ const services: ServiceSection[] = [
       { value: '2+ years', label: 'Asset usability horizon' },
     ],
     review: {
-      quote: 'I did not expect professional work at this price. Worth it.',
-      author: 'Branding Client · Verified',
+      quote: 'Professional output that matched — and exceeded — what we expected at this scope.',
+      author: 'Brand Identity Client · Verified',
     },
     primaryCta: { label: 'Explore Branding Kits', to: '/services/branding' },
     secondaryCta: { label: 'See Branding Proof', to: '/portfolio' },
@@ -293,17 +292,12 @@ export default function Services() {
         </div>
 
         <div className="relative max-w-5xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-[#FF2B2B]/10 to-[#FF2B2B]/5 border border-[#FF2B2B]/20">
-            <Award className="w-4 h-4 text-[#FF2B2B]" />
-            <span className="text-xs font-semibold text-[#FF2B2B] tracking-wide">TRUSTED BY 100+ BUSINESSES</span>
-          </div>
-
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-6 leading-tight tracking-tight">
-            Professional Services for Digital Growth
+            Three disciplines. One outcome: business growth.
           </h1>
 
           <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed font-medium">
-            At Microsite Studio, we craft scalable digital ecosystems—from conversion-optimized websites to growth engines and premium brand identities. Every service is engineered for measurable outcomes and long-term success.
+            Microsite Studio operates at the intersection of web engineering, growth strategy, and brand identity. Every engagement is scoped to a specific business problem — and measured against a specific business outcome.
           </p>
 
           {/* Premium gradient underline */}
@@ -453,8 +447,8 @@ export default function Services() {
 
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4">Our Proven Delivery Framework</h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">A structured approach that ensures quality, accountability, and measurable results at every step.</p>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4">How every engagement works</h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Clear milestones. No surprises. Every project follows the same four-phase structure.</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-4">
@@ -483,12 +477,7 @@ export default function Services() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <div className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-[#FF2B2B]/10 to-[#FF2B2B]/5 border border-[#FF2B2B]/30 px-5 py-3 shadow-lg shadow-[#FF2B2B]/10">
-              <TrendingUp className="w-4 h-4 text-[#FF2B2B]" />
-              <span className="text-xs md:text-sm font-bold text-gray-900 dark:text-white tracking-wide">Simple process, measurable outcomes, guaranteed success</span>
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -505,8 +494,8 @@ export default function Services() {
               <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">Average Client Rating</p>
             </div>
             <div className="rounded-2xl border border-gray-200 dark:border-neutral-700 bg-white dark:bg-neutral-950 p-8 text-center shadow-sm hover:shadow-lg transition-shadow">
-              <div className="text-3xl font-black mb-2 bg-gradient-to-r from-[#FF2B2B] to-[#FF5555] bg-clip-text text-transparent">100%</div>
-              <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">On-Time Delivery Rate</p>
+              <div className="text-3xl font-black mb-2 bg-gradient-to-r from-[#FF2B2B] to-[#FF5555] bg-clip-text text-transparent">7-Day</div>
+              <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">Average Delivery</p>
             </div>
           </div>
         </div>
@@ -525,14 +514,14 @@ export default function Services() {
             <div className="relative p-12 md:p-16">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
                 <div className="flex-1">
-                  <h3 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-5 leading-tight">Ready to Elevate Your Digital Presence?</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed mb-6">Share your goals and challenges. We'll recommend the right service path and show you exactly what's possible.</p>
+                  <h3 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-5 leading-tight">Tell us your business problem.</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed mb-6">Every engagement starts with a 20-minute diagnostic call. We listen first, recommend second, and only proceed if there's a genuine fit.</p>
                   
                   <ul className="space-y-3 mb-8">
                     {[
-                      '20-minute strategy consultation',
-                      'Custom service recommendation',
-                      'No pressure, no obligation'
+                      '20-minute diagnostic call, no obligation',
+                      'Honest service recommendation based on your goals',
+                      'Clear scope and timeline before any commitment'
                     ].map((item) => (
                       <li key={item} className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#FF2B2B]" />
