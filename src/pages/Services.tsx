@@ -95,7 +95,7 @@ const services: ServiceSection[] = [
       'Weekly reporting and decision dashboard',
     ],
     metrics: [
-      { value: '30%↓', label: 'Average CPL improvement' },
+      { value: '30%↓', label: 'Average CPL reduction across active campaigns' },
       { value: 'Weekly', label: 'Optimization cadence' },
     ],
     review: {
