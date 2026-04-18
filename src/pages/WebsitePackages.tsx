@@ -19,10 +19,10 @@ interface WebPackage {
 const websitePackages: WebPackage[] = [
   {
   key: 'starter-1500',
-  title: 'Static Websites',
+  title: 'Starter Website',
   subtitle: 'Fast, secure launch-ready websites',
   price: '₹1,500 onwards',
-    highlight: true,
+    highlight: false,
     features: [
       'Professional static website build',
       'Core sections aligned to your business goals',
@@ -37,7 +37,8 @@ const websitePackages: WebPackage[] = [
   },
   {
     key: 'business',
-    title: 'Dynamic Websites',
+    title: 'Business Website',
+    highlight: true,
     subtitle: 'Database-backed websites with custom workflows',
     price: 'starts from ₹3,000',
     features: [
@@ -51,7 +52,7 @@ const websitePackages: WebPackage[] = [
   },
   {
     key: 'ecommerce',
-    title: 'E-Commerce Websites',
+    title: 'E-Commerce Platform',
     subtitle: 'Scalable storefront systems for online selling',
     price: 'starts from ₹15,000',
     features: [
@@ -229,14 +230,14 @@ export default function WebsitePackages() {
         <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-[#FF2B2B]/10 to-[#FF2B2B]/5 border border-[#FF2B2B]/20">
               <Award className="w-4 h-4 text-[#FF2B2B]" />
-              <span className="text-xs font-semibold text-[#FF2B2B] tracking-wide">LAUNCH-READY WEBSITES, DELIVERED FAST</span>
+              <span className="text-xs font-semibold text-[#FF2B2B] tracking-wide">WEB ENGINEERING & DIGITAL INFRASTRUCTURE</span>
             </div>
 
           <h1 className="text-[2.9rem] md:text-[3.2rem] leading-[1.05] font-extrabold tracking-tight text-gray-900 dark:text-white mb-5">
-            Professional Website Packages
+            Websites engineered for outcomes, not aesthetics.
             <span className="absolute left-1/2 -bottom-3 h-[3px] w-40 -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-[#FF2B2B] to-transparent" /></h1>
           <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 font-medium tracking-tight">
-            We design and deliver professional web systems engineered for stability, scale, and long-term growth. Pay after delivery on eligible plans.
+            Every site we build is scoped to a specific business goal — lead generation, credibility, e-commerce, or scale. We deliver in days, not weeks. And you pay only after approval.
           </p>
 
           {/* Trust Badges */}
@@ -262,7 +263,7 @@ export default function WebsitePackages() {
         <WhyInfoBox
           title="Why a Professional Website?"
           description={<>
-            Your website is often the first serious interaction a prospect has with your brand. A fast, structured, mobile‑ready experience builds credibility, improves conversion and becomes a foundation you can scale (SEO, content, products) without redoing core structure.
+            In high-consideration markets, buyers research before they reach out. Your website is the first filter — and often the deciding one. A well-engineered site does three things: it builds instant credibility, it captures the inquiry, and it scales with your business without requiring a rebuild every 18 months.
           </>}
         />
 
@@ -303,13 +304,13 @@ export default function WebsitePackages() {
                   <li key={f} className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#FF2B2B] mt-0.5 flex-shrink-0" />
                     <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <button
-                onClick={() => handleSelect(pkg)}
-                className={`mt-auto w-full text-sm font-bold rounded-xl px-4 py-3 transition-all tracking-tight will-change-transform ${pkg.mode === 'direct-starter' ? 'bg-gradient-to-r from-[#FF2B2B] to-[#FF5555] text-white hover:shadow-lg hover:shadow-[#FF2B2B]/40 hover:scale-[1.02] active:scale-[0.95]' : 'border-2 border-[#FF2B2B] text-[#FF2B2B] hover:bg-[#FF2B2B] hover:text-white hover:scale-[1.02] active:scale-[0.95]'}`}
-              >
+                  {[
+                    { icon: CreditCard, label: 'Pay after delivery' },
+                    { icon: ShieldCheck, label: '2-year free maintenance' },
+                    { icon: Clock, label: '7-day delivery' },
+                    { icon: MessagesSquare, label: 'WhatsApp support' },
+                    { icon: Layers, label: 'No hidden charges' }
+                  ].map(item => (
                 {pkg.cta}
               </button>
               {pkg.mode !== 'direct-starter' && (
@@ -452,9 +453,9 @@ export default function WebsitePackages() {
           <div className="relative w-full rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/70 dark:bg-neutral-900/60 backdrop-blur-[2px] p-10 md:p-14 overflow-hidden">
             <div className="absolute -left-1 top-0 bottom-0 w-1.5 rounded-r-xl bg-gradient-to-b from-[#FF2B2B] via-[#ff4d4d] to-[#FF2B2B]" />
             <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-10">
-              <div className="max-w-2xl">
-                <h3 className="text-2xl md:text-[1.75rem] font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">Need Guidance Choosing a Website Plan?</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm md:text-[15px] leading-relaxed">Not sure whether to start small or go multi-page? We assess your goals, content readiness and scaling path then recommend the right package. Quick, honest and straightforward.</p>
+                <div className="max-w-2xl">
+                <h3 className="text-2xl md:text-[1.75rem] font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">Not sure which build is right for you?</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm md:text-[15px] leading-relaxed">Tell us what the website needs to do for your business. We will recommend the right scope — and be honest if a simpler solution serves you better.</p>
               </div>
               <button
                 onClick={() => window.open('https://wa.me/919060868026', '_blank')}
