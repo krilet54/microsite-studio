@@ -58,27 +58,7 @@ export default function Articles() {
       category: 'Websites',
       description: 'Compare Wix, WordPress, Shopify, freelancers, and Microsite for price, features, and reliability. Find the best website maker for your needs.'
     },
-    // Add more articles here
-    {
-      title: 'How I Earned ₹1,500 in 24 Hours: 30% Commission with Microsite Studio',
-      url: '/articles/how-i-made-1500-in-24-hours',
-      thumbnail: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      date: 'Apr 17, 2026',
-      author: 'Rahul Singh',
-      readTime: '4 min read',
-      category: 'Passive Income',
-      description: 'A first-person account of how I earned ₹1,500 in 24 hours by referring a client to Microsite Studio and earning a 30% commission.'
-    },
-    {
-      title: 'Top 6 Legit Passive Income Ideas For Students (College & School Friendly)',
-      url: '/articles/top-6-passive-income-students',
-      thumbnail: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      date: 'Apr 17, 2026',
-      author: 'Microsite Studio',
-      readTime: '6 min read',
-      category: 'Passive Income',
-      description: 'Six practical, low-barrier passive income ideas students can start today — referrals, digital products, print-on-demand, UGC, micro-templates and short-form content.'
-    },
+  
   ];
   const categories = ['all', 'Websites', 'Digital Marketing', 'Branding'];
   const filtered = articles.filter(a => (category === 'all' || a.category === category) && a.title.toLowerCase().includes(search.toLowerCase()));
