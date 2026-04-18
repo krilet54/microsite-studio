@@ -228,9 +228,9 @@ export default function WebsitePackages() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-[#FF2B2B]/10 to-[#FF2B2B]/5 border border-[#FF2B2B]/20">
-            <Award className="w-4 h-4 text-[#FF2B2B]" />
-            <span className="text-xs font-semibold text-[#FF2B2B] tracking-wide">LAUNCH-READY WEBSITES SINCE 2025</span>
-          </div>
+              <Award className="w-4 h-4 text-[#FF2B2B]" />
+              <span className="text-xs font-semibold text-[#FF2B2B] tracking-wide">LAUNCH-READY WEBSITES, DELIVERED FAST</span>
+            </div>
 
           <h1 className="text-[2.9rem] md:text-[3.2rem] leading-[1.05] font-extrabold tracking-tight text-gray-900 dark:text-white mb-5">
             Professional Website Packages

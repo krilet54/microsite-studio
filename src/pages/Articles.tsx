@@ -111,7 +111,7 @@ export default function Articles() {
       </Helmet>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
         <main className="flex-1">
-          <h1 className="text-3xl font-black text-gray-900 dark:text-white mb-6">Articles & Guides</h1>
+          <h1 className="text-3xl font-black text-gray-900 dark:text-white mb-6">Insights & Case Studies</h1>
           {/* Search & Filters */}
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <input

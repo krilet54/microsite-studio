@@ -564,10 +564,12 @@ export default function Home() {
             <div className="space-y-6 text-left max-w-xl">
               <span className="inline-flex items-center rounded-full bg-white/80 dark:bg-neutral-900/80 px-4 py-1 text-sm font-semibold uppercase tracking-[0.22em] text-neutral-700 dark:text-neutral-300 shadow-sm">Microsite Studio</span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-900 dark:text-white max-w-xl hero-fade-in">
-                Affordable websites that win you customers.
+                Digital infrastructure that grows your business.
               </h1>
               <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-200 leading-relaxed max-w-2xl hero-fade-in hero-delay-sm">
-                We help small businesses and startups turn ideas into impact—fast websites, credible branding, and content that drives leads.
+                We engineer websites, funnels, and brand systems that 
+                generate real business outcomes — leads, conversions, 
+                and client trust. Delivered in days, not months.
               </p>
               <ul className="grid gap-3 sm:gap-4 max-w-xl hero-fade-in hero-delay-md">
                 {heroBullets.map(point => (
